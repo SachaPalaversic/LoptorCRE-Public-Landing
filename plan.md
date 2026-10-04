@@ -35,7 +35,7 @@ Composición editorial asimétrica: texto y prueba visual se alternan en una ret
 
 ### Interacción y animación
 
-La interacción debe explicar, no distraer. El walkthrough avanza por estados mediante transición corta de opacidad y desplazamiento, con indicadores de progreso y controles explícitos. Las líneas de procedencia pueden dibujarse suavemente al entrar en viewport. No habrá parallax intenso, contadores falsos ni animaciones que sugieran una garantía financiera.
+La interacción debe explicar, no distraer. El walkthrough se presenta como un product showcase embebido: tabs horizontales para cambiar de módulo y un único workspace ficticio de gran formato, con marco de navegador, estado activo, descripción y controles anterior/siguiente. Las líneas de procedencia pueden dibujarse suavemente al entrar en viewport. No habrá parallax intenso, contadores falsos ni animaciones que sugieran una garantía financiera.
 
 ### Tipografía
 
