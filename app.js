@@ -61,16 +61,6 @@ const I18N = {
   }
 };
 
-const demoTemplates = [
-  `<div class="demo-files"><div class="demo-file is-uploading"><span class="file-icon">PDF</span><div><b>asset_information.pdf</b><small>24 pages · 6.4 MB · reading in browser</small></div><span class="status status-verified"><i></i></span></div><div class="demo-file"><span class="file-icon">XLS</span><div><b>operating_model.xlsx</b><small>12 sheets · 1.2 MB</small></div></div><div class="demo-file"><span class="file-icon">TXT</span><div><b>broker_notes.txt</b><small>3.1 KB · pasted note</small></div></div><div class="demo-upload"><span class="upload-plus">+</span><div><b>Drop more evidence</b><small>PDF · XLSX · DOCX · notes</small></div></div></div>`,
-  `<div class="demo-proof"><div class="proof-source-card"><label><span>ASSET INFORMATION.PDF</span><b>VERIFIED</b></label><div class="proof-data">€42.8M <small>ASKING PRICE</small></div></div><div class="proof-source-card"><label><span>OPERATING_MODEL.XLSX</span><b>VERIFIED</b></label><div class="proof-data">6.4% <small>STABILIZED YIELD</small></div></div><div class="proof-cite"><span class="cite-mark">⌁</span><span>Each figure retains its source reference: <b>PDF · p. 03 · paragraph 4</b> and <b>XLSX · sheet Returns · cell D8</b>.</span></div></div>`,
-  `<div class="conflict-card"><div class="conflict-head"><span>DOCUMENT CONFLICT · HOTEL_KEYS</span><span>UNDER REVIEW</span></div><div class="conflict-rows"><div class="conflict-row"><span>Asset information.pdf</span><strong>128</strong><em>Page 7</em></div><div class="conflict-row"><span>Broker notes.txt</span><strong>132</strong><em>Note 02</em></div><div class="conflict-row"><span>Output status</span><strong>—</strong><em>Not printed</em></div></div></div>`,
-  `<div class="visibility-demo"><div class="visibility-card is-selected"><span>LEVEL 01</span><h4>Text only</h4><p>Financial ratios and technical narrative. Most restrictive and confidential.</p></div><div class="visibility-card"><span>LEVEL 02</span><h4>One photo</h4><p>One anonymous image or audited architectural plan.</p></div><div class="visibility-card"><span>LEVEL 03</span><h4>Gallery</h4><p>Multiple images without brands or urban landmarks.</p></div></div>`,
-  `<div class="a4-demo"><div class="a4-sheet"><div class="sheet-meta"><span>CONFIDENTIAL</span><span>A4 TEASER</span></div><h4>Urban hotel<br><em>prime location</em></h4><p>Barcelona · Spain</p><div class="a4-cover"></div><div class="a4-lines"></div></div><div class="a4-side"><b>READY TO SHARE</b><span>Every printed datum has a source. Every hidden datum stays hidden.</span></div></div>`,
-  `<div class="match-demo"><div class="match-box"><small>ANONYMOUS ASSET</small><b>Urban hotel</b><p>Barcelona · €42.8M · 6.4% yield</p></div><div class="match-mid">⌾<span>87% FIT</span></div><div class="match-box"><small>ANONYMOUS MANDATE</small><b>Core / Core+</b><p>Spain · €30–60M · urban only</p></div></div>`
-];
-
-
 const STATIC_UI = {
   en: {
     crumbs:'Assets <i>›</i> Hotel / urban <i>›</i> Teaser',
@@ -95,18 +85,7 @@ function localizeStaticUi() {
   setText('.mandate-card p', ui.mandate, true); setAll('.metric-grid small', ui.portfolioLabels); setAll('.metric-grid .metric-up,.metric-grid .metric-neutral', ui.portfolioStatus);
   $$('.price-card ul').forEach((list, i) => { list.innerHTML = ui.pricingFeatures[i].map((item) => `<li>${item}</li>`).join(''); });
   setAll('.footer-links a', ui.footerLinks, true);
-  localizeDemoStage();
 }
-function localizeDemoStage() {
-  const d = STATIC_UI[currentLang].demo;
-  if (currentStep === 0) { setText('.demo-file.is-uploading b','asset_information.pdf'); setText('.demo-file.is-uploading small',d.reading); setText('.demo-file:nth-child(2) b','operating_model.xlsx'); setText('.demo-file:nth-child(2) small',d.sheets); setText('.demo-file:nth-child(3) b','broker_notes.txt'); setText('.demo-file:nth-child(3) small',d.note); setText('.demo-upload b',d.drop); setText('.demo-upload small',d.formats); }
-  if (currentStep === 1) { setText('.proof-source-card:nth-child(1) label span',d.source1); setText('.proof-source-card:nth-child(2) label span',d.source2); setAll('.proof-source-card label b',[d.verified,d.verified]); setText('.proof-source-card:nth-child(1) .proof-data small',d.price); setText('.proof-source-card:nth-child(2) .proof-data small',d.yield); setText('.proof-cite span:last-child',d.cite,true); }
-  if (currentStep === 2) { setText('.conflict-head span:first-child',d.conflict); setText('.conflict-head span:last-child',d.underReview); setAll('.conflict-row span',[d.sourceA,d.sourceB,d.output]); setAll('.conflict-row em',[d.pageA,d.pageB,d.notPrinted]); }
-  if (currentStep === 3) { setAll('.visibility-card span',d.levels); setAll('.visibility-card h4',d.visibility); setAll('.visibility-card p',d.visibilityBody); }
-  if (currentStep === 4) { setText('.a4-sheet .sheet-meta span:last-child',d.a4Meta); setText('.a4-sheet h4',d.a4Title,true); setText('.a4-side b',d.ready); setText('.a4-side span',d.readyBody); }
-  if (currentStep === 5) { setText('.match-box:nth-child(1) small',d.asset); setText('.match-box:nth-child(2) small',d.mandate); setText('.match-mid span',d.fit); }
-}
-
 let currentLang = 'en';
 let currentStep = 0;
 let billing = 'monthly';
@@ -134,19 +113,6 @@ function applyTranslations() {
   localizeStaticUi();
 }
 
-function renderWalkthrough() {
-  const locale = I18N[currentLang];
-  $('#stage-content').innerHTML = demoTemplates[currentStep];
-  localizeDemoStage();
-  $('#step-name').textContent = locale.steps[currentStep].title;
-  $('#stage-description').textContent = locale.steps[currentStep].description;
-  $('#step-current').textContent = String(currentStep + 1).padStart(2, '0');
-  $$('.step-button').forEach((button, index) => { const active = index === currentStep; button.classList.toggle('is-active', active); button.setAttribute('aria-selected', String(active)); });
-  const prev = $('#step-prev'); const next = $('#step-next');
-  prev.disabled = currentStep === 0; next.disabled = currentStep === locale.steps.length - 1;
-  prev.style.opacity = prev.disabled ? '.35' : '1'; next.style.opacity = next.disabled ? '.35' : '1';
-}
-
 function renderFaq() {
   const list = $('#faq-list');
   list.innerHTML = I18N[currentLang].faqItems.map(([question, answer], index) => `<div class="faq-item${index === 0 ? ' is-open' : ''}"><button class="faq-question" type="button" aria-expanded="${index === 0}"><span>${question}</span><span aria-hidden="true">+</span></button><div class="faq-answer"><div>${answer}</div></div></div>`).join('');
@@ -159,18 +125,31 @@ function setLanguage(lang) { if (!I18N[lang]) return; currentLang = lang; $$('.l
 
 function setBilling(nextBilling) { billing = nextBilling; $$('.billing-btn').forEach((button) => button.classList.toggle('is-active', button.dataset.billing === nextBilling)); const prices = nextBilling === 'annual' ? ['€55','€159','€390'] : ['€69','€199','€390']; $$('.monthly-price').forEach((el, index) => { el.textContent = prices[index]; }); $$('.annual-copy').forEach((el, index) => { el.textContent = nextBilling === 'annual' ? (index === 2 ? '€4,680 / year · annual only' : 'Annual billing · save 20%') : (index === 2 ? '€4,680 / year · annual only' : index === 0 ? '€55 / month billed annually' : '€159 / month billed annually'); }); }
 
-function wireEvents() {
-  $$('.lang-btn').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-  $$('.step-button').forEach((button) => button.addEventListener('click', () => { currentStep = Number(button.dataset.step); renderWalkthrough(); }));
-  $('#step-prev').addEventListener('click', () => { if (currentStep > 0) { currentStep -= 1; renderWalkthrough(); } });
-  $('#step-next').addEventListener('click', () => { if (currentStep < 5) { currentStep += 1; renderWalkthrough(); } });
-  $$('.billing-btn').forEach((button) => button.addEventListener('click', () => setBilling(button.dataset.billing)));
-  const menu = $('.mobile-menu'); const nav = $('.main-nav');
-  menu.addEventListener('click', () => { const open = nav.classList.toggle('is-open'); menu.setAttribute('aria-expanded', String(open)); });
-  $$('.main-nav a').forEach((link) => link.addEventListener('click', () => { nav.classList.remove('is-open'); menu.setAttribute('aria-expanded','false'); }));
-}
+const TOUR_CONTENT={
+ en:{live:'LIVE TOUR',cta:'Start 7-day free trial <span>→</span>',steps:[
+  {title:'Chaotic multi-source ingest',short:'Bring the scattered evidence.',description:'Ingest unformatted documentation. Critical metrics are extracted automatically.',html:`<div class="tour-ingest"><div class="tour-kicker">01 / INGESTION QUEUE <span>3 SOURCES DETECTED</span></div><div class="source-stack"><div class="tour-source source-pdf"><b>PDF</b><div><strong>Hotel_IM_2026.pdf</strong><small>Page 14 · 24 pages</small></div><em>INGESTED</em></div><div class="tour-source source-xls"><b>XLS</b><div><strong>Financial_Model.xlsx</strong><small>P&amp;L!F28 · 12 sheets</small></div><em>READING</em></div><div class="tour-source source-txt"><b>TXT</b><div><strong>Seller_Notes.txt</strong><small>WhatsApp export · 3.1 KB</small></div><em>QUEUED</em></div></div><div class="ingest-signal"><i></i><span>EXTRACTING STRUCTURED EVIDENCE</span><b>84%</b></div></div>`},
+  {title:'Zero fabrication & data provenance',short:'Zero fabrication, source by source.',description:'Every KPI keeps its source. No figure enters the teaser without a document, page or cell.',html:`<div class="tour-provenance"><div class="tour-kicker">02 / VERIFIED DATA <span>ZERO FABRICATION</span></div><div class="kpi-grid"><div><small>ASKING PRICE</small><strong>€28M</strong><em>Hotel_IM_2026.pdf · p.14</em></div><div class="kpi-active"><small>TARGET YIELD</small><strong>7.5%</strong><em>Financial_Model.xlsx!F28</em><span class="provenance-popover">✓ Source verified<br><b>Zero fabrication</b></span></div><div><small>EBITDA</small><strong>€1.9M</strong><em>Financial_Model.xlsx · P&amp;L!F28</em></div></div><div class="provenance-foot"><span>↳ Every number retains its trail</span><b>100% TRACEABLE</b></div></div>`},
+  {title:'Discrepancy arbitration & anonymisation',short:'Resolve discrepancies, protect identity.',description:'Conflicts stay visible until resolved. Privacy controls protect the asset before a match is made.',html:`<div class="tour-conflicts"><div class="tour-kicker">03 / REVIEW QUEUE <span class="amber-text">UNDER VERIFICATION</span></div><div class="conflict-alert"><div><strong>Conflict detected</strong><p>128 keys <b>(PDF)</b> vs. 132 keys <b>(Notes)</b></p></div><button class="resolve-button" type="button">Resolve conflict</button></div><div class="privacy-checks"><div><span class="check-done">✓</span><span>Facade photos blocked</span><em>PROTECTED</em></div><div><span class="check-done">✓</span><span>Exact location generalised to Valencia Macro-Area</span><em>ANONYMISED</em></div><div><span class="check-open">○</span><span>Confirm operating data with seller</span><em>OPEN</em></div></div></div>`},
+  {title:'Institutional teaser & blind match',short:'Issue and connect in the Dark Pool.',description:'A4-ready output meets an anonymous Family Office mandate. Fit first. Identity later.',html:`<div class="tour-match"><div class="tour-kicker">04 / OUTPUT &amp; MATCH <span class="green-text">DARK POOL ACTIVE</span></div><div class="match-layout"><div class="a4-preview"><div class="a4-ribbon">INSTITUTIONAL TEASER · A4</div><h3>Urban hotel<br><em>Valencia macro-area</em></h3><div class="a4-kpis"><span>€28M<strong>ASKING</strong></span><span>7.5%<strong>YIELD</strong></span><span>€1.9M<strong>EBITDA</strong></span></div><small>Formal NDA protocol · source-controlled output</small></div><div class="match-notice"><span class="match-orbit">◎</span><b>92% TRUE FIT</b><strong>European Family Office</strong><p>Dark Pool matching active.<br>Identity protected until consent.</p><button type="button">View blind profile ↗</button></div></div></div>`}
+ ]},
+ es:{live:'TOUR EN DIRECTO',cta:'Iniciar Free Trial de 7 días <span>→</span>',steps:[
+  {title:'Ingesta multifuente caótica',short:'Trae la evidencia dispersa.',description:'Ingesta documentación desordenada sin formatear. Las métricas críticas se extraen automáticamente.'},{title:'Cero fabricación y procedencia',short:'Cero fabricación, fuente a fuente.',description:'Cada KPI conserva su fuente. Ninguna cifra entra en el teaser sin documento, página o celda.'},{title:'Arbitraje de discrepancias y anonimización',short:'Resuelve conflictos, protege la identidad.',description:'Los conflictos permanecen visibles hasta resolverse. Los controles de privacidad protegen el activo antes del cruce.'},{title:'Teaser institucional y cruce ciego',short:'Emite y conecta en el Dark Pool.',description:'El resultado A4 encaja con un mandato anónimo de Family Office. Primero el encaje. Después la identidad.'}
+ ]},
+ fr:{live:'VISITE GUIDÉE',cta:'Démarrer l’essai gratuit de 7 jours <span>→</span>',steps:[
+  {title:'Ingestion multi-source chaotique',short:'Apportez les preuves dispersées.',description:'Ingérez des documents non formatés. Les métriques critiques sont extraites automatiquement.'},{title:'Zéro fabrication et provenance',short:'Zéro fabrication, source par source.',description:'Chaque KPI conserve sa source. Aucun chiffre n’entre dans le teaser sans document, page ou cellule.'},{title:'Arbitrage des écarts et anonymisation',short:'Résolvez les écarts, protégez l’identité.',description:'Les conflits restent visibles jusqu’à résolution. Les contrôles de confidentialité protègent l’actif avant le matching.'},{title:'Teaser institutionnel et matching aveugle',short:'Émettez et connectez dans le Dark Pool.',description:'Le résultat A4 rencontre un mandat anonyme de Family Office. L’adéquation d’abord. L’identité ensuite.'}
+ ]}
+};
+let tourTimer=null,tourStartedAt=0,tourPaused=false;
+function tourLocale(){return TOUR_CONTENT[currentLang]||TOUR_CONTENT.en;}
+function renderWalkthrough(){const locale=tourLocale();const step=locale.steps[currentStep];const base=TOUR_CONTENT.en.steps[currentStep];$('#stage-content').innerHTML=base.html;$('#step-name').textContent=step.title;$('#stage-description').textContent=step.description;$('#tour-progress').textContent=`${currentStep*25}%`;$('#tour-progress-bar').style.width=`${currentStep*25}%`;$$('.step-button').forEach((button,index)=>{const active=index===currentStep;button.classList.toggle('is-active',active);button.setAttribute('aria-selected',String(active));button.querySelector('[data-step-title]').textContent=locale.steps[index].title;button.querySelector('[data-step-short]').textContent=locale.steps[index].short;});if(currentStep===1&&currentLang==='es')$('.tour-kicker').innerHTML='02 / DATOS VERIFICADOS <span>CERO FABRICACIÓN</span>';if(currentStep===1&&currentLang==='fr')$('.tour-kicker').innerHTML='02 / DONNÉES VÉRIFIÉES <span>ZÉRO FABRICATION</span>';const cta=$('.tour-cta');if(cta)cta.innerHTML=locale.cta;const live=$('[data-i18n="tour.live"]');if(live)live.textContent=locale.live;}
+function stopTourTimer(){if(tourTimer){clearInterval(tourTimer);tourTimer=null;}}
+function startTourTimer(){stopTourTimer();tourPaused=false;tourStartedAt=Date.now();tourTimer=setInterval(()=>{if(tourPaused)return;const elapsed=Date.now()-tourStartedAt;const progress=Math.min(100,Math.round(elapsed/200));$('#tour-progress').textContent=`${progress}%`;$('#tour-progress-bar').style.width=`${progress}%`;if(elapsed>=20000){currentStep=(currentStep+1)%4;tourStartedAt=Date.now();renderWalkthrough();}},100);}
+function setTourStep(step,manual=true){currentStep=Math.max(0,Math.min(3,step));if(manual){tourPaused=true;stopTourTimer();}renderWalkthrough();}
+function wireEvents(){$$('.lang-btn').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.lang)));$$('.step-button').forEach(button=>button.addEventListener('click',()=>setTourStep(Number(button.dataset.step),true)));$('.tour-cta')?.addEventListener('click',()=>{});$('.mobile-menu')?.addEventListener('click',()=>{const nav=$('.main-nav');const open=nav.classList.toggle('is-open');$('.mobile-menu').setAttribute('aria-expanded',String(open));});$$('.main-nav a').forEach(link=>link.addEventListener('click',()=>$('.main-nav').classList.remove('is-open')));}
 
 try { const saved = localStorage.getItem('loptor-lang'); if (saved && I18N[saved]) currentLang = saved; } catch (_) {}
 wireEvents();
 $$('.lang-btn').forEach((button) => button.classList.toggle('is-active', button.dataset.lang === currentLang));
 applyTranslations();
+renderWalkthrough();
+startTourTimer();

@@ -17,8 +17,9 @@
 
 ## Walkthrough incrustado
 
-- [ ] La landing contiene un walkthrough interactivo integrado, autónomo y responsive; no usa iframe, login, backend, base de datos ni datos reales.
-- [ ] El walkthrough recorre carga de documentos, extracción de datos, procedencia por documento/página/celda, conflicto entre fuentes, estado «En verificación», control de visibilidad, teaser A4 y matching anónimo.
+- [ ] La landing contiene un Interactive Product Tour nativo, autónomo y responsive; no usa iframe, login, backend, base de datos ni datos reales.
+- [ ] El tour simula el ciclo de vida de un activo off-market en cuatro fases secuenciales: ingesta multifuente, Zero Fabrication & Data Provenance, arbitraje de discrepancias y anonimización, y teaser A4 institucional con cruce en doble ciego.
+- [ ] El tour incluye autoplay de 20 segundos (5 segundos por fase), barra de progreso temporal, cuatro pestañas clicables que pausan el autoplay y CTA «Iniciar Free Trial de 7 Días →» hacia `https://app.loptorcre.com/?action=register&trial=7d`.
 - [ ] El walkthrough utiliza exclusivamente un caso ficticio de Commercial Real Estate y muestra estados coherentes de «Sin documentar», «En verificación», «Bajo solicitud» y «Verificado».
 - [ ] Los controles del walkthrough son operables con teclado, tienen etiquetas accesibles, muestran progreso y respetan `prefers-reduced-motion`.
 - [ ] El CTA del walkthrough enlaza a `https://app.loptorcre.com` sin pretender abrir una sesión ni compartir datos con la aplicación.
