@@ -17,3 +17,14 @@
 .addon-card{border:1px solid var(--line);background:#fff;border-radius:10px;padding:21px 23px}.addon-card strong{display:block;font-family:var(--serif);font-size:22px;font-weight:500}.addon-card b{display:block;margin-top:7px;font-family:var(--mono);font-size:11px;color:var(--blue)}.addon-card p{margin:13px 0 0;color:#718096;font-size:12px;max-width:560px}.addons-footnote{margin:17px 0 0;color:#7b899b;font-size:11px;line-height:1.55}
 .footer-contact{font-family:var(--mono);font-size:8px;color:#74879b;letter-spacing:.03em}.footer-contact:hover{color:#a8c7e6}
 @media(max-width:720px){.header-login{display:none}.addons-grid{grid-template-columns:1fr}.pricing-trial-note{text-align:left;line-height:1.6}.addons-block h3{font-size:28px}}
+
+
+/* Header fit and app-link localization — branch: ajustes-cabecera-idioma */
+.site-header,.main-nav,.header-actions,.main-nav a,.header-login,.button-small,.language-switcher{white-space:nowrap}
+@media (min-width:1024px) and (max-width:1600px){
+  .site-header{padding-left:clamp(18px,3.2vw,52px);padding-right:clamp(18px,3.2vw,52px)}
+  .main-nav{gap:clamp(14px,1.7vw,27px);margin-left:clamp(0px,4vw,72px)}
+  .main-nav a{font-size:clamp(11px,.85vw,13px)}
+  .header-actions{gap:clamp(12px,1.7vw,22px)}
+  .button-small{padding-left:clamp(12px,1.4vw,16px);padding-right:clamp(12px,1.4vw,16px)}
+}

@@ -55,7 +55,7 @@ const I18N = {
     beta:{kicker:'LA BÊTA',title:'La bêta commence par<br><em>l’essentiel.</em>',body:'La première version se concentre sur la structuration des dossiers, le contrôle de la visibilité, l’émission de teasers institutionnels et la recherche d’adéquations anonymes. La collaboration et le partage sécurisé évolueront progressivement.',cta:'Lire les limites du produit <span>↓</span>',liveLabel:'DISPONIBLE EN BÊTA',liveTitle:'Fondation guidée par les preuves',live1:'Provenance et conflits',live2:'Trois niveaux de visibilité du teaser',live3:'Mandats, Dark Pool et vue portefeuille',live4:'Expérience bilingue ES / EN',nextLabel:'EN DÉVELOPPEMENT',nextTitle:'Collaboration sécurisée',next1:'Lien de partage sécurisé',next2:'Deal Rooms',next3:'Mode réunion et rôles dans l’opération',next4:'Expérience française',next5:'Matching anonyme inter-entreprises'},
     faq:{kicker:'FAQ',title:'La précision avant<br><em>la persuasion.</em>',intro:'Des réponses directes pour les équipes qui évaluent LoptorCRE.'},
     final:{eyebrow:'INTELLIGENCE CRE OFF-MARKET',title:'Faites en sorte que chaque actif<br><em>arrive à la bonne table.</em>',body:'Structurez les preuves. Protégez la confidentialité. Trouvez l’adéquation.',primary:'Commencer l’essai gratuit <span>↗</span>',secondary:'Activer mon radar <span>→</span>'},
-    nav:{how:'Comment ça marche',sell:'Pour les vendeurs',buy:'Pour les acheteurs',pricing:'Tarifs',login:'Se connecter',trial:"Commencer l'essai gratuit",contact:'Contact : info@loptorcre.com'},
+    nav:{how:'Fonctionnement',sell:'Vendeurs',buy:'Acheteurs',pricing:'Tarifs',login:'Se connecter',trial:'Essai gratuit',contact:'Contact : info@loptorcre.com'},
     steps:[{title:'Apportez les preuves',short:'Commencez là où se trouve l’information.',description:'Apportez un IM, un tableur, une note de broker ou un fil de messages. L’information commence là où vous la conservez déjà.'},{title:'Conservez la provenance',short:'Chaque chiffre garde sa trace.',description:'Chaque chiffre proposé conserve une référence explicite : document, page ou cellule. Un chiffre n’apparaît jamais seul.'},{title:'Rendez les conflits visibles',short:'Un désaccord reste visible.',description:'Lorsque deux sources divergent, LoptorCRE ne choisit pas à votre place et ne comble pas le vide. La donnée reste à vérifier.'},{title:'Choisissez la visibilité',short:'Vous décidez ce que voit le marché.',description:'Sélectionnez ce que l’investisseur peut voir. Une donnée non confirmée ne devient pas un vide ambigu : elle reste simplement hors du teaser.'},{title:'Émettez le teaser',short:'A4, institutionnel, prêt à partager.',description:'Générez un teaser A4 institutionnel avec le bon niveau d’exposition : texte seul, une photo ou une galerie.'},{title:'Matchez anonymement',short:'L’adéquation d’abord. L’identité ensuite.',description:'L’actif peut entrer dans un matching aveugle avec des mandats d’acquisition structurés. L’identité n’arrive qu’après le consentement des deux parties.'}],
     faqItems:[['Que fait LoptorCRE ?','LoptorCRE structure les informations dispersées d’un actif en teasers institutionnels auditables et met anonymement ces actifs en relation avec des mandats d’acquisition.'],['LoptorCRE invente-t-il ou complète-t-il les données manquantes ?','Non. Si une donnée ne figure pas dans les sources, elle n’existe pas dans le teaser. Les conflits restent visibles et les chiffres non résolus ne sont pas imprimés.'],['LoptorCRE est-il un VDR ou un portail public d’annonces ?','Non. Ce n’est ni un VDR pour une due diligence lourde, ni un catalogue ouvert. C’est une couche de structuration, de contrôle de visibilité et de matching anonyme.'],['Quand les identités sont-elles révélées ?','Uniquement après que les deux parties ont consulté le profil aveugle et consenti explicitement au contact.'],['Les acheteurs peuvent-ils utiliser LoptorCRE gratuitement ?','Le radar passif est gratuit pour enregistrer des mandats et recevoir des alertes anonymes. Des options de déblocage existent pour les équipes d’achat actives.'],['Où se trouve l’application ?','L’espace de travail est séparé de cette landing publique et se trouve sur app.loptorcre.com.']]
   }
@@ -132,6 +132,18 @@ function applyTranslations() {
   $$('.billing-btn').forEach((button) => { button.textContent = button.dataset.billing === 'monthly' ? (currentLang === 'fr' ? 'Mensuel' : currentLang === 'es' ? 'Mensual' : 'Monthly') : (currentLang === 'fr' ? 'Annuel' : currentLang === 'es' ? 'Anual' : 'Annual −20%'); });
   updatePriceCopy();
   localizeStaticUi();
+  updateAppLinks();
+}
+
+function updateAppLinks() {
+  $$('a[href^="https://app.loptorcre.com/"]').forEach((link) => {
+    const url = new URL(link.href);
+    const action = url.searchParams.get('action');
+    if (action === 'login' || action === 'register') {
+      url.searchParams.set('lang', currentLang);
+      link.href = url.toString();
+    }
+  });
 }
 
 function renderWalkthrough() {
@@ -170,7 +182,16 @@ function wireEvents() {
   $$('.main-nav a').forEach((link) => link.addEventListener('click', () => { nav.classList.remove('is-open'); menu.setAttribute('aria-expanded','false'); }));
 }
 
-try { const saved = localStorage.getItem('loptor-lang'); if (saved && I18N[saved]) currentLang = saved; } catch (_) {}
+try {
+  const requestedLang = new URLSearchParams(window.location.search).get('lang');
+  const saved = localStorage.getItem('loptor-lang');
+  if (requestedLang && I18N[requestedLang]) {
+    currentLang = requestedLang;
+    localStorage.setItem('loptor-lang', requestedLang);
+  } else if (saved && I18N[saved]) {
+    currentLang = saved;
+  }
+} catch (_) {}
 wireEvents();
 $$('.lang-btn').forEach((button) => button.classList.toggle('is-active', button.dataset.lang === currentLang));
 applyTranslations();
