@@ -35,7 +35,7 @@ Composición editorial asimétrica: texto y prueba visual se alternan en una ret
 
 ### Interacción y animación
 
-La interacción debe explicar, no distraer. El walkthrough se presenta como un product showcase embebido: tabs horizontales para cambiar de módulo y un único workspace ficticio de gran formato, con marco de navegador, barra de progreso temporal de 20 segundos, autoplay pausado al interactuar, estado activo, descripción y CTA de prueba de 7 días. El recorrido usa cuatro fases: ingesta multifuente, procedencia sin fabricación, arbitraje de conflictos/anonimización y teaser institucional con matching ciego. Las líneas de procedencia pueden dibujarse suavemente al entrar en viewport. No habrá parallax intenso, contadores falsos ni animaciones que sugieran una garantía financiera.
+La interacción debe explicar, no distraer. El walkthrough se presenta como un product showcase embebido: tabs horizontales para cambiar de módulo y un único workspace ficticio de gran formato, con marco de navegador, estado activo, descripción y controles anterior/siguiente. Las líneas de procedencia pueden dibujarse suavemente al entrar en viewport. No habrá parallax intenso, contadores falsos ni animaciones que sugieran una garantía financiera.
 
 ### Tipografía
 
