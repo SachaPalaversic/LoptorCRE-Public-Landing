@@ -28,3 +28,7 @@
   .header-actions{gap:clamp(12px,1.7vw,22px)}
   .button-small{padding-left:clamp(12px,1.4vw,16px);padding-right:clamp(12px,1.4vw,16px)}
 }
+
+/* Official brand lockup */
+.brand-icon{width:42px;height:42px;display:block;object-fit:contain;flex:none}.brand-submark{white-space:nowrap}.auth-brand-icon{display:block}
+@media(max-width:720px){.brand-icon{width:36px;height:36px}.brand{gap:10px}.brand-submark{font-size:7px;padding-left:9px}}
