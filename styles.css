@@ -44,3 +44,6 @@
 .brand-promise span,.brand-promise em{display:inline-block}
 .brand-promise em{color:#2563EB;font-style:italic}
 .brand-promise .promise-gap{display:block;height:.10em}
+
+/* Exact auth-brand lockup shared with app.loptorcre.com */
+.brand-mark-img{display:block;width:42px;height:42px;object-fit:contain;flex:none}.brand-wordmark{display:flex;align-items:baseline;gap:10px;color:var(--ink);font-family:'Newsreader','Iowan Old Style','Palatino Linotype',Palatino,Georgia,'Times New Roman',serif;font-size:30px;line-height:1;letter-spacing:-.04em}.brand-wordmark span{color:#7b899b;font-family:var(--mono);font-size:8px;letter-spacing:.16em;line-height:1;white-space:nowrap}@media(max-width:720px){.brand-mark-img{width:38px;height:38px}.brand-wordmark{font-size:28px}.brand-wordmark span{font-size:7px}}
