@@ -37,3 +37,10 @@
 :root{--blue:#3B82F6;--blue-deep:#2563EB}
 .brand-lockup{display:block;width:184px;height:auto;max-width:100%;flex:none;object-fit:contain}
 @media(max-width:720px){.brand-lockup{width:155px;height:auto}.brand{gap:10px}}
+
+
+/* Loptor CRE master promise: same editorial serif and cobalt emphasis. */
+.brand-promise{font-family:Georgia,'Times New Roman',serif}
+.brand-promise span,.brand-promise em{display:inline-block}
+.brand-promise em{color:#2563EB;font-style:italic}
+.brand-promise .promise-gap{display:block;height:.10em}
