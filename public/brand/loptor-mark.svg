@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Loptor mark</title>
+  <desc id="desc">Three ascending cobalt bars and a fourth amber connecting-dots bar.</desc>
+  <g transform="skewX(-10)">
+    <rect x="10" y="36" width="8" height="18" rx="2" fill="#3B82F6" opacity=".58"/>
+    <rect x="22" y="26" width="8" height="28" rx="2" fill="#3B82F6" opacity=".8"/>
+    <rect x="34" y="14" width="8" height="40" rx="2" fill="#3B82F6"/>
+    <circle cx="50" cy="48" r="3.2" fill="#F5A524"/>
+    <circle cx="50" cy="36" r="3.2" fill="#F5A524"/>
+    <circle cx="50" cy="24" r="3.2" fill="#F5A524"/>
+    <circle cx="50" cy="12" r="3.2" fill="#F5A524"/>
+    <path d="M50 15.5v5M50 27.5v5M50 39.5v5" stroke="#F5A524" stroke-width="1.5" stroke-linecap="round" opacity=".72"/>
+  </g>
+</svg>
