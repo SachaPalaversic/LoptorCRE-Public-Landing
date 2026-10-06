@@ -35,8 +35,8 @@
 
 /* Loptor CRE master-brand alignment: cobalt + connecting dots */
 :root{--blue:#3B82F6;--blue-deep:#2563EB}
-.brand-lockup{display:block;width:184px;height:auto;max-width:100%;flex:none;object-fit:contain}
-@media(max-width:720px){.brand-lockup{width:155px;height:auto}.brand{gap:10px}}
+.brand-lockup{display:block;width:203px;height:auto;max-width:100%;flex:none;object-fit:contain}
+@media(max-width:720px){.brand-lockup{width:170px;height:auto}.brand{gap:10px}}
 
 
 /* Loptor CRE master promise: same editorial serif and cobalt emphasis. */
