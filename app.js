@@ -304,3 +304,30 @@ try {
 wireEvents();
 $$('.lang-btn').forEach((button) => button.classList.toggle('is-active', button.dataset.lang === currentLang));
 applyTranslations();
+
+// Anchor navigation: land on the section's content, not on its empty top padding.
+(function anchorOffset() {
+  const header = document.querySelector('.site-header');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(hash, smooth) {
+    if (!hash || hash === '#' || hash === '#top') return false;
+    let target = null;
+    try { target = document.querySelector(hash); } catch (_) {}
+    if (!target) return false;
+    let pad = parseFloat(getComputedStyle(target).paddingTop) || 0;
+    if (!pad && target.firstElementChild) pad = parseFloat(getComputedStyle(target.firstElementChild).paddingTop) || 0;
+    const headerH = header ? header.offsetHeight : 0;
+    const top = target.getBoundingClientRect().top + window.scrollY + pad - headerH - 28;
+    window.scrollTo({ top: Math.max(0, top), behavior: smooth && !reduce ? 'smooth' : 'auto' });
+    return true;
+  }
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    if (go(a.getAttribute('href'), true)) {
+      e.preventDefault();
+      try { history.pushState(null, '', a.getAttribute('href')); } catch (_) {}
+    }
+  });
+  if (location.hash) window.addEventListener('load', () => setTimeout(() => go(location.hash, false), 50));
+})();
