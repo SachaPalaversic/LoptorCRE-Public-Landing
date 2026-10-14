@@ -348,7 +348,7 @@ applyTranslations();
   if (!prod || !copy) return;
   const RATIO = 1273 / 900; // alto / ancho del teaser A4
   const mq = window.matchMedia('(min-width:1101px)');
-  const VARS = ['--hp-h', '--hp-bh', '--hp-th', '--hp-tw', '--hp-pw'];
+  const VARS = ['--hp-h', '--hp-bh', '--hp-th', '--hp-tw', '--hp-total'];
   const GAP = 14;
   const BANNER = 172 / 1400; // alto / ancho de la franja de cifras
   function layout() {
@@ -359,14 +359,16 @@ applyTranslations();
     const H = button.getBoundingClientRect().bottom - eyebrow.getBoundingClientRect().top;
     const W = prod.clientWidth;
     if (!(H > 0) || !(W > 0)) return;
-    const bh = W * BANNER;
-    const rowH = H - bh - GAP;
-    const tw = Math.min(rowH / RATIO, W * 0.55);
+    // dos páginas A4 iguales debajo; la franja de cifras cubre de la esquina izquierda a la derecha de ambas
+    let tw = (H - GAP - BANNER * GAP) / (RATIO + 2 * BANNER);
+    tw = Math.min(tw, (W - GAP) / 2);
     const th = tw * RATIO;
+    const total = 2 * tw + GAP;
+    const bh = total * BANNER;
     prod.style.setProperty('--hp-bh', bh + 'px');
     prod.style.setProperty('--hp-th', th + 'px');
     prod.style.setProperty('--hp-tw', tw + 'px');
-    prod.style.setProperty('--hp-pw', (W - tw - GAP) + 'px');
+    prod.style.setProperty('--hp-total', total + 'px');
     prod.style.setProperty('--hp-h', (bh + GAP + th) + 'px');
   }
   let raf = 0;
