@@ -288,6 +288,34 @@ function renderPlans() {
 
 function setLanguage(lang) { if (!I18N[lang]) return; currentLang = lang; $$('.lang-btn').forEach((button) => button.classList.toggle('is-active', button.dataset.lang === lang)); applyTranslations(); try { localStorage.setItem('loptor-lang', lang); } catch (_) {} }
 
+
+// Calendario de demos (Cal.com) integrado en una ventana emergente. El script de Cal.com
+// no se carga con la página: solo cuando alguien pulsa un botón de demo. Si no carga
+// (bloqueador, red), el enlace normal se abre en una pestaña nueva.
+const CAL_LINK = 'loptorcre/30min';
+let calState = 'idle'; // idle | loading | ready | failed
+function loadCal() {
+  if (calState !== 'idle') return;
+  calState = 'loading';
+  (function (C, A, L) { const p = function (a, ar) { a.q.push(ar); }; const d = C.document; C.Cal = C.Cal || function () { const cal = C.Cal; const ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; const s = d.createElement('script'); s.src = A; s.async = true; s.onload = () => { calState = 'ready'; }; s.onerror = () => { calState = 'failed'; }; d.head.appendChild(s); cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const ns = ar[1]; api.q = api.q || []; if (typeof ns === 'string') { cal.ns[ns] = cal.ns[ns] || api; p(cal.ns[ns], ar); p(cal, ['initNamespace', ns]); } else p(cal, ar); return; } p(cal, ar); }; })(window, 'https://app.cal.com/embed/embed.js', 'init');
+  window.Cal('init', { origin: 'https://app.cal.com' });
+  window.Cal('on', { action: 'bookingSuccessful', callback: () => { if (window.loptorTrack) window.loptorTrack('demo_booked', { lang: currentLang }); } });
+}
+function openCal(plan) {
+  loadCal();
+  const config = { layout: 'month_view' };
+  if (plan && PLAN_NAMES[plan]) config.notes = `Plan: ${PLAN_NAMES[plan]}`;
+  window.Cal('modal', { calLink: CAL_LINK, config });
+  setTimeout(() => { if (calState !== 'ready') window.open(DEMO_URL, '_blank', 'noopener'); }, 5000);
+}
+document.addEventListener('click', (event) => {
+  const link = event.target && event.target.closest ? event.target.closest('a[data-demo]') : null;
+  if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.button === 1) return;
+  if (calState === 'failed') return; // deja que el enlace normal haga su trabajo
+  event.preventDefault();
+  openCal(link.dataset.plan);
+});
+
 function wireEvents() {
   $$('.lang-btn').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
   $$('.step-button').forEach((button) => button.addEventListener('click', () => { currentStep = Number(button.dataset.step); renderWalkthrough(); }));
