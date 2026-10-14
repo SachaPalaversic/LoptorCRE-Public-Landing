@@ -93,3 +93,6 @@
 /* Plan name is the title; the audience becomes the small label above it. */
 .price-label{text-transform:uppercase}
 .price-card h3{font-size:32px;margin:18px 0 6px}
+
+.price-card li.plan-base{font-weight:600;color:var(--ink,#0f172a)}
+.price-card li.plan-base::before{display:none}
