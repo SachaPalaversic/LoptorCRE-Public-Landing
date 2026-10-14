@@ -237,3 +237,4 @@
 .radar-note{max-width:none}
 .radar-note p{max-width:760px}
 .radar-shot{margin-top:22px;overflow-x:auto;border:1px solid var(--line);border-radius:10px}.radar-shot img{display:block;width:100%;min-width:680px;height:auto}
+section[id]{scroll-margin-top:82px}
