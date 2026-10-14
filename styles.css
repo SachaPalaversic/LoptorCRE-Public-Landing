@@ -96,3 +96,8 @@
 
 .price-card li.plan-base{font-weight:600;color:var(--ink,#0f172a)}
 .price-card li.plan-base::before{display:none}
+
+/* Pricing header: title left, intro right (saves vertical space so the plan cards are visible on arrival) */
+.pricing-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:40px}
+.pricing-head .pricing-intro{margin:0 0 6px;max-width:440px;font-size:16px}
+@media(max-width:900px){.pricing-head{display:block;margin-bottom:0}.pricing-head .pricing-intro{margin:24px 0 34px;max-width:none}}
