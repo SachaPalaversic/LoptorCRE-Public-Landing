@@ -238,3 +238,6 @@
 .radar-note p{max-width:760px}
 .radar-shot{margin-top:22px;overflow-x:auto;border:1px solid var(--line);border-radius:10px}.radar-shot img{display:block;width:100%;min-width:680px;height:auto}
 section[id]{scroll-margin-top:82px}
+.footer-brand{display:flex;align-items:center;gap:14px}
+.footer-brand .brand-wordmark{color:#fff}
+.footer-brand .brand-submark{color:#8fa1b8;border-left-color:rgba(214,225,238,.3)}
