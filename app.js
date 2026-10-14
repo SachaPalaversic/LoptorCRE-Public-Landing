@@ -351,7 +351,7 @@ applyTranslations();
   const VARS = ['--hp-h', '--hp-bh', '--hp-th', '--hp-total'];
   const GAP = 14;
   const BANNER = 172 / 1400; // alto / ancho de la franja de cifras
-  const COVER = 1090 / 1100; // alto / ancho de la portada recortada
+  const COVER = 1120 / 1100; // alto / ancho de la portada recortada
   function layout() {
     if (!mq.matches) { VARS.forEach((v) => prod.style.removeProperty(v)); return; }
     const eyebrow = copy.querySelector('.eyebrow');
