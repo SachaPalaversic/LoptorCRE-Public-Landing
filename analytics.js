@@ -126,6 +126,7 @@
 
   function ctaLocation(link) {
     if (link.closest('.price-card')) return 'pricing';
+    if (link.closest('.plan-compare')) return 'pricing_compare';
     if (link.closest('.final-cta')) return 'final_cta';
     if (link.closest('.hero')) return 'hero';
     if (link.closest('.seller-card')) return 'sell_side';
@@ -135,13 +136,9 @@
   }
 
   function planOf(link) {
-    var card = link.closest('.price-card');
-    var label = card && card.querySelector('.price-label');
-    var text = label ? label.textContent.toUpperCase() : '';
-    if (text.indexOf('SOLO') !== -1) return 'solo';
-    if (text.indexOf('BOUTIQUE') !== -1) return 'boutique';
-    if (text.indexOf('FAMILY') !== -1) return 'family_office';
-    return undefined;
+    // Los CTAs de plan llevan data-plan (advisor | desk | institutional | enterprise).
+    var plan = link.getAttribute('data-plan');
+    return plan || undefined;
   }
 
   function ctaTarget(href) {
@@ -190,7 +187,8 @@
 
     var link = target.closest('a[href]');
     if (link) {
-      var kind = ctaTarget(link.getAttribute('href') || '');
+      // «Solicita demo» es la conversión principal: se distingue del contacto genérico.
+      var kind = link.hasAttribute('data-demo') ? 'demo' : ctaTarget(link.getAttribute('href') || '');
       if (kind) track('cta_clicked', { location: ctaLocation(link), target: kind, plan: planOf(link), lang: currentLang() });
       return;
     }
