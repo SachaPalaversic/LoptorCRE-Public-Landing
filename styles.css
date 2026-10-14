@@ -184,3 +184,10 @@
 .matching-steps li p{margin:0;color:var(--slate);line-height:1.55;font-size:15px}
 @media(max-width:1000px){.matching-steps{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.matching-steps{grid-template-columns:1fr;gap:26px}}
+.privacy-section{background:var(--paper-2)}
+.privacy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+.privacy-grid>div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
+.privacy-grid span{display:block;font:500 12px/1 var(--mono,ui-monospace,monospace);letter-spacing:.08em;color:var(--blue);margin-bottom:14px}
+.privacy-grid b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-.02em;margin-bottom:10px;color:var(--ink)}
+.privacy-grid p{margin:0;color:var(--slate);line-height:1.55;font-size:15px}
+@media(max-width:900px){.privacy-grid{grid-template-columns:1fr}}
