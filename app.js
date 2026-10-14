@@ -121,18 +121,8 @@ function localizeDemoStage() {
 // renderiza al cambiar de idioma.
 const PLAN_KEYS = ['advisor', 'desk', 'institutional', 'enterprise'];
 const PLAN_NAMES = { advisor: 'Advisor', desk: 'Desk', institutional: 'Institutional', enterprise: 'Enterprise' };
-const DEMO_COPY = {
-  en: { subject: 'Demo request', intro: 'Hello,\n\nI would like to request a demo of Loptor CRE', fields: 'Name:\nCompany:\nRole:\nAssets and mandates you work with:' },
-  es: { subject: 'Solicitud de demo', intro: 'Hola,\n\nQuiero solicitar una demo de Loptor CRE', fields: 'Nombre:\nEmpresa:\nCargo:\nActivos y mandatos con los que trabajas:' },
-  fr: { subject: 'Demande de démo', intro: 'Bonjour,\n\nJe souhaite demander une démo de Loptor CRE', fields: 'Nom :\nEntreprise :\nFonction :\nActifs et mandats que vous gérez :' }
-};
-function demoHref(lang, plan) {
-  const c = DEMO_COPY[lang] || DEMO_COPY.en;
-  const name = plan ? PLAN_NAMES[plan] : '';
-  const subject = name ? `${c.subject} — ${name}` : c.subject;
-  const body = `${c.intro}${name ? ` (${name})` : ''}.\n\n${c.fields}\n`;
-  return 'mailto:info@loptorcre.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body).replace(/%0A/g, '%0D%0A');
-}
+const DEMO_URL = 'https://cal.com/loptorcre/30min';
+function demoHref() { return DEMO_URL; }
 const Y = true, N = false;
 const PLAN_COPY = {
   en: {
@@ -293,7 +283,7 @@ function renderPlans() {
   const cards = $('#plan-cards'); const compare = $('#plan-compare');
   if (cards) cards.innerHTML = renderPlanCards(currentLang);
   if (compare) compare.innerHTML = renderPlanCompare(currentLang);
-  $$('[data-demo]').forEach((el) => { el.href = demoHref(currentLang, el.dataset.plan); });
+  $$('[data-demo]').forEach((el) => { el.href = DEMO_URL; el.target = '_blank'; el.rel = 'noopener'; });
 }
 
 function setLanguage(lang) { if (!I18N[lang]) return; currentLang = lang; $$('.lang-btn').forEach((button) => button.classList.toggle('is-active', button.dataset.lang === lang)); applyTranslations(); try { localStorage.setItem('loptor-lang', lang); } catch (_) {} }
