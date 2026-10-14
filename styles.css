@@ -241,3 +241,4 @@ section[id]{scroll-margin-top:82px}
 .footer-brand{display:flex;align-items:center;gap:14px}
 .footer-brand .brand-wordmark{color:#fff}
 .footer-brand .brand-submark{color:#8fa1b8;border-left-color:rgba(214,225,238,.3)}
+.footer-brand .brand-mark-img{filter:brightness(1.3) saturate(1.1)}
