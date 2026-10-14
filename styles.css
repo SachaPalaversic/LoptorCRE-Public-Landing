@@ -101,3 +101,12 @@
 .pricing-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:40px}
 .pricing-head .pricing-intro{margin:0 0 6px;max-width:440px;font-size:16px}
 @media(max-width:900px){.pricing-head{display:block;margin-bottom:0}.pricing-head .pricing-intro{margin:24px 0 34px;max-width:none}}
+
+/* Vertical rhythm: one consistent, tighter section spacing (replaces the oversized per-section paddings) */
+:root{--sec-y:clamp(56px,6.2vw,88px)}
+.statement,.walkthrough-section,.darkpool-section,.portfolio-section,.trust-section,.pricing-section,.beta-section,.faq-section,.final-cta{padding-top:var(--sec-y);padding-bottom:var(--sec-y)}
+.audience-card{padding-top:var(--sec-y);padding-bottom:var(--sec-y)}
+.hero{min-height:0;padding-top:clamp(40px,5vw,72px);padding-bottom:clamp(40px,5vw,72px)}
+.walkthrough-grid{margin-top:clamp(32px,4vw,48px)}
+.faq-list{margin-top:clamp(28px,3.5vw,40px)}
+.pricing-head{margin-bottom:clamp(24px,3vw,36px)}
