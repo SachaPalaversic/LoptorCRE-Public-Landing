@@ -232,3 +232,8 @@
 .faq-item.is-open .faq-panel{grid-template-rows:1fr}
 @media(max-width:980px){.faq-layout{grid-template-columns:1fr;gap:34px}.faq-aside{position:static}.faq-panel p{padding-right:8px}}
 @media(prefers-reduced-motion:reduce){.faq-panel,.faq-icon::before,.faq-icon::after{transition:none}}
+
+.matching-section{padding-top:calc(var(--sec-y,110px) + 8px);padding-bottom:var(--sec-y,110px)}
+.radar-note{max-width:none}
+.radar-note p{max-width:760px}
+.radar-shot{margin-top:22px;overflow-x:auto;border:1px solid var(--line);border-radius:10px}.radar-shot img{display:block;width:100%;min-width:680px;height:auto}
