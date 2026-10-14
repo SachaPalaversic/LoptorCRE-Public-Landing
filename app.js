@@ -340,3 +340,38 @@ applyTranslations();
   });
   if (location.hash) window.addEventListener('load', () => setTimeout(() => go(location.hash, false), 50));
 })();
+
+/* Hero: las imágenes miden lo mismo que el texto (de la etiqueta al borde inferior de los botones) */
+(function () {
+  const prod = document.querySelector('.hero-product.shots');
+  const copy = document.querySelector('.hero-copy');
+  if (!prod || !copy) return;
+  const RATIO = 1273 / 900; // alto / ancho del teaser A4
+  const mq = window.matchMedia('(min-width:1101px)');
+  const VARS = ['--hp-h', '--hp-tw', '--hp-rw', '--hp-pmax'];
+  function layout() {
+    if (!mq.matches) { VARS.forEach((v) => prod.style.removeProperty(v)); return; }
+    const eyebrow = copy.querySelector('.eyebrow');
+    const button = copy.querySelector('.hero-actions .button');
+    if (!eyebrow || !button) return;
+    const H = button.getBoundingClientRect().bottom - eyebrow.getBoundingClientRect().top;
+    const W = prod.clientWidth;
+    if (!(H > 0) || !(W > 0)) return;
+    const tw = Math.min(H / RATIO, W * 0.6);
+    const h = tw * RATIO;
+    const rw = W - tw + 14;
+    const kpisH = rw * (172 / 1400);
+    prod.style.setProperty('--hp-h', h + 'px');
+    prod.style.setProperty('--hp-tw', tw + 'px');
+    prod.style.setProperty('--hp-rw', rw + 'px');
+    prod.style.setProperty('--hp-pmax', Math.max(120, h - kpisH - 16) + 'px');
+  }
+  let raf = 0;
+  const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(layout); };
+  window.addEventListener('resize', schedule);
+  window.addEventListener('load', schedule);
+  if (mq.addEventListener) mq.addEventListener('change', schedule);
+  if (window.ResizeObserver) new ResizeObserver(schedule).observe(copy);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+  schedule();
+})();

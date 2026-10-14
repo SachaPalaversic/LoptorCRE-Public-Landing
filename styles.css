@@ -195,10 +195,10 @@
 .radar-note b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-.02em;margin-bottom:8px;color:var(--ink)}
 .radar-note p{margin:0;color:var(--slate);line-height:1.55;font-size:15px}
 @media(min-width:1101px){
-.hero{grid-template-columns:minmax(0,.74fr) minmax(560px,1.26fr)}
-.hero-product.shots{min-height:0;aspect-ratio:1/.771;width:100%;align-self:start}
-.hs-teaser{width:54.5%;top:0;left:0}
-.hs-kpis{width:46.5%;top:0;right:0}
-.hs-prov{width:46.5%;top:auto;bottom:0;right:0;max-height:none}
+.hero{grid-template-columns:minmax(0,.86fr) minmax(560px,1.14fr);align-items:start}
+.hero-product.shots{min-height:0;width:100%;height:var(--hp-h,620px);align-self:start}
+.hs-teaser{top:0;left:0;height:var(--hp-h,620px);width:auto;max-width:none}
+.hs-kpis{top:0;right:0;width:var(--hp-rw,46%)}
+.hs-prov{top:auto;bottom:0;right:0;width:var(--hp-rw,46%);height:var(--hp-pmax,420px);max-height:none;object-fit:cover;object-position:top}
 .hs-note{bottom:-34px}
 }
