@@ -348,7 +348,9 @@ applyTranslations();
   if (!prod || !copy) return;
   const RATIO = 1273 / 900; // alto / ancho del teaser A4
   const mq = window.matchMedia('(min-width:1101px)');
-  const VARS = ['--hp-h', '--hp-tw', '--hp-rw', '--hp-pmax'];
+  const VARS = ['--hp-h', '--hp-bh', '--hp-th', '--hp-tw', '--hp-pw'];
+  const GAP = 14;
+  const BANNER = 172 / 1400; // alto / ancho de la franja de cifras
   function layout() {
     if (!mq.matches) { VARS.forEach((v) => prod.style.removeProperty(v)); return; }
     const eyebrow = copy.querySelector('.eyebrow');
@@ -357,14 +359,15 @@ applyTranslations();
     const H = button.getBoundingClientRect().bottom - eyebrow.getBoundingClientRect().top;
     const W = prod.clientWidth;
     if (!(H > 0) || !(W > 0)) return;
-    const tw = Math.min(H / RATIO, W * 0.6);
-    const h = tw * RATIO;
-    const rw = W - tw + 14;
-    const kpisH = rw * (172 / 1400);
-    prod.style.setProperty('--hp-h', h + 'px');
+    const bh = W * BANNER;
+    const rowH = H - bh - GAP;
+    const tw = Math.min(rowH / RATIO, W * 0.55);
+    const th = tw * RATIO;
+    prod.style.setProperty('--hp-bh', bh + 'px');
+    prod.style.setProperty('--hp-th', th + 'px');
     prod.style.setProperty('--hp-tw', tw + 'px');
-    prod.style.setProperty('--hp-rw', rw + 'px');
-    prod.style.setProperty('--hp-pmax', Math.max(120, h - kpisH - 16) + 'px');
+    prod.style.setProperty('--hp-pw', (W - tw - GAP) + 'px');
+    prod.style.setProperty('--hp-h', (bh + GAP + th) + 'px');
   }
   let raf = 0;
   const schedule = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(layout); };
