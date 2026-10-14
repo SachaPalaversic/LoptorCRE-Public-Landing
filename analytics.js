@@ -29,6 +29,7 @@
   var ALLOWED = {
     $pageview: ['lang', 'utm_source', 'utm_medium', 'utm_campaign'],
     cta_clicked: ['location', 'target', 'plan', 'lang'],
+    demo_booked: ['plan', 'lang'],
     language_changed: ['language'],
     billing_toggled: ['billing'],
     walkthrough_interacted: ['control', 'step'],
