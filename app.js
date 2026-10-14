@@ -348,9 +348,10 @@ applyTranslations();
   if (!prod || !copy) return;
   const RATIO = 1273 / 900; // alto / ancho del teaser A4
   const mq = window.matchMedia('(min-width:1101px)');
-  const VARS = ['--hp-h', '--hp-bh', '--hp-th', '--hp-tw', '--hp-total'];
+  const VARS = ['--hp-h', '--hp-bh', '--hp-th', '--hp-total'];
   const GAP = 14;
   const BANNER = 172 / 1400; // alto / ancho de la franja de cifras
+  const COVER = 1090 / 1100; // alto / ancho de la portada recortada
   function layout() {
     if (!mq.matches) { VARS.forEach((v) => prod.style.removeProperty(v)); return; }
     const eyebrow = copy.querySelector('.eyebrow');
@@ -359,16 +360,14 @@ applyTranslations();
     const H = button.getBoundingClientRect().bottom - eyebrow.getBoundingClientRect().top;
     const W = prod.clientWidth;
     if (!(H > 0) || !(W > 0)) return;
-    // dos páginas A4 iguales debajo; la franja de cifras cubre de la esquina izquierda a la derecha de ambas
-    let tw = (H - GAP - BANNER * GAP) / (RATIO + 2 * BANNER);
-    tw = Math.min(tw, (W - GAP) / 2);
-    const th = tw * RATIO;
-    const total = 2 * tw + GAP;
-    const bh = total * BANNER;
+    // franja de cifras arriba y la portada del teaser debajo, del mismo ancho; todo mide lo que el texto
+    let w = (H - GAP) / (BANNER + COVER);
+    w = Math.min(w, W);
+    const th = w * COVER;
+    const bh = w * BANNER;
     prod.style.setProperty('--hp-bh', bh + 'px');
     prod.style.setProperty('--hp-th', th + 'px');
-    prod.style.setProperty('--hp-tw', tw + 'px');
-    prod.style.setProperty('--hp-total', total + 'px');
+    prod.style.setProperty('--hp-total', w + 'px');
     prod.style.setProperty('--hp-h', (bh + GAP + th) + 'px');
   }
   let raf = 0;
