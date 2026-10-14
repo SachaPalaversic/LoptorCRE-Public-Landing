@@ -304,6 +304,7 @@ function wireEvents() {
   $('#step-prev').addEventListener('click', () => { if (currentStep > 0) { currentStep -= 1; renderWalkthrough(); } });
   $('#step-next').addEventListener('click', () => { if (currentStep < 5) { currentStep += 1; renderWalkthrough(); } });
   const menu = $('.mobile-menu'); const nav = $('.main-nav');
+  $('.brand').addEventListener('click', (event) => { event.preventDefault(); nav.classList.remove('is-open'); menu.setAttribute('aria-expanded','false'); window.scrollTo({ top: 0, behavior: 'smooth' }); if (location.hash) history.replaceState(null, '', location.pathname + location.search); });
   menu.addEventListener('click', () => { const open = nav.classList.toggle('is-open'); menu.setAttribute('aria-expanded', String(open)); });
   $$('.main-nav a').forEach((link) => link.addEventListener('click', () => { nav.classList.remove('is-open'); menu.setAttribute('aria-expanded','false'); }));
 }
