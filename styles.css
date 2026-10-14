@@ -194,3 +194,10 @@
 .radar-note{margin-top:44px;padding:24px 28px;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:10px;background:#fff;max-width:820px}
 .radar-note b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:-.02em;margin-bottom:8px;color:var(--ink)}
 .radar-note p{margin:0;color:var(--slate);line-height:1.55;font-size:15px}
+@media(min-width:1101px){
+.hero{grid-template-columns:minmax(0,.84fr) minmax(560px,1.16fr)}
+.hero-product.shots{min-height:700px}
+.hs-teaser{width:49%}
+.hs-kpis{width:53%}
+.hs-prov{width:53%;top:100px;max-height:none}
+}
