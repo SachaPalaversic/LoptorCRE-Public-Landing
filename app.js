@@ -197,7 +197,7 @@ const EN = {
  "final.title": "Present with <em>rigour.</em> Connect with <em>judgement.</em>",
  "final.body": "Structure the documentation. Find the fit. Talk directly to the other party.",
  "final.cta": "Request a demo",
- "footer.legal": "© 2026 Loptor CRE Intelligence · Ginete Inversiones S.L.",
+ "footer.legal": "© 2026 Loptor CRE Intelligence",
  "footer.privacy": "Privacy",
  "footer.cookies": "Cookies",
  "footer.aviso": "Legal notice",
