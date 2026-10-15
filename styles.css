@@ -354,3 +354,8 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 
 /* Titular de «El problema»: mismo tamaño que la frase de cierre */
 #problem-title{font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.25;letter-spacing:0;max-width:30ch}
+.price-card ul{margin-top:18px}
+.price-cta{order:99;width:100%;justify-content:center;margin-top:auto;text-align:center}
+.price-card ul{margin-bottom:24px}
+.button-outline{background:#fff;color:var(--cobalt-text);border-color:var(--cobalt-text)}
+.button-outline:hover{background:var(--paper-2)}
