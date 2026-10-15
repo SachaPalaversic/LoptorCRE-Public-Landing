@@ -20,7 +20,7 @@ const EN = {
  "nav.lang": "Language",
  "brand.aria": "Loptor CRE Intelligence, home",
  "hero.eyebrow": "Off-market commercial real estate",
- "hero.title": "Present with <em>rigour.</em><br />Connect with <em>judgement.</em>",
+ "hero.title": "Present with<br /><em>rigour.</em><br />Connect with<br /><em>judgement.</em>",
  "hero.lede": "Documents arrive scattered, the figures do not add up and the asset passes through too many hands before it reaches someone who can buy it. Loptor CRE turns that information into a traceable institutional teaser and matches it, anonymously, with the buy-side mandates that fit.",
  "hero.cta": "Request a demo",
  "hero.note": "Then a 14-day trial with 1 real teaser. No card required.",
