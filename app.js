@@ -173,6 +173,19 @@ const EN = {
  "footer.privacy": "Privacy",
  "footer.cookies": "Cookies",
  "footer.aviso": "Legal notice",
+ "cookie.title": "Your privacy",
+ "cookie.text": "This site uses no analytics or advertising cookies. We will only load the Cal.com booking calendar, a third-party service that may use its own cookies, if you accept.",
+ "cookie.more": "More information",
+ "cookie.necessary": "Necessary",
+ "cookie.necessaryD": "They store your language and this choice. Always on.",
+ "cookie.cal": "Booking calendar (Cal.com)",
+ "cookie.calD": "Lets you book the demo without leaving this page. If off, the button opens Cal.com in a new tab.",
+ "cookie.reject": "Necessary only",
+ "cookie.config": "Customise",
+ "cookie.save": "Save selection",
+ "cookie.accept": "Accept all",
+ "cookie.aria": "Cookie preferences",
+ "footer.cookieSettings": "Cookie settings",
  "footer.contact": "Contact: info@loptorcre.com"
 };
 
@@ -239,6 +252,27 @@ document.documentElement.dataset.posterAltEs = 'Captura de la app de Loptor CRE 
 
 const PLAN_NAMES = { advisor: 'Advisor', desk: 'Desk', institutional: 'Institutional', enterprise: 'Enterprise' };
 const DEMO_URL = 'https://cal.com/loptorcre/30min';
+
+// Consentimiento de cookies: solo el calendario de Cal.com (tercero) depende de él.
+const CONSENT_KEY = 'loptor-consent';
+function readConsent() { try { const v = JSON.parse(localStorage.getItem(CONSENT_KEY) || 'null'); return v && typeof v.cal === 'boolean' ? v : null; } catch (_) { return null; } }
+function writeConsent(cal) { try { localStorage.setItem(CONSENT_KEY, JSON.stringify({ v: 1, cal })); } catch (_) { /* sin almacenamiento */ } }
+function calendarAllowed() { const c = readConsent(); return !!(c && c.cal); }
+function setupConsent() {
+  const banner = $('#cookie-banner'); if (!banner) return;
+  const prefs = $('#cb-prefs'); const calBox = $('#cb-cal');
+  const bConfig = $('#cb-config'); const bSave = $('#cb-save'); const bAccept = $('#cb-accept'); const bReject = $('#cb-reject');
+  let opener = null;
+  const showPrefs = (on) => { prefs.hidden = !on; bSave.hidden = !on; bConfig.hidden = on; bConfig.setAttribute('aria-expanded', String(on)); };
+  const open = (fromUser) => { const c = readConsent(); calBox.checked = !!(c && c.cal); showPrefs(!!fromUser); banner.hidden = false; opener = fromUser ? document.activeElement : null; (fromUser ? calBox : bAccept).focus({ preventScroll: true }); };
+  const close = (cal) => { writeConsent(cal); banner.hidden = true; showPrefs(false); if (opener && opener.focus) opener.focus(); };
+  bAccept.addEventListener('click', () => close(true));
+  bReject.addEventListener('click', () => close(false));
+  bSave.addEventListener('click', () => close(calBox.checked));
+  bConfig.addEventListener('click', () => { showPrefs(true); calBox.focus(); });
+  const reopen = $('#cookie-settings'); if (reopen) reopen.addEventListener('click', () => open(true));
+  if (!readConsent()) { banner.hidden = false; }
+}
 // Calendario de demos (Cal.com) integrado en una ventana emergente. El script de Cal.com
 // no se carga con la página: solo cuando alguien pulsa un botón de demo. Si no carga
 // (bloqueador, red), el enlace normal se abre en una pestaña nueva.
@@ -266,7 +300,7 @@ function openCal(plan) {
 document.addEventListener('click', (event) => {
   const link = event.target && event.target.closest ? event.target.closest('a[data-demo]') : null;
   if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.button === 1) return;
-  if (calState === 'failed') return; // deja que el enlace normal haga su trabajo
+  if (!calendarAllowed() || calState === 'failed') return; // deja que el enlace normal haga su trabajo
   event.preventDefault();
   openCal(link.dataset.plan);
 });
@@ -299,4 +333,5 @@ try {
 } catch (_) { /* sin almacenamiento */ }
 
 wireEvents();
+setupConsent();
 if (currentLang !== 'es') applyTranslations(); else setupVideo();
