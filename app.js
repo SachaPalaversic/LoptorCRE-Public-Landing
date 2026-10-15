@@ -55,7 +55,7 @@ const EN = {
  "hero.cta": "Request a demo",
  "hero.note": "Then a 14-day trial with 1 real teaser. No card required.",
  "problem.kicker": "The problem",
- "problem.title": "Structuring an asset costs more than selling it.",
+ "problem.title": "A badly structured asset can go unsold. <em>So can one sent down a chain of intermediaries.</em>",
  "problem.p1t": "Scattered information",
  "problem.p1b": "A PDF, a spreadsheet and loose notes that have to be reordered by hand before anything can be sent.",
  "problem.p2t": "Figures that contradict each other",
