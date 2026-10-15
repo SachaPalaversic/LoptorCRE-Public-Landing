@@ -80,7 +80,7 @@ const EN = {
  "platform.note": "Recording of the real app · fictitious data",
  "platform.videoLabel": "Video: platform walkthrough, from file ingestion to the Deal Room",
  "platform.noVideo": "Your browser cannot play this video.",
- "platform.posterAlt": "Screenshot of the Loptor CRE app showing the data table and its provenance",
+ "platform.posterAlt": "Blind opportunity sheet in the Loptor CRE app: 100% match, anonymous identity",
  "how.kicker": "How it works",
  "how.title": "Structure. Connect. <em>Negotiate.</em>",
  "s1.label": "Structure",
@@ -273,7 +273,7 @@ function setupVideo() {
     } else showFallback();
   }).catch(() => { if (token === videoToken) showFallback(); });
 }
-document.documentElement.dataset.posterAltEs = 'Captura de la app de Loptor CRE con la tabla de datos y su procedencia';
+document.documentElement.dataset.posterAltEs = 'Ficha ciega de oportunidad en la app de Loptor CRE: cruce al 100 %, identidad anónima';
 
 const PLAN_NAMES = { advisor: 'Advisor', desk: 'Desk', institutional: 'Institutional', enterprise: 'Enterprise' };
 const DEMO_URL = 'https://cal.com/loptorcre/30min';
