@@ -50,7 +50,7 @@ const EN = {
  "road3d": "Anonymous A4 teaser, at three visibility levels.",
  "road4t": "Connect",
  "road4d": "Anonymous matching with the mandates that fit.",
- "road5t": "Talk",
+ "road5t": "Negotiate",
  "road5d": "Direct contact when both parties approve.",
  "hero.cta": "Request a demo",
  "hero.note": "Then a 14-day trial with 1 real teaser. No card required.",
