@@ -351,3 +351,6 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .roadmap li:last-child span{color:#8bb8ff}
 @media (max-width:1100px){.roadmap{grid-template-columns:repeat(3,minmax(0,1fr))}.roadmap li::after{display:none}}
 @media (max-width:620px){.roadmap{grid-template-columns:1fr;gap:10px}}
+
+/* Titular de «El problema»: mismo tamaño que la frase de cierre */
+#problem-title{font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.25;letter-spacing:0;max-width:30ch}
