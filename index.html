@@ -1,171 +1,295 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f4f7fb" />
-    <meta name="description" content="Loptor CRE Intelligence turns scattered commercial real estate information into auditable institutional teasers and anonymous acquisition matches." />
+    <title data-i18n="meta.title">Loptor CRE Intelligence — Presenta con rigor. Conecta con criterio.</title>
+    <meta name="description" data-i18n-content="meta.desc" content="Loptor CRE Intelligence convierte documentos dispersos en teasers institucionales trazables y los cruza, de forma anónima, con mandatos de compra en real estate comercial off-market." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Loptor CRE Intelligence — Present with rigour. Connect with judgement." />
-    <meta property="og:description" content="Auditable CRE teasers, provenance and anonymous matching for off-market real estate." />
+    <meta property="og:title" data-i18n-content="meta.title" content="Loptor CRE Intelligence — Presenta con rigor. Conecta con criterio." />
+    <meta property="og:description" data-i18n-content="meta.desc" content="Loptor CRE Intelligence convierte documentos dispersos en teasers institucionales trazables y los cruza, de forma anónima, con mandatos de compra en real estate comercial off-market." />
     <meta property="og:site_name" content="Loptor CRE Intelligence" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="es_ES" />
     <meta property="og:url" content="https://loptorcre.com/" />
     <meta property="og:image" content="https://loptorcre.com/og-loptorcre.jpg" />
-    <meta property="og:image:secure_url" content="https://loptorcre.com/og-loptorcre.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Loptor CRE Intelligence — auditable teasers and anonymous matching" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Loptor CRE Intelligence" />
-    <meta name="twitter:description" content="Present with rigour. Connect with judgement." />
     <meta name="twitter:image" content="https://loptorcre.com/og-loptorcre.jpg" />
-    <meta name="twitter:image:alt" content="Loptor CRE Intelligence — auditable teasers and anonymous matching" />
     <link rel="canonical" href="https://loptorcre.com/" />
     <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg" />
     <link rel="apple-touch-icon" href="/brand/favicon.svg" />
-    <title>Loptor CRE Intelligence — Present with rigour. Connect with judgement.</title>
-    <link rel="stylesheet" href="/styles.css?v=20261014-plans" />
+    <link rel="preload" href="/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/styles.css?v=20261015-storytelling" />
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
-    <div class="site-shell">
-      <header class="site-header" id="top">
-        <a class="brand" href="#top" aria-label="Loptor CRE Intelligence home">
-          <img class="brand-mark-img" src="/brand/loptor-mark.svg" alt="" width="42" height="42" /><span class="brand-wordmark">loptor<span>CRE / INTELLIGENCE</span></span>
+    <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
+
+    <header class="site-header" id="top">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top" data-i18n-aria="brand.aria" aria-label="Loptor CRE Intelligence, inicio">
+          <img src="/brand/loptor-lockup-light.svg" alt="" width="186" height="38" />
         </a>
-        <nav class="main-nav" aria-label="Primary navigation">
-          <a href="#walkthrough">How it works</a>
-          <a href="#dark-pool">Dark Pool</a>
-          <a href="#matching">Matching</a>
-          <a href="#privacy">Your data</a>
-          <a href="#pricing">Plans</a>
-          <a href="#faq">FAQ</a>
+        <nav class="main-nav" id="main-nav" data-i18n-aria="nav.label" aria-label="Navegación principal">
+          <a href="#plataforma" data-i18n="nav.platform">Plataforma</a>
+          <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+          <a href="#matching" data-i18n="nav.match">Matching</a>
+          <a href="#dark-pool" data-i18n="nav.pool">Dark Pool</a>
+          <a href="#tus-datos" data-i18n="nav.data">Tus datos</a>
+          <a href="#planes" data-i18n="nav.plans">Planes</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
         </nav>
         <div class="header-actions">
-          <div class="language-switcher" role="group" aria-label="Language">
-            <button class="lang-btn is-active" data-lang="en" type="button">EN</button>
-            <span>/</span>
-            <button class="lang-btn" data-lang="es" type="button">ES</button>
-            <span>/</span>
-            <button class="lang-btn" data-lang="fr" type="button">FR</button>
+          <div class="lang" role="group" data-i18n-aria="nav.lang" aria-label="Idioma">
+            <button type="button" class="lang-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+            <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
           </div>
-          <a class="header-login" href="https://app.loptorcre.com/?action=login" data-i18n="nav.login">Log in</a><a class="button button-dark button-small" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="nav.trial">Request a demo</a>
-          <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+          <a class="header-login" href="https://app.loptorcre.com/?action=login" data-i18n="nav.login">Iniciar sesión</a>
+          <a class="button button-primary button-small" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="nav.demo">Solicita demo</a>
+          <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" data-i18n-aria="nav.menu" aria-label="Abrir menú"><span></span><span></span><span></span></button>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <main id="main">
-        <section class="hero hero--story section-pad" aria-labelledby="hero-title">
+    <main id="main">
+      <!-- 1 · HERO -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="wrap hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="hero.eyebrow">ACTIVE BETA · COMMERCIAL REAL ESTATE OFF-MARKET</span></p>
-            <h1 id="hero-title" class="brand-promise" data-i18n="hero.title"><span>Present with</span><br /><em>rigour.</em><br /><span class="promise-gap" aria-hidden="true"></span><span>Connect with</span><br /><em>judgement.</em></h1>
-            <p class="hero-lede" data-i18n="hero.lede">From scattered documents to an institutional teaser, and from the teaser to the right counterpart: an anonymous match between assets and buy mandates, each side declaring its mandate type.</p>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Real estate comercial off-market</p>
+            <h1 id="hero-title" data-i18n="hero.title">Presenta con <em>rigor.</em><br />Conecta con <em>criterio.</em></h1>
+            <p class="lede" data-i18n="hero.lede">Los documentos llegan dispersos, las cifras no cuadran y el activo pasa por demasiadas manos antes de llegar a quien puede comprarlo. Loptor CRE convierte esa información en un teaser institucional trazable y lo cruza, de forma anónima, con los mandatos de compra que encajan.</p>
             <div class="hero-actions">
-              <a class="button button-primary" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="hero.primary">Request a demo <span>↗</span></a>
-            </div>
-            <div class="hero-assurances" aria-label="Product assurances">
-              <span><b>✓</b> <span data-i18n="assurance.browser">Read in-browser</span></span>
-              <span><b>✓</b> <span data-i18n="assurance.zero">Zero fabrication</span></span>
-              <span><b>✓</b> <span data-i18n="assurance.provenance">Cell-by-cell provenance</span></span>
-              <span><b>✓</b> <span data-i18n="assurance.blind">Double-blind matching</span></span>
+              <a class="button button-primary" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="hero.cta">Solicita demo</a>
+              <p class="hero-note" data-i18n="hero.note">Después, 14 días de prueba con 1 teaser real. Sin tarjeta.</p>
             </div>
           </div>
-<div class="story-track" id="story-track" aria-label="Scroll to follow the journey from scattered files to a Deal Room" data-i18n-aria="story.aria">
-            <div class="story-stage" data-scene="1">
-              <div class="story-screen" aria-hidden="true">
-                <div class="sc sc1">
-                  <div class="doc doc-pdf" style="--x:4%;--y:3%;--r:-5deg"><span class="doc-tag" data-i18n="story.pdf">PDF</span><b>IM_Hotel_v7.pdf</b><i></i><i></i><em class="fig" data-i18n="story.roomsA">120 rooms</em></div>
-                  <div class="doc doc-xls" style="--x:50%;--y:7%;--r:5deg"><span class="doc-tag" data-i18n="story.xls">Excel</span><b>Model_FINAL_2.xlsx</b><i></i><i></i><em class="fig" data-i18n="story.roomsB">126 rooms</em></div>
-                  <div class="doc doc-mail" style="--x:2%;--y:36%;--r:3deg"><span class="doc-tag" data-i18n="story.mail">Email</span><b data-i18n="story.mailSub">RE: RE: FW: updated numbers</b><p data-i18n="story.mailBody">See attached. The figures changed.</p></div>
-                  <div class="doc doc-notes" style="--x:50%;--y:40%;--r:-4deg"><span class="doc-tag" data-i18n="story.notes">Notes</span><p data-i18n="story.notesBody">Ask the owner about the terrace</p><i></i></div>
-                  <div class="doc doc-msg" style="--x:24%;--y:68%;--r:2deg"><span class="doc-tag" data-i18n="story.msg">Message</span><p data-i18n="story.msgBody">Can you send the numbers?</p></div>
-                  <span class="conflict-tag" data-i18n="story.conflict">120 ≠ 126</span>
-                </div>
-                <div class="sc sc2">
-                  <img class="story-teaser" src="/app/teaser-cover-crop.webp" width="1100" height="1120" alt="" />
-                  <span class="chip chip-a" data-i18n="story.c1">Source: IM · p. 12</span><span class="chip chip-b" data-i18n="story.c2">Conflict resolved by you: 120 rooms</span><span class="chip chip-c" data-i18n="story.c3">No name, no address</span>
-                </div>
-                <div class="sc sc3">
-                  <div class="pair pair-a"><span class="pair-k" data-i18n="story.aT">Asset</span><b data-i18n="story.aB">Urban hotel · Valencia</b><span class="pos" data-i18n="story.aP">Direct mandate</span></div>
-                  <div class="pair-link"><span class="pair-fit" data-i18n="story.fit">True Fit 87%</span></div>
-                  <div class="pair pair-b"><span class="pair-k" data-i18n="story.mT">Buy mandate</span><b data-i18n="story.mB">Family office · €15–45M</b><span class="pos" data-i18n="story.mP">Owner</span></div>
-                  <p class="pair-acc" data-i18n="story.acc">Both accept working with each other</p>
-                </div>
-                <div class="sc sc4">
-                  <div class="room"><span class="room-badge" data-i18n="story.room">Deal Room open</span><b data-i18n="story.rel">Identity released</b><ul><li data-i18n="story.r1">Seller authorises</li><li data-i18n="story.r2">Buyer requests contact</li><li data-i18n="story.r3">Name and contact visible to both</li></ul></div>
-                </div>
+          <figure class="hero-visual">
+            <div class="teaser-frame">
+              <img src="/app/es/teaser-cover.webp" data-src-es="/app/es/teaser-cover.webp" data-src-en="/app/teaser-cover.webp" data-i18n-alt="hero.alt" alt="Teaser institucional A4 de un hotel de cinco estrellas en Valencia, con habitaciones, precio solicitado, yield objetivo y año de la última reforma" width="900" height="1273" fetchpriority="high" />
+              <div class="chip" aria-hidden="false">
+                <span class="chip-dot"></span>
+                <span class="chip-main"><strong data-i18n="hero.chipLabel">Habitaciones · 120</strong><small data-i18n="hero.chipSource">Hotel_Information_Memorandum_2026.pdf · p. 6</small></span>
+                <span class="chip-state" data-i18n="hero.chipState">Confirmado</span>
               </div>
-              <div class="story-caption" aria-live="polite"><b class="cap-t">Scattered files that disagree</b><p class="cap-b">A PDF, a spreadsheet, emails and notes. Two figures for the same room count.</p></div>
-              <ol class="story-dots"><li><button type="button" data-go="0" class="is-on"><span data-i18n="story.d1">Scattered files</span></button></li><li><button type="button" data-go="1"><span data-i18n="story.d2">One dossier</span></button></li><li><button type="button" data-go="2"><span data-i18n="story.d3">Blind match</span></button></li><li><button type="button" data-go="3"><span data-i18n="story.d4">Deal Room</span></button></li></ol>
-              <p class="story-note"><span data-i18n="story.note">Illustration · fictional data</span></p>
+            </div>
+            <figcaption class="mono" data-i18n="hero.caption">Teaser de ejemplo · datos ficticios</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 2 · PROBLEMA -->
+      <section class="problem section" id="problema" aria-labelledby="problem-title">
+        <div class="wrap">
+          <p class="kicker" data-i18n="problem.kicker">El problema</p>
+          <h2 id="problem-title" class="display" data-i18n="problem.title">Estructurar un activo cuesta más que venderlo.</h2>
+          <div class="problem-grid">
+            <article><span class="num mono">01</span><h3 data-i18n="problem.p1t">Información dispersa</h3><p data-i18n="problem.p1b">Un PDF, un Excel y notas sueltas que hay que reordenar a mano antes de poder enviar nada.</p></article>
+            <article><span class="num mono">02</span><h3 data-i18n="problem.p2t">Cifras que se contradicen</h3><p data-i18n="problem.p2b">Cada documento dice una cosa distinta y nadie sabe cuál manda. Quien recibe el teaser lo nota.</p></article>
+            <article><span class="num mono">03</span><h3 data-i18n="problem.p3t">Eslabones que no aportan</h3><p data-i18n="problem.p3b">El activo pasa por manos sin mandato ni criterio que solo reenvían, y cada reenvío se parece menos al original.</p></article>
+          </div>
+          <p class="problem-close" data-i18n="problem.close">No sobran los intermediarios. <em>Sobran los eslabones que no aportan.</em></p>
+        </div>
+      </section>
+
+      <!-- 3 · PLATAFORMA (vídeo) -->
+      <section class="platform section dark" id="plataforma" aria-labelledby="platform-title">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker" data-i18n="platform.kicker">La plataforma</p>
+            <h2 id="platform-title" class="display" data-i18n="platform.title">Mira la plataforma <em>funcionando.</em></h2>
+            <p class="section-lede" data-i18n="platform.lede">Un recorrido con la app real y datos ficticios: de los archivos de un activo a la sala donde se abre la conversación con quien tiene el mandato.</p>
+          </div>
+          <div class="video-frame" id="video-frame">
+            <video id="platform-video" controls preload="none" playsinline poster="/app/es/provenance.webp" data-poster-es="/app/es/provenance.webp" data-poster-en="/app/provenance.webp" data-src-es="/video/plataforma-es.mp4" data-src-en="/video/plataforma-en.mp4" data-i18n-aria="platform.videoLabel" aria-label="Vídeo: recorrido por la plataforma, de la ingesta de archivos a la Deal Room">
+              <span data-i18n="platform.noVideo">Tu navegador no puede reproducir este vídeo.</span>
+            </video>
+          </div>
+          <p class="video-note mono" data-i18n="platform.note">Grabación de la app real · datos ficticios</p>
+          <ol class="chapters" data-i18n-aria="platform.chaptersLabel" aria-label="Qué verás en el recorrido">
+            <li><span class="mono">01</span><strong data-i18n="platform.c1">Ingesta de archivos</strong><small data-i18n="platform.c1d">PDF, Excel y notas</small></li>
+            <li><span class="mono">02</span><strong data-i18n="platform.c2">Teaser en tres niveles</strong><small data-i18n="platform.c2d">Cuánto se revela, tú decides</small></li>
+            <li><span class="mono">03</span><strong data-i18n="platform.c3">Matching</strong><small data-i18n="platform.c3d">Activos frente a mandatos</small></li>
+            <li><span class="mono">04</span><strong data-i18n="platform.c4">Dark Pool</strong><small data-i18n="platform.c4d">Anónimo hasta que ambos aprueban</small></li>
+            <li><span class="mono">05</span><strong data-i18n="platform.c5">Deal Room</strong><small data-i18n="platform.c5d">Se abre con la doble aprobación</small></li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- 4 · CÓMO FUNCIONA -->
+      <section class="how section" id="como-funciona" aria-labelledby="how-title">
+        <div class="wrap">
+          <p class="kicker" data-i18n="how.kicker">Cómo funciona</p>
+          <h2 id="how-title" class="display" data-i18n="how.title">Estructura. Conecta. <em>Negocia.</em></h2>
+
+          <article class="step" id="estructura">
+            <div class="step-copy">
+              <p class="step-label"><span class="mono">01</span><span data-i18n="s1.label">Estructura</span></p>
+              <h3 data-i18n="s1.title">Del documento al expediente.</h3>
+              <p data-i18n="s1.body">Sube un PDF, un Excel o una nota. Cada dato queda ligado a su documento, página o celda y a su cita literal. Si dos fuentes se contradicen, la cifra no se imprime hasta que tú la confirmas.</p>
+              <p class="step-aside" data-i18n="s1.levels">Del expediente salen teasers A4 en tres niveles de visibilidad: solo texto, una imagen o varias. Tú decides cuánto se revela.</p>
+            </div>
+            <figure class="shot shot-wide"><img src="/app/es/provenance.webp" data-src-es="/app/es/provenance.webp" data-src-en="/app/provenance.webp" data-i18n-alt="s1.alt" alt="Tabla de datos y procedencia de la app: cada valor con su estado y su documento de origen" width="1400" height="980" loading="lazy" /></figure>
+          </article>
+
+          <article class="step" id="conecta">
+            <div class="step-copy">
+              <p class="step-label"><span class="mono">02</span><span data-i18n="s2.label">Conecta</span></p>
+              <h3 data-i18n="s2.title">Tu activo, frente a los mandatos que encajan.</h3>
+              <div class="subcards">
+                <div class="subcard" id="matching"><h4 data-i18n="s2.matchTitle">Matching</h4><p data-i18n="s2.matchBody">El motor cruza activos y mandatos de compra con filtros duros —tipo de activo, horquilla de ticket, tipo de mandato, autorización de ambas partes y exclusiones— y una puntuación de encaje. Se propone un cruce desde el 85 %.</p></div>
+                <div class="subcard" id="dark-pool"><h4 data-i18n="s2.poolTitle">Dark Pool</h4><p data-i18n="s2.poolBody">Todo es anónimo. Solo viajan las métricas auditadas y la macrozona: ni el nombre, ni la marca, ni los asesores. La identidad no se revela hasta que las dos partes aprueban.</p></div>
+              </div>
+            </div>
+            <figure class="shot shot-tall"><img src="/app/es/match-proposed.webp" data-src-es="/app/es/match-proposed.webp" data-src-en="/app/match-proposed.webp" data-i18n-alt="s2.alt" alt="Ficha de cruce ciego de la app: puntuación de encaje, datos documentados y protocolo de anonimato" width="1000" height="1583" loading="lazy" /><figcaption class="mono" data-i18n="how.demoNote">Cruce de ejemplo de la app: datos ficticios</figcaption></figure>
+          </article>
+
+          <article class="step" id="negocia">
+            <div class="step-copy">
+              <p class="step-label"><span class="mono">03</span><span data-i18n="s3.label">Negocia</span></p>
+              <h3 data-i18n="s3.title">Si las dos partes aprueban, se abre la Deal Room.</h3>
+              <p data-i18n="s3.body">Se revelan las identidades y la conversación continúa con quien tiene el mandato, sin cadenas de por medio. Loptor no es un data room ni gestiona NDA: la negociación sigue donde ya la haces.</p>
+            </div>
+            <figure class="shot shot-tall shot-bottom"><img src="/app/es/match-released.webp" data-src-es="/app/es/match-released.webp" data-src-en="/app/match-released.webp" data-i18n-alt="s3.alt" alt="Cruce con el contacto liberado: las dos partes han aprobado y se intercambian las credenciales" width="1000" height="1923" loading="lazy" /><figcaption class="mono" data-i18n="how.demoNote">Cruce de ejemplo de la app: datos ficticios</figcaption></figure>
+          </article>
+        </div>
+      </section>
+
+      <!-- 5 · PARA QUIÉN -->
+      <section class="who section tint" id="para-quien" aria-labelledby="who-title">
+        <div class="wrap">
+          <p class="kicker" data-i18n="who.kicker">Para quién</p>
+          <h2 id="who-title" class="display" data-i18n="who.title">Para quien vende, para quien compra y para quien tiene el mandato.</h2>
+          <div class="who-grid">
+            <article><h3 data-i18n="who.sellT">Vende</h3><p data-i18n="who.sellB">Presenta con rigor y sin exponer tu activo.</p></article>
+            <article><h3 data-i18n="who.buyT">Compra</h3><p data-i18n="who.buyB">Recibe solo lo que encaja con tu mandato.</p></article>
+            <article><h3 data-i18n="who.brokerT">Bróker con mandato</h3><p data-i18n="who.brokerB">Tu mandato sale reforzado. Tu red sigue siendo tuya: Loptor la ordena y la amplía.</p></article>
+          </div>
+
+          <div class="types">
+            <h3 class="types-title" data-i18n="types.title">Seis tipologías de activo, <em>un mismo estándar documental.</em></h3>
+            <p class="section-lede" data-i18n="types.intro">Cada tipología tiene sus propios campos, extracción y teaser: un hotel se lee como un hotel y unas oficinas como unas oficinas.</p>
+            <ul class="types-grid">
+              <li><strong data-i18n="types.hotel">Hotel</strong><span data-i18n="types.hotelD">Habitaciones, ocupación, ADR, RevPAR, operador y contrato de gestión.</span></li>
+              <li><strong data-i18n="types.res">Residencial</strong><span data-i18n="types.resD">Unidades por tipología, ocupación, renta media, WAULT y yield bruta y neta.</span></li>
+              <li><strong data-i18n="types.office">Oficinas</strong><span data-i18n="types.officeD">Calidad del edificio, inquilinos, ocupación, WAULT, renta en vigor y yield inicial.</span></li>
+              <li><strong data-i18n="types.gas">Gasolineras</strong><span data-i18n="types.gasD">Marca, volumen de combustible, margen por litro, tienda, lavado y cargadores EV.</span></li>
+              <li><strong data-i18n="types.ren">Renovables</strong><span data-i18n="types.renD">Tecnología, fase del proyecto, MWp, conexión a red, PPA y superficie.</span></li>
+              <li><strong data-i18n="types.land">Suelo</strong><span data-i18n="types.landD">Uso del suelo, situación urbanística, usos permitidos, titularidad y servicios.</span></li>
+            </ul>
+          </div>
+
+          <div class="mandate">
+            <p class="kicker" data-i18n="mandate.kicker">Tipo de mandato</p>
+            <h3 data-i18n="mandate.title">Cada parte declara su posición y con quién acepta trabajar.</h3>
+            <ul class="pills"><li data-i18n="mandate.pill1">Titular</li><li data-i18n="mandate.pill2">Mandato directo</li><li data-i18n="mandate.pill3">Co-mandato</li></ul>
+            <p data-i18n="mandate.body">Un mandato que acepta solo titulares y mandatos directos nunca se cruza con un co-mandato: es un filtro duro del motor. Es una declaración, no una verificación: Loptor no certifica a nadie, no implica exclusividad y no altera el orden de los resultados.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · TUS DATOS -->
+      <section class="trust section" id="tus-datos" aria-labelledby="trust-title">
+        <div class="wrap">
+          <p class="kicker" data-i18n="data.kicker">Tus datos</p>
+          <h2 id="trust-title" class="display" data-i18n="data.title">Diseñada para estructurar y conectar. <em>No para prometerlo todo.</em></h2>
+          <p class="section-lede" data-i18n="data.lede">La confianza también consiste en explicar los límites del producto.</p>
+          <div class="trust-grid">
+            <div class="trust-col is">
+              <h3 data-i18n="data.yesT">Loptor CRE sí es</h3>
+              <ul><li data-i18n="data.y1">Un expediente trazable: cada dato con su fuente y su cita literal.</li><li data-i18n="data.y2">Un sistema que no completa nada: un dato en conflicto no se imprime y lo que falta se declara.</li><li data-i18n="data.y3">Un generador de teasers A4 institucionales con visibilidad selectiva.</li><li data-i18n="data.y4">Un matching anónimo: la identidad solo se abre si ambas partes aprueban.</li></ul>
+            </div>
+            <div class="trust-col isnt">
+              <h3 data-i18n="data.noT">Loptor CRE no es</h3>
+              <ul><li data-i18n="data.n1">Un portal de anuncios ni un catálogo abierto de activos o compradores.</li><li data-i18n="data.n2">Un data room para almacenar una due diligence completa.</li><li data-i18n="data.n3">Un servicio de NDA o de firma electrónica.</li><li data-i18n="data.n4">Una garantía de operación ni una verificación de nadie.</li></ul>
             </div>
           </div>
-        </section>
+          <p class="soon"><strong class="mono" data-i18n="data.soonT">En desarrollo</strong><span data-i18n="data.soonB">Matching anónimo entre firmas, chat ciego dentro de la Deal Room, modo reunión y roles en la operación, y más tipologías de activo.</span></p>
+        </div>
+      </section>
 
-        <div class="proof-strip"><div><span class="proof-mark">01</span><b data-i18n="proof.oneTitle">Institutional teasers</b><small data-i18n="proof.oneBody">Ready for the investment committee</small></div><div><span class="proof-mark">02</span><b data-i18n="proof.twoTitle">Traceable intelligence</b><small data-i18n="proof.twoBody">Auditable from source to output</small></div><div><span class="proof-mark">03</span><b data-i18n="proof.threeTitle">Anonymous connection</b><small data-i18n="proof.threeBody">Double-blind before identity</small></div><div class="proof-note"><span data-i18n="proof.note1">EU HOSTED · GDPR READY</span><span data-i18n="proof.note2">ZERO FABRICATION · 256-BIT ENCRYPTION</span></div></div>
-
-        <section class="statement section-pad" id="how-it-works" aria-labelledby="statement-title">
-          <div class="section-kicker"><span>01</span><span data-i18n="statement.kicker">THE PROBLEM WITH PRESENTING</span></div>
-          <div class="statement-grid"><h2 id="statement-title" data-i18n="statement.title">Spend your time negotiating,<br><em>not formatting.</em></h2><div><p data-i18n="statement.body">An asset arrives as a PDF, a spreadsheet and loose notes that do not always agree. To present it, someone has to find each figure, compare it across documents, decide what is shown and what is not, and lay out the teaser. None of that is negotiating, yet it is the first thing the other side sees.</p></div></div>
-          <ul class="statement-points"><li><span>01</span><b data-i18n="statement.a1t">Data scattered across files</b><p data-i18n="statement.a1b">Each figure has to be found, copied and checked against another document.</p></li><li><span>02</span><b data-i18n="statement.a2t">Figures that contradict each other</b><p data-i18n="statement.a2b">When two sources disagree, someone has to decide which one holds, and that decision is not always written down.</p></li><li><span>03</span><b data-i18n="statement.a3t">A figure you cannot back up</b><p data-i18n="statement.a3b">In front of whoever decides, one figure without a source weakens the rest of the document.</p></li></ul>
-          <p class="statement-punch statement-punch-wide" data-i18n="statement.punch">The first impression of a deal is a document. It deserves more than copy and paste.</p>
-        </section>
-
-        <section class="walkthrough-section section-pad" id="walkthrough" aria-labelledby="walkthrough-title">
-          <div class="section-intro"><div class="section-kicker"><span>02</span><span data-i18n="walkthrough.kicker">THE LOPTOR METHOD</span></div><h2 id="walkthrough-title" data-i18n="walkthrough.title">From scattered files<br /><em>to a defensible teaser.</em></h2><p data-i18n="walkthrough.intro">See how an opportunity moves from a messy file set to an institutional presentation without losing the relationship between a claim and its source.</p></div>
-          <div class="demo-showcase">
-            <div class="demo-tabs" role="tablist" aria-label="Interactive product demo">
-              <button class="step-button is-active" role="tab" aria-selected="true" data-step="0"><span>01</span><div><b data-step-title="0">Bring the evidence</b><small data-step-short="0">Start where the information already lives.</small></div><i>↗</i></button>
-              <button class="step-button" role="tab" aria-selected="false" data-step="1"><span>02</span><div><b data-step-title="1">Keep the provenance</b><small data-step-short="1">Every number carries its trail.</small></div><i>↗</i></button>
-              <button class="step-button" role="tab" aria-selected="false" data-step="2"><span>03</span><div><b data-step-title="2">Surface conflicts</b><small data-step-short="2">A disagreement stays visible.</small></div><i>↗</i></button>
-              <button class="step-button" role="tab" aria-selected="false" data-step="3"><span>04</span><div><b data-step-title="3">Choose visibility</b><small data-step-short="3">You decide what the market sees.</small></div><i>↗</i></button>
-              <button class="step-button" role="tab" aria-selected="false" data-step="4"><span>05</span><div><b data-step-title="4">Issue the teaser</b><small data-step-short="4">A4, institutional, ready to share.</small></div><i>↗</i></button>
-              <button class="step-button" role="tab" aria-selected="false" data-step="5"><span>06</span><div><b data-step-title="5">Match anonymously</b><small data-step-short="5">Fit first. Identity later.</small></div><i>↗</i></button>
-            </div>
-            <div class="walkthrough-stage" role="tabpanel" aria-live="polite">
-              <div class="stage-head"><span class="status status-verified"><i></i><span data-i18n="walkthrough.demoLabel">FICTIONAL WORKSPACE · NO PRODUCTION DATA</span></span><span class="stage-count"><b id="step-current">01</b> / 06</span></div>
-              <div class="demo-browser"><div class="demo-browser-bar"><span class="browser-dots"><i></i><i></i><i></i></span><span class="browser-address">app.loptorcre.com</span><span class="browser-secure">● secure preview</span></div><div class="stage-content" id="stage-content"></div></div>
-              <div class="stage-footer"><div><strong id="step-name">Bring the evidence</strong><p id="stage-description">Bring an IM, spreadsheet, broker note or message thread. The information starts where you already keep it.</p></div><div class="stage-controls"><button class="round-control" id="step-prev" type="button" aria-label="Previous walkthrough step">←</button><button class="round-control" id="step-next" type="button" aria-label="Next walkthrough step">→</button></div></div>
-            </div>
+      <!-- 7 · PLANES + FAQ -->
+      <section class="plans section tint" id="planes" aria-labelledby="plans-title">
+        <div class="wrap">
+          <p class="kicker" data-i18n="plans.kicker">Planes</p>
+          <h2 id="plans-title" class="display" data-i18n="plans.title">Empieza por una demo. <em>Elige plan después.</em></h2>
+          <p class="section-lede" data-i18n="plans.lede">Todos los planes empiezan con una demo y 14 días de prueba gratuita con 1 teaser A4 real, sin tarjeta. El precio se comparte en la demo.</p>
+          <div class="plan-grid">
+            <article class="price-card">
+              <p class="plan-who" data-i18n="plans.adv.who">Broker independiente</p><h3>Advisor</h3><p class="plan-bill mono" data-i18n="plans.adv.bill">Facturación mensual o anual</p>
+              <dl class="plan-stats"><div><dt data-i18n="plans.users">usuarios</dt><dd>1</dd></div><div><dt data-i18n="plans.assets">activos</dt><dd>10</dd></div><div><dt data-i18n="plans.mandates">mandatos</dt><dd>5</dd></div></dl>
+              <p class="plan-pool"><span data-i18n="plans.pool">En Dark Pool</span> <strong>5</strong></p>
+              <ul><li data-i18n="plans.adv.f1">Teasers A4 ilimitados en los tres niveles de visibilidad</li><li data-i18n="plans.adv.f2">Tu logotipo, contacto y colores en cada teaser</li><li data-i18n="plans.adv.f3">Protocolo de co-brokerage</li></ul>
+            </article>
+            <article class="price-card is-featured">
+              <p class="badge mono" data-i18n="plans.recommended">Más utilizado</p>
+              <p class="plan-who" data-i18n="plans.desk.who">Equipos transaccionales</p><h3>Desk</h3><p class="plan-bill mono" data-i18n="plans.desk.bill">Facturación anual</p>
+              <dl class="plan-stats"><div><dt data-i18n="plans.users">usuarios</dt><dd>3</dd></div><div><dt data-i18n="plans.assets">activos</dt><dd>35</dd></div><div><dt data-i18n="plans.mandates">mandatos</dt><dd>20</dd></div></dl>
+              <p class="plan-pool"><span data-i18n="plans.pool">En Dark Pool</span> <strong>20</strong></p>
+              <ul><li data-i18n="plans.desk.f1">Todo lo de Advisor</li><li data-i18n="plans.desk.f2">Espacio compartido para hasta 3 usuarios</li><li data-i18n="plans.desk.f3">Detección y resolución avanzada de conflictos</li></ul>
+            </article>
+            <article class="price-card">
+              <p class="plan-who" data-i18n="plans.inst.who">Family offices y fondos</p><h3>Institutional</h3><p class="plan-bill mono" data-i18n="plans.inst.bill">Facturación anual</p>
+              <dl class="plan-stats"><div><dt data-i18n="plans.users">usuarios</dt><dd>10</dd></div><div><dt data-i18n="plans.assets">activos</dt><dd>100</dd></div><div><dt data-i18n="plans.mandates">mandatos</dt><dd data-i18n="plans.unl">Ilimitados</dd></div></dl>
+              <p class="plan-pool"><span data-i18n="plans.pool">En Dark Pool</span> <strong data-i18n="plans.all">Toda la cartera</strong></p>
+              <ul><li data-i18n="plans.inst.f1">Todo lo de Desk</li><li data-i18n="plans.inst.f2">Entregables white-label, sin marca de Loptor</li><li data-i18n="plans.inst.f3">Gestor de cuenta y soporte prioritario</li></ul>
+            </article>
+            <article class="price-card">
+              <p class="plan-who" data-i18n="plans.ent.who">Grandes carteras</p><h3>Enterprise</h3><p class="plan-bill mono" data-i18n="plans.ent.bill">Facturación anual</p>
+              <dl class="plan-stats"><div><dt data-i18n="plans.users">usuarios</dt><dd data-i18n="plans.tailored">A medida</dd></div><div><dt data-i18n="plans.assets">activos</dt><dd data-i18n="plans.tailored">A medida</dd></div><div><dt data-i18n="plans.mandates">mandatos</dt><dd data-i18n="plans.unl">Ilimitados</dd></div></dl>
+              <p class="plan-pool"><span data-i18n="plans.pool">En Dark Pool</span> <strong data-i18n="plans.all">Toda la cartera</strong></p>
+              <ul><li data-i18n="plans.ent.f1">Todo lo de Institutional</li><li data-i18n="plans.ent.f2">Usuarios, volumen y gobernanza a medida</li><li data-i18n="plans.ent.f3">API e integraciones a convenir</li></ul>
+            </article>
           </div>
-        </section>
+          <p class="plans-note mono" data-i18n="plans.note">Los elementos «ilimitados» están sujetos a uso razonable.</p>
+          <p class="plans-cta"><a class="button button-primary" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="hero.cta">Solicita demo</a></p>
+        </div>
+      </section>
 
-        <section class="types-section section-pad" id="asset-types" aria-labelledby="types-title"><div class="section-intro"><div class="section-kicker"><span data-i18n="types.kicker">ASSET TYPES</span></div><h2 id="types-title" data-i18n="types.title">Six asset types,<br /><em>one documentary standard.</em></h2><p data-i18n="types.intro">Each type has its own fields, extraction, teaser and document, so a hotel is read as a hotel and an office as an office.</p></div><ul class="types-grid"><li class="type-card"><span class="type-icon" data-type="hotel" aria-hidden="true"></span><b data-i18n="types.hotel">hotel</b><p data-i18n="types.hotelD">hotel</p></li><li class="type-card"><span class="type-icon" data-type="residential" aria-hidden="true"></span><b data-i18n="types.residential">residential</b><p data-i18n="types.residentialD">residential</p></li><li class="type-card"><span class="type-icon" data-type="office" aria-hidden="true"></span><b data-i18n="types.office">office</b><p data-i18n="types.officeD">office</p></li><li class="type-card"><span class="type-icon" data-type="gas" aria-hidden="true"></span><b data-i18n="types.gas">gas</b><p data-i18n="types.gasD">gas</p></li><li class="type-card"><span class="type-icon" data-type="renewables" aria-hidden="true"></span><b data-i18n="types.renewables">renewables</b><p data-i18n="types.renewablesD">renewables</p></li><li class="type-card"><span class="type-icon" data-type="land" aria-hidden="true"></span><b data-i18n="types.land">land</b><p data-i18n="types.landD">land</p></li></ul><p class="types-more" data-i18n="types.more">More asset types will be activated progressively.</p></section>
+      <section class="faq section" id="faq" aria-labelledby="faq-title">
+        <div class="wrap faq-wrap">
+          <div>
+            <p class="kicker" data-i18n="faq.kicker">FAQ</p>
+            <h2 id="faq-title" class="display" data-i18n="faq.title">Precisión antes <em>que persuasión.</em></h2>
+          </div>
+          <div class="faq-list">
+            <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="fa1" data-i18n="faq.q1">¿Cómo se convierte un documento en un teaser?</button></h3><div class="faq-answer" id="fa1" hidden><p data-i18n="faq.a1">Subes lo que ya tienes: documentos y notas. La plataforma extrae cada dato junto con su fuente —documento, página o celda— y su cita literal. El teaser A4 anónimo se construye solo a partir de ese expediente. No hay que rehacer nada.</p></div></div>
+            <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="fa2" data-i18n="faq.q2">¿Loptor inventa o completa datos que faltan?</button></h3><div class="faq-answer" id="fa2" hidden><p data-i18n="faq.a2">No. Nada se infiere, se estima, se promedia ni se completa. Un dato sin fuente no existe para la plataforma. Lo que falta se agrupa en una única línea «Bajo NDA» en lugar de dejar huecos.</p></div></div>
+            <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="fa3" data-i18n="faq.q3">¿Qué pasa cuando dos fuentes se contradicen?</button></h3><div class="faq-answer" id="fa3" hidden><p data-i18n="faq.a3">El conflicto se marca y la cifra en disputa no se imprime en el teaser. Cuando confirmas un valor, manda el tuyo.</p></div></div>
+            <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="fa4" data-i18n="faq.q4">¿Y mi confidencialidad?</button></h3><div class="faq-answer" id="fa4" hidden><p data-i18n="faq.a4">Todo es anónimo hasta que ambas partes aprueban el contacto. Los datos identificativos van ocultos por defecto y tú decides, activo por activo, qué más se muestra.</p></div></div>
+            <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="fa5" data-i18n="faq.q5">Ya tengo mi red. ¿Cómo evitáis a los intermediarios sin mandato?</button></h3><div class="faq-answer" id="fa5" hidden><p data-i18n="faq.a5">Tu red sigue siendo tuya. Cada activo y cada mandato de compra declara su posición —titular, mandato directo o co-mandato— y con quién acepta trabajar, y el motor solo cruza parejas compatibles. Es una declaración, no una verificación: Loptor acorta la cadena, pero no certifica a nadie.</p></div></div>
+            <div class="faq-item"><h3><button type="button" class="faq-question" aria-expanded="false" aria-controls="fa6" data-i18n="faq.q6">¿Qué incluye la prueba?</button></h3><div class="faq-answer" id="fa6" hidden><p data-i18n="faq.a6">Primero una demo. Después, 14 días de prueba gratuita con 1 teaser A4 real incluido y sin tarjeta. No hay plan gratuito permanente.</p></div></div>
+          </div>
+        </div>
+      </section>
 
-        <section class="chain-section section-pad" id="chain" aria-labelledby="chain-title"><div class="section-intro"><div class="section-kicker"><span>03</span><span data-i18n="chain.kicker">AFTER THE PDF</span></div><h2 id="chain-title" data-i18n="chain.title">You have the teaser.<br><em>Now it has to travel.</em></h2><p data-i18n="chain.intro">Passed from hand to hand, an asset ends up in versions you did not write, in hands you do not know, at a price nobody agreed. Every link in the chain costs you four things.</p></div><ol class="chain-grid"><li><span>01</span><b data-i18n="chain.c1t">Time</b><p data-i18n="chain.c1b">Every question goes up and down the chain.</p></li><li><span>02</span><b data-i18n="chain.c2t">Information</b><p data-i18n="chain.c2b">The forwarded teaser is a photocopy of a photocopy.</p></li><li><span>03</span><b data-i18n="chain.c3t">Fees</b><p data-i18n="chain.c3b">Each link wants its share, and the deal stops closing.</p></li><li><span>04</span><b data-i18n="chain.c4t">Confidentiality</b><p data-i18n="chain.c4b">The asset circulates without control and arrives burned.</p></li></ol><p class="chain-punch" data-i18n="chain.punch">The problem is not intermediaries. It is the links that add nothing: the ones that hold no mandate and only pass messages on. A broker with a mandate comes out stronger.</p></section>
+      <!-- 8 · CIERRE -->
+      <section class="final dark" aria-labelledby="final-title">
+        <div class="wrap final-inner">
+          <h2 id="final-title" class="display" data-i18n="final.title">Presenta con <em>rigor.</em> Conecta con <em>criterio.</em></h2>
+          <p class="section-lede" data-i18n="final.body">Estructura la documentación. Encuentra el encaje. Trabaja con quien tiene el mandato.</p>
+          <p><a class="button button-light" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="final.cta">Solicita demo</a></p>
+        </div>
+      </section>
+    </main>
 
-        <section class="position-section section-pad" id="mandate-type" aria-labelledby="position-title"><div class="section-intro"><div class="section-kicker"><span>04</span><span data-i18n="position.kicker">MANDATE TYPE</span></div><h2 id="position-title" data-i18n="position.title">Say what you hold.<br><em>Choose who you work with.</em></h2><p data-i18n="position.body">Every asset and every buy mandate declares its position in the operation. The match only crosses pairs that have chosen to work together.</p></div><ul class="pos-grid"><li class="pos-card"><span class="pos-n">01</span><b data-i18n="position.p1t">Owner</b><p data-i18n="position.p1b">You are the owner or the end investor.</p></li><li class="pos-card"><span class="pos-n">02</span><b data-i18n="position.p2t">Direct mandate</b><p data-i18n="position.p2b">You hold the owner’s direct instruction.</p></li><li class="pos-card"><span class="pos-n">03</span><b data-i18n="position.p3t">Co-mandate</b><p data-i18n="position.p3b">You share the mandate with other professionals and hold one yourself.</p></li></ul><div class="pos-accept"><b data-i18n="position.accT">And each side chooses whom it accepts</b><div class="pos-chips"><span class="pos-chip" data-i18n="position.acc1">Only owners and direct mandates</span><span class="pos-chip pos-chip-wide" data-i18n="position.acc2">Owners, direct mandates and co-mandates</span></div></div><p class="pos-note" data-i18n="position.note">It is a declaration: saved with its date and always shown as “declared”, never “verified”. It filters the market; it does not replace your own checks on the counterparty.</p><p class="pos-punch" data-i18n="position.punch">Fewer links. Fewer people passing messages on. More conversations between those who declare a mandate.</p></section>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <img src="/brand/loptor-lockup-light.svg" alt="Loptor CRE Intelligence" width="160" height="33" />
+        <nav class="footer-links" data-i18n-aria="nav.label" aria-label="Navegación principal">
+          <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
+          <a href="#planes" data-i18n="nav.plans">Planes</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="https://app.loptorcre.com/?action=login" data-i18n="nav.login">Iniciar sesión</a>
+        </nav>
+        <div class="footer-meta"><span data-i18n="footer.legal">© 2026 Loptor CRE Intelligence · Ginete Inversiones S.L.</span><a class="footer-contact" href="mailto:info@loptorcre.com" data-i18n="footer.contact">Contacto: info@loptorcre.com</a></div>
+      </div>
+    </footer>
 
-        <section class="audience-section section-pad" id="sell-side" aria-labelledby="sell-title">
-          <div class="audience-card seller-card"><div class="section-kicker"><span>05</span><span data-i18n="seller.kicker">FOR THE SELL-SIDE</span></div><h2 id="sell-title" data-i18n="seller.title">Present the asset<br /><em>without overexposing it.</em></h2><p data-i18n="seller.body">A good teaser is not the one that says the most. It is the one that shows enough to create interest while keeping control of what remains to be verified or requested.</p><div class="feature-list"><div><span class="feature-number">A</span><div><b data-i18n="seller.feature1Title">The living dossier</b><p data-i18n="seller.feature1Body">Keep the asset’s sources, coverage and evolution together.</p></div></div><div><span class="feature-number">B</span><div><b data-i18n="seller.feature2Title">Selective visibility</b><p data-i18n="seller.feature2Body">Issue a text-only, one-photo or gallery teaser.</p></div></div><div><span class="feature-number">C</span><div><b data-i18n="seller.feature3Title">Anonymity checks</b><p data-i18n="seller.feature3Body">Flag signs that could reveal the asset too early.</p></div></div></div><a class="text-link" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="seller.cta">Request a demo <span>↗</span></a></div>
-          <div class="audience-card buyer-card" id="buy-side"><div class="section-kicker"><span>06</span><span data-i18n="buyer.kicker">FOR THE BUY-SIDE</span></div><h2 data-i18n="buyer.title">Let your mandate<br /><em>work quietly.</em></h2><p data-i18n="buyer.body">Define what you are looking for, where, at what ticket and with which exclusions. LoptorCRE watches the market in the background and alerts you when a fit appears.</p><figure class="buyer-shot"><img data-shot="mandates" src="/app/mandates.webp" width="1400" height="835" alt="Buy mandates screen of the app: type, region, ticket range and exclusions" data-i18n-alt="buyerAlt" loading="lazy" /></figure><p class="buyer-punch" data-i18n="buyer.punch">You do not need a catalogue of assets. You need the opportunities that meet your mandate.</p><a class="text-link" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="buyer.cta">Request a demo <span>↗</span></a></div>
-        </section>
-
-        <section class="darkpool-section section-pad" id="dark-pool" aria-labelledby="darkpool-title"><div class="darkpool-content"><div class="section-kicker light"><span>07</span><span data-i18n="darkpool.kicker">THE DARK POOL</span></div><h2 id="darkpool-title" data-i18n="darkpool.title">The liquidity that<br /><em>doesn’t appear in a catalogue.</em></h2><p data-i18n="darkpool.body">Some assets should not be published. Some buyers do not want to announce themselves. LoptorCRE creates the point of connection without sacrificing the confidentiality of the process.</p><div class="darkpool-principle"><span>01</span><b data-i18n="darkpool.principle">Fit first. Identity later.</b><span>02</span></div></div><figure class="dp-shot"><div class="dp-frame"><img src="/app/match-proposed.webp" width="1000" height="1583" alt="Blind match: anonymous opportunity spec sheet with the True Fit score, no identity revealed" loading="lazy" /></div><figcaption><span class="dp-lock">⌾ <span data-i18n="darkpool.lock">Identity protected until consent</span></span><small data-i18n="shots.note">Real app screens · fictional data</small></figcaption></figure></section>
-        <section class="matching-section section-pad" id="matching" aria-labelledby="matching-title"><div class="section-intro"><div class="section-kicker"><span data-i18n="matching.kicker">HOW THE MATCH WORKS</span></div><h2 id="matching-title" data-i18n="matching.title">A match you can explain,<br /><em>not a black box.</em></h2><p data-i18n="matching.intro">AI helps structure your documents. The match itself is calculated by transparent rules, so the same asset and the same mandate always produce the same result.</p></div><ol class="matching-steps"><li><span>01</span><b data-i18n="matching.s1t">Hard filters first</b><p data-i18n="matching.s1b">Asset type, ticket range, mandate position, authorisation from both parties and the buyer’s exclusions. If one fails, there is no match.</p></li><li><span>02</span><b data-i18n="matching.s2t">Only documented data</b><p data-i18n="matching.s2b">The score reads what is documented and sourced in the dossier. What is missing adds nothing: the engine never estimates a figure.</p></li><li><span>03</span><b data-i18n="matching.s3t">A True Fit score</b><p data-i18n="matching.s3b">Each criterion the mandate declares is weighted. A match is proposed from 85% True Fit.</p></li><li><span>04</span><b data-i18n="matching.s4t">Identity later</b><p data-i18n="matching.s4b">Both sides see an anonymous spec sheet. Names and contacts are released only when both approve.</p></li></ol><div class="radar-note"><b data-i18n="matching.rt">The radar, working in the background</b><p data-i18n="matching.rb">The radar crosses the assets and mandates that each side has authorised for blind matching. It only surfaces matches that reach 85% True Fit, and it shows the zone, never the address.</p><div class="lr-wrap"><div class="lr-head"><span class="lr-kick" data-i18n="radar.kicker">RADARS BY ASSET TYPE</span><span class="lr-total" data-i18n="radar.total">On the network: 79 assets for sale · 55 buy mandates</span></div><ul class="lr-grid"><li class="lr-card"><div class="lr-dish" style="--sd:0s;--st:4.0s;--dir:normal" aria-hidden="true"><span class="lr-sweep"></span><i class="lr-blip" style="left:62%;top:28%;--bd:0.0s"></i><i class="lr-blip" style="left:35%;top:64%;--bd:1.1s"></i><i class="lr-blip" style="left:70%;top:70%;--bd:2.2s"></i></div><b class="lr-name" data-i18n="types.hotel">hotel</b><span class="lr-fig"><strong>14</strong><small data-i18n="radar.assets">Assets for sale</small></span><span class="lr-fig"><strong>9</strong><small data-i18n="radar.mandates">Buy mandates</small></span></li><li class="lr-card"><div class="lr-dish" style="--sd:-1.3s;--st:5.2s;--dir:reverse" aria-hidden="true"><span class="lr-sweep"></span><i class="lr-blip" style="left:30%;top:30%;--bd:1.3s"></i><i class="lr-blip" style="left:66%;top:55%;--bd:2.4s"></i><i class="lr-blip" style="left:48%;top:78%;--bd:3.5s"></i></div><b class="lr-name" data-i18n="types.residential">residential</b><span class="lr-fig"><strong>23</strong><small data-i18n="radar.assets">Assets for sale</small></span><span class="lr-fig"><strong>17</strong><small data-i18n="radar.mandates">Buy mandates</small></span></li><li class="lr-card"><div class="lr-dish" style="--sd:-2.6s;--st:3.6s;--dir:normal" aria-hidden="true"><span class="lr-sweep"></span><i class="lr-blip" style="left:72%;top:40%;--bd:2.6s"></i><i class="lr-blip" style="left:40%;top:22%;--bd:3.7s"></i><i class="lr-blip" style="left:28%;top:66%;--bd:4.8s"></i></div><b class="lr-name" data-i18n="types.office">office</b><span class="lr-fig"><strong>18</strong><small data-i18n="radar.assets">Assets for sale</small></span><span class="lr-fig"><strong>12</strong><small data-i18n="radar.mandates">Buy mandates</small></span></li><li class="lr-card"><div class="lr-dish" style="--sd:-0.7s;--st:6.0s;--dir:reverse" aria-hidden="true"><span class="lr-sweep"></span><i class="lr-blip" style="left:50%;top:25%;--bd:0.7s"></i><i class="lr-blip" style="left:75%;top:62%;--bd:1.8s"></i><i class="lr-blip" style="left:30%;top:50%;--bd:2.9s"></i></div><b class="lr-name" data-i18n="types.gas">gas</b><span class="lr-fig"><strong>6</strong><small data-i18n="radar.assets">Assets for sale</small></span><span class="lr-fig"><strong>4</strong><small data-i18n="radar.mandates">Buy mandates</small></span></li><li class="lr-card"><div class="lr-dish" style="--sd:-3.4s;--st:4.6s;--dir:normal" aria-hidden="true"><span class="lr-sweep"></span><i class="lr-blip" style="left:25%;top:45%;--bd:3.4s"></i><i class="lr-blip" style="left:58%;top:72%;--bd:4.5s"></i><i class="lr-blip" style="left:68%;top:30%;--bd:5.6s"></i></div><b class="lr-name" data-i18n="types.renewables">renewables</b><span class="lr-fig"><strong>11</strong><small data-i18n="radar.assets">Assets for sale</small></span><span class="lr-fig"><strong>8</strong><small data-i18n="radar.mandates">Buy mandates</small></span></li><li class="lr-card"><div class="lr-dish" style="--sd:-1.9s;--st:3.2s;--dir:reverse" aria-hidden="true"><span class="lr-sweep"></span><i class="lr-blip" style="left:45%;top:68%;--bd:1.9s"></i><i class="lr-blip" style="left:70%;top:35%;--bd:3.0s"></i><i class="lr-blip" style="left:30%;top:28%;--bd:4.1s"></i></div><b class="lr-name" data-i18n="types.land">land</b><span class="lr-fig"><strong>7</strong><small data-i18n="radar.assets">Assets for sale</small></span><span class="lr-fig"><strong>5</strong><small data-i18n="radar.mandates">Buy mandates</small></span></li></ul><p class="lr-foot"><span data-i18n="radar.note">Only assets and mandates with blind matching authorised are counted. A number reveals nobody: identity opens only if both parties accept the handshake.</span> <em data-i18n="radar.illus">Illustrative figures.</em></p></div></div></section>
-
-        <section class="portfolio-section section-pad" aria-labelledby="portfolio-title"><div class="portfolio-head"><div><div class="section-kicker"><span>08</span><span data-i18n="portfolio.kicker">FOR THE WHOLE PORTFOLIO</span></div><h2 id="portfolio-title" data-i18n="portfolio.title">From one asset<br /><em>to a clearer portfolio.</em></h2></div><p data-i18n="portfolio.body">When opportunities multiply, you need to know what is documented, what is ready to present and where new connections are forming.</p></div><div class="pf-shots"><figure class="pf-card"><img src="/app/readiness.webp" width="1400" height="893" alt="Teaser readiness map: coverage by investor question" loading="lazy" /></figure><figure class="pf-card"><img src="/app/mandates.webp" width="1400" height="835" alt="Buy-side mandates with ticket, target markets and exclusions" loading="lazy" /></figure><p class="hs-note" data-i18n="shots.note">Real app screens · fictional data</p></div></section>
-
-        <section class="trust-section section-pad" aria-labelledby="trust-title"><div class="section-kicker"><span>09</span><span data-i18n="trust.kicker">RADICAL TRANSPARENCY</span></div><div class="trust-head"><h2 id="trust-title" data-i18n="trust.title">Built to structure and connect.<br /><em>Not to promise everything.</em></h2><p data-i18n="trust.intro">Trust also means explaining the limits of the product.</p></div><div class="trust-grid"><div class="trust-column is-yes"><div class="trust-column-head"><span>+</span><b data-i18n="trust.yesTitle">LoptorCRE is</b></div><p data-i18n="trust.yes1"></p><p data-i18n="trust.yes2"></p><p data-i18n="trust.yes3"></p><p data-i18n="trust.yes4"></p><p data-i18n="trust.yes5"></p><p data-i18n="trust.yes6"></p></div><div class="trust-column is-no"><div class="trust-column-head"><span>−</span><b data-i18n="trust.noTitle">LoptorCRE is not</b></div><p data-i18n="trust.no1">A VDR for storing a complete due diligence.</p><p data-i18n="trust.no2">A service for NDAs or electronic signatures.</p><p data-i18n="trust.no3">An open commercial catalogue of assets or buyers.</p><p data-i18n="trust.no4">A place to share full files before consent.</p><p data-i18n="trust.no5">A system that estimates, averages or fills in missing data.</p></div></div></section>
-        <section class="privacy-section section-pad" id="privacy" aria-labelledby="privacy-title"><div class="section-intro"><div class="section-kicker"><span data-i18n="privacy.kicker">YOUR INFORMATION</span></div><h2 id="privacy-title" data-i18n="privacy.title">Your information is yours.<br /><em>Until you decide to share it.</em></h2></div><div class="privacy-grid"><div><span>01</span><b data-i18n="privacy.t1">Never used to train AI</b><p data-i18n="privacy.b1">Nothing you upload or write is used to train AI models.</p></div><div><span>02</span><b data-i18n="privacy.t2">Only you can access it</b><p data-i18n="privacy.b2">Your dossier is private. Only you can see it before you share it.</p></div><div><span>03</span><b data-i18n="privacy.t3">Loptor can’t see it either</b><p data-i18n="privacy.b3">Loptor does not access your information. Only what you choose to share leaves your workspace, and it goes anonymised.</p></div></div></section>
-
-        <section class="pricing-section section-pad" id="pricing" aria-labelledby="pricing-title"><div class="pricing-head"><div><div class="section-kicker"><span>10</span><span data-i18n="pricing.kicker">PLANS BY TEAM SIZE</span></div><h2 id="pricing-title" data-i18n="pricing.title">Start at the level<br /><em>you need today.</em></h2></div><p class="pricing-intro" data-i18n="pricing.intro">From an independent broker to a transaction team, a fund or a large portfolio, LoptorCRE grows with the assets, users and mandates you coordinate. Pricing is shared in a short demo.</p></div>
-          <div class="pricing-grid" id="plan-cards"><article class="price-card"><div class="price-label">01 / Independent broker</div><h3>Advisor</h3><p>Structure assets with individual control.</p><div class="plan-billing">Monthly or annual billing</div><div class="plan-stats"><div><strong>1</strong><small>users</small></div><div><strong>10</strong><small>assets</small></div><div><strong>5</strong><small>mandates</small></div></div><a class="button button-outline price-cta" data-demo data-plan="advisor" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo <span>↗</span></a><ul><li>5 assets matching in the Dark Pool</li><li>Unlimited A4 teasers in all three visibility levels</li><li>Cell-by-cell provenance and basic conflict audit</li><li>Co-brokerage protocol</li><li>Your logo, contact details and corporate colours on every teaser</li></ul></article><article class="price-card is-featured"><div class="featured-tag">MOST USED</div><div class="price-label">02 / Transactional teams</div><h3>Desk</h3><p>Coordinate operations, people and brand.</p><div class="plan-billing">Annual billing</div><div class="plan-stats"><div><strong>3</strong><small>users</small></div><div><strong>35</strong><small>assets</small></div><div><strong>20</strong><small>mandates</small></div></div><a class="button button-primary price-cta" data-demo data-plan="desk" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo <span>↗</span></a><ul><li class="plan-base">Everything in Advisor, plus:</li><li>20 assets matching in the Dark Pool</li><li>Shared workspace for up to 3 users</li><li>Advanced conflict detection and resolution</li></ul></article><article class="price-card"><div class="price-label">03 / Family offices &amp; funds</div><h3>Institutional</h3><p>Coordinate portfolios and mandates at scale.</p><div class="plan-billing">Annual billing</div><div class="plan-stats"><div><strong>10</strong><small>users</small></div><div><strong>100</strong><small>assets</small></div><div><strong><span aria-hidden="true">∞</span><span class="vh">Unlimited</span></strong><small>mandates</small></div></div><a class="button button-outline price-cta" data-demo data-plan="institutional" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo <span>↗</span></a><ul><li class="plan-base">Everything in Desk, plus:</li><li>Your whole portfolio matching in the Dark Pool</li><li>White-label deliverables: no Loptor branding</li><li>Dedicated account manager and priority support</li><li>Guided technical demo and assisted onboarding</li></ul></article><article class="price-card"><div class="price-label">04 / Large portfolios</div><h3>Enterprise</h3><p>Servicers, SOCIMIs and corporate portfolios.</p><div class="plan-billing">Annual billing</div><p class="plan-tailored">Seats, volume and governance designed around your organisation.</p><a class="button button-outline price-cta" data-demo data-plan="enterprise" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo <span>↗</span></a><ul><li class="plan-base">Everything in Institutional, plus:</li><li>Seats and volume by territory or delegation</li><li>Granular permissions and audit governance</li><li>API and CRM/ERP integration scoped by agreement</li><li>Service levels agreed in contract</li><li>In-company training for your analysts</li></ul></article></div>
-          <div class="pricing-trial-note" data-i18n="pricing.note">Request a demo · 14-day free trial on every plan · no card required</div>
-          <div class="plan-compare" id="plan-compare"><div class="plan-compare-head"><h3>Compare the plans</h3><p>What each plan includes, side by side.</p></div><div class="cmp-scroll" role="region" aria-label="Comparison of the Advisor, Desk, Institutional and Enterprise plans" tabindex="0"><table class="cmp-table"><caption class="vh">Comparison of the Advisor, Desk, Institutional and Enterprise plans</caption><thead><tr><th scope="col" class="cmp-feature-col">Feature</th><th scope="col" class="cmp-plan"><span class="cmp-plan-name">Advisor</span><span class="cmp-plan-for">Independent broker</span><a class="button button-outline cmp-cta" data-demo data-plan="advisor" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo</a></th><th scope="col" class="cmp-plan is-featured"><span class="cmp-tag">MOST USED</span><span class="cmp-plan-name">Desk</span><span class="cmp-plan-for">Transactional teams</span><a class="button button-primary cmp-cta" data-demo data-plan="desk" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo</a></th><th scope="col" class="cmp-plan"><span class="cmp-plan-name">Institutional</span><span class="cmp-plan-for">Family offices &amp; funds</span><a class="button button-outline cmp-cta" data-demo data-plan="institutional" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo</a></th><th scope="col" class="cmp-plan"><span class="cmp-plan-name">Enterprise</span><span class="cmp-plan-for">Large portfolios</span><a class="button button-outline cmp-cta" data-demo data-plan="enterprise" href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener">Request a demo</a></th></tr></thead><tbody><tr class="cmp-group"><th scope="colgroup" colspan="5">Capacity</th></tr><tr><th scope="row">Users</th><td>1</td><td class="is-featured">3</td><td>10</td><td>Tailored</td></tr><tr><th scope="row">Assets in your workspace</th><td>10</td><td class="is-featured">35</td><td>100</td><td>Tailored</td></tr><tr><th scope="row">Assets matching in the Dark Pool</th><td>5</td><td class="is-featured">20</td><td>Whole portfolio</td><td>Whole portfolio</td></tr><tr><th scope="row">Acquisition mandates</th><td>5</td><td class="is-featured">20</td><td>Unlimited</td><td>Unlimited</td></tr><tr class="cmp-group"><th scope="colgroup" colspan="5">Documents and evidence</th></tr><tr><th scope="row">Institutional A4 teasers · three visibility levels</th><td>Unlimited</td><td class="is-featured">Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr><tr><th scope="row">Cell-by-cell provenance</th><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td class="is-featured"><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td></tr><tr><th scope="row">Conflict audit</th><td>Basic</td><td class="is-featured">Advanced</td><td>Advanced</td><td>Custom governance</td></tr><tr class="cmp-group"><th scope="colgroup" colspan="5">Brand and team</th></tr><tr><th scope="row">Your logo and contact details</th><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td class="is-featured"><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td></tr><tr><th scope="row">Corporate colour palettes</th><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td class="is-featured"><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td></tr><tr><th scope="row">Co-brokerage protocol</th><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td class="is-featured"><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td></tr><tr><th scope="row">Shared team workspace</th><td><span class="cmp-no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="is-featured"><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td></tr><tr><th scope="row">White-label deliverables (no Loptor branding)</th><td><span class="cmp-no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="is-featured"><span class="cmp-no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td></tr><tr class="cmp-group"><th scope="colgroup" colspan="5">Security and service</th></tr><tr><th scope="row">Hosting in the EU · DPA</th><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td class="is-featured"><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td><td><span class="cmp-yes" aria-hidden="true">✓</span><span class="vh">Included</span></td></tr><tr><th scope="row">Support</th><td>Standard</td><td class="is-featured">Standard</td><td>Priority + account manager</td><td>Agreed in contract</td></tr><tr><th scope="row">Granular permissions, API and integrations</th><td><span class="cmp-no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td class="is-featured"><span class="cmp-no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td><span class="cmp-no" aria-hidden="true">—</span><span class="vh">Not included</span></td><td>By agreement</td></tr><tr class="cmp-group"><th scope="colgroup" colspan="5">Access</th></tr><tr><th scope="row">Billing</th><td>Monthly or annual</td><td class="is-featured">Annual</td><td>Annual</td><td>Annual</td></tr><tr><th scope="row">How you start</th><td>Demo, then 14-day trial</td><td class="is-featured">Demo, then 14-day trial</td><td>Demo, then 14-day trial</td><td>Demo, then 14-day trial</td></tr></tbody></table></div><p class="cmp-note">Pricing is shared during the demo. Every plan starts with a 14-day free trial after the demo: 1 real A4 teaser included, no card required. “Unlimited” items are subject to fair use.</p></div></section>
-
-        <section class="beta-section section-pad" aria-labelledby="beta-title"><div class="beta-copy"><div class="section-kicker light"><span>11</span><span data-i18n="beta.kicker">THE BETA</span></div><h2 id="beta-title" data-i18n="beta.title">The beta starts with<br /><em>what matters most.</em></h2><p data-i18n="beta.body">The first version focuses on structuring dossiers, controlling visibility, issuing institutional teasers and finding anonymous fits. Collaboration and secure sharing will expand progressively.</p><a class="text-link light-link" href="#faq" data-i18n="beta.cta">Read the product boundaries <span>↓</span></a></div><div class="roadmap"><div class="roadmap-col"><span class="roadmap-state is-live" data-i18n="beta.liveLabel">LIVE IN BETA</span><h3 data-i18n="beta.liveTitle">Evidence-led foundation</h3><ul><li data-i18n="beta.live1">Provenance and conflicts</li><li data-i18n="beta.live2">Three teaser visibility levels</li><li data-i18n="beta.live3">Mandates and their type, Dark Pool, Deal Rooms and portfolio overview</li><li data-i18n="beta.live4">Bilingual ES / EN experience</li><li data-i18n="beta.live5">Traceable sharing link with expiry</li></ul></div><div class="roadmap-col"><span class="roadmap-state is-next" data-i18n="beta.nextLabel">IN DEVELOPMENT</span><h3 data-i18n="beta.nextTitle">Secure collaboration</h3><ul><li data-i18n="beta.next2">Blind chat inside the Deal Room</li><li data-i18n="beta.next4">French experience</li><li data-i18n="beta.next6">More asset types</li></ul></div></div></section>
-
-        <section class="faq-section section-pad" id="faq" aria-labelledby="faq-title"><div class="section-kicker"><span>12</span><span data-i18n="faq.kicker">FAQ</span></div><div class="faq-layout"><aside class="faq-aside"><h2 id="faq-title" class="faq-h2" data-i18n="faq.title">Precision before<br /><em>persuasion.</em></h2><p class="faq-intro" data-i18n="faq.intro">What teams ask before trusting a platform with their deals.</p><div class="faq-contact"><b data-i18n="faq.ct">Still have a question?</b><p data-i18n="faq.cb">Write to us and we will answer you directly.</p><a class="faq-mail" href="mailto:info@loptorcre.com"><span data-i18n="faq.cc">Write to us</span><span aria-hidden="true">→</span></a></div></aside><div class="faq-list" id="faq-list"></div></div></section>
-
-        <section class="final-cta section-pad"><div class="final-cta-inner"><p class="eyebrow light"><span class="eyebrow-dot"></span><span data-i18n="final.eyebrow">OFF-MARKET CRE INTELLIGENCE</span></p><h2 data-i18n="final.title">Make every asset<br /><em>ready for the right table.</em></h2><p data-i18n="final.body">Structure the evidence. Find the fit. Work with those who hold the mandate.</p><div class="hero-actions"><a class="button button-primary" data-demo href="https://cal.com/loptorcre/30min" target="_blank" rel="noopener" data-i18n="final.primary">Request a demo <span>↗</span></a><a class="button button-light-outline" href="#pricing" data-i18n="final.secondary">See the plans <span>→</span></a></div></div></section>
-      </main>
-
-      <footer class="site-footer"><div class="footer-brand"><img class="brand-mark-img" src="/brand/loptor-mark.svg" alt="" width="42" height="42" /><span class="brand-wordmark">loptor</span><span class="brand-submark">CRE<br />INTELLIGENCE</span></div><div class="footer-links"><a href="#walkthrough">How it works</a><a href="#pricing">Plans</a><a href="#faq">FAQ</a></div><div class="footer-meta"><span>© 2026 Loptor CRE Intelligence</span><span data-i18n="nav.hosted">Hosted in the EU · GDPR ready</span><a class="footer-contact" href="mailto:info@loptorcre.com"><span data-i18n="nav.contact">Contact: info@loptorcre.com</span></a></div></footer>
-    </div>
-    <script src="/analytics.js?v=20261014-plans" defer></script>
-    <script src="/app.js?v=20261014-plans" defer></script>
+    <script src="/analytics.js" defer></script>
+    <script src="/app.js" defer></script>
   </body>
 </html>

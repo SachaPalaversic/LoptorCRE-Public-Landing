@@ -126,7 +126,7 @@
   window.loptorTrack = track;
 
   function ctaLocation(link) {
-    if (link.closest('.price-card')) return 'pricing';
+    if (link.closest('.plans')) return 'pricing';
     if (link.closest('.plan-compare')) return 'pricing_compare';
     if (link.closest('.final-cta')) return 'final_cta';
     if (link.closest('.hero')) return 'hero';
@@ -176,7 +176,7 @@
         observer.unobserve(entry.target);
       });
     }, { threshold: 0.35 });
-    ['how-it-works', 'sell-side', 'buy-side', 'pricing', 'faq'].forEach(function (id) {
+    ['plataforma', 'como-funciona', 'para-quien', 'tus-datos', 'planes', 'faq'].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) observer.observe(el);
     });
