@@ -285,3 +285,24 @@ section[id]{scroll-margin-top:82px}
 /* ── Captura real de mandatos (04) ──────────────────────── */
 .buyer-shot{margin:26px 0 8px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 12px 36px rgba(20,40,64,.08)}
 .buyer-shot img{display:block;width:100%;height:auto}
+
+/* ── Acto 2: la cadena · Acto 3: tipo de mandato ────────── */
+.chain-grid{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.chain-grid li{padding:24px 22px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--amber);border-radius:14px;display:flex;flex-direction:column;gap:8px}
+.chain-grid li>span{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.chain-grid b{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:-.4px}
+.chain-grid p{margin:0;font-size:14px;color:var(--slate);max-width:none}
+.chain-punch,.pos-punch{margin:30px 0 0;font-family:var(--serif);font-size:clamp(20px,2.2vw,26px);line-height:1.3;letter-spacing:-.4px;max-width:860px}
+.pos-grid{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pos-card{padding:24px 22px;background:var(--white);border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:14px;display:flex;flex-direction:column;gap:8px}
+.pos-n{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.pos-card b{font-family:var(--serif);font-size:24px;font-weight:500;letter-spacing:-.5px}
+.pos-card p{margin:0;font-size:14px;color:var(--slate);max-width:none}
+.pos-accept{margin:26px 0 0;padding:22px;background:var(--paper-2);border:1px solid var(--line);border-radius:14px;display:flex;flex-direction:column;gap:12px}
+.pos-accept>b{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--slate)}
+.pos-chips{display:flex;flex-wrap:wrap;gap:10px}
+.pos-chip{padding:10px 16px;background:var(--white);border:1px solid var(--line);border-radius:999px;font-size:14px;font-weight:600}
+.pos-chip-wide{border-color:var(--blue);color:var(--blue-deep)}
+.pos-note{margin:16px 0 0;font-size:13px;color:var(--slate);max-width:760px}
+@media(max-width:980px){.chain-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pos-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.chain-grid{grid-template-columns:1fr}}
