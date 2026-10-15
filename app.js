@@ -129,7 +129,7 @@ const EN = {
  "mandate.pill3": "Co-mandate",
  "mandate.body": "A mandate that only accepts owners and direct mandates is never matched with a co-mandate: it is a hard filter in the engine. It is a declaration, not a verification: Loptor does not certify anyone, does not imply exclusivity and does not change the order of results.",
  "data.kicker": "Your data",
- "data.title": "Designed to structure and connect. <em>Not to promise everything.</em>",
+ "data.title": "Designed to structure and connect.<br /><em>Not to promise everything.</em>",
  "data.lede": "Trust also means explaining the limits of the product.",
  "data.yesT": "Loptor CRE is",
  "data.y1": "A traceable dossier: every figure with its source and literal quote.",

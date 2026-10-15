@@ -359,3 +359,4 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .price-card ul{margin-bottom:24px}
 .button-outline{background:#fff;color:var(--cobalt-text);border-color:var(--cobalt-text)}
 .button-outline:hover{background:var(--paper-2)}
+#trust-title{max-width:none}
