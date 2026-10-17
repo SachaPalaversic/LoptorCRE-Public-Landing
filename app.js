@@ -56,14 +56,14 @@ const EN = {
  "hero.cta": "Request a demo",
  "hero.note": "Then a 14-day trial with 1 real teaser. No card required.",
  "problem.kicker": "The problem",
- "problem.title": "A badly structured asset can go unsold. <em>So can one sent down a chain of intermediaries.</em>",
+ "problem.title": "An asset sent down a chain of intermediaries can go unsold. <em>So can a badly structured one.</em>",
  "problem.p1t": "Scattered information",
  "problem.p1b": "A PDF, a spreadsheet and loose notes that have to be reordered by hand before anything can be sent.",
  "problem.p2t": "Figures that contradict each other",
  "problem.p2b": "Each document says something different and nobody knows which one rules. Whoever receives the teaser notices.",
  "problem.p3t": "Links that add nothing",
  "problem.p3b": "The asset passes through hands with no mandate and no judgement that only forward it, and each forward looks less like the original.",
- "problem.close": "It is not that there are too many intermediaries. <em>It is that there are links that add nothing.</em>",
+ "problem.close": "<em>There are links that add nothing.</em> There are not too many intermediaries.",
  "platform.kicker": "The platform",
  "platform.title": "Watch the platform <em>at work.</em>",
  "platform.lede": "A walkthrough of the real app with fictitious data: from an asset’s files to the room where direct contact between the two parties opens.",
@@ -94,12 +94,14 @@ const EN = {
  "t1.alt": "Sample A4 teaser from the app: description, image and key metrics, without the asset or seller name",
  "s2.label": "Matching",
  "s2.title": "Your asset, against the mandates that fit.",
- "s2.matchBody": "The engine crosses assets and buy-side mandates using hard filters —asset type, ticket range, mandate type, authorisation from both sides and exclusions— plus a fit score. A match is proposed from 85 %.",
+ "s2.matchBody": "Inside the Dark Pool, the engine crosses assets and buy-side mandates using hard filters —asset type, ticket range, mandate type, authorisation from both sides and exclusions— plus a fit score. A match is proposed from 85 %.",
  "s2.advTitle": "Ask the Advisor",
  "s2.advBody": "It explains why a match scores the way it does, or why there is no match, using the engine's rules.",
  "s2.nearTitle": "Near matches",
  "s2.nearBody": "If a match falls a few points short, a discreet alert goes out. Nobody loses an opportunity over a small margin.",
- "s2.poolBody": "Everything is anonymous. Only audited metrics and the macro-zone travel: no name, no brand, no advisers. Identity is not revealed until both parties approve.",
+ "adv.aria": "Animated example: a question is typed to the Advisor and it answers.",
+ "adv.note": "Illustrative example with fictitious data",
+ "s2.poolBody": "The Dark Pool is the confidential space where assets and mandates are crossed. Everything is anonymous: only audited metrics and the macro-zone travel, with no name, brand or advisers. Identity is not revealed until both parties approve.",
  "p1.label": "Dark Pool",
  "p1.title": "Anonymous until both approve.",
  "p1.askTitle": "One data point at a time",
@@ -110,7 +112,15 @@ const EN = {
  "s2.alt": "Buy-side mandates in the app: each buyer's criteria, with ticket, markets and exclusions",
  "s3.label": "Deal Room",
  "s3.title": "If both parties approve, the Deal Room opens.",
- "s3.body": "Identities are revealed and the two parties talk directly, whatever the position of each: owner, direct mandate or co-mandate. Loptor is not a data room and does not handle NDAs: the negotiation carries on where you already conduct it.",
+ "s3.intro": "This is where anonymity ends, and only once both parties have decided it.",
+ "dr.1t": "Both parties approve",
+ "dr.1b": "No identity travels until both approvals exist.",
+ "dr.2t": "Identities are revealed",
+ "dr.2b": "Each party receives the other's name and contact details, whatever its position: owner, direct mandate or co-mandate.",
+ "dr.3t": "They talk directly",
+ "dr.3b": "Loptor is not a data room and does not handle NDAs: the negotiation carries on where you already conduct it.",
+ "dr.4t": "The Advisor stays with you",
+ "dr.4b": "Inside the room you can keep asking it about the fit.",
  "s3.alt": "Match with contact released: both parties have approved and credentials are exchanged",
  "how.demoNote": "Sample match from the app: fictitious data",
  "how.shotNote": "Sample screen from the app: fictitious data",
@@ -256,6 +266,7 @@ function applyTranslations() {
   const ogLocale = $('meta[property="og:locale"]'); if (ogLocale) ogLocale.setAttribute('content', currentLang === 'en' ? 'en_US' : 'es_ES');
   $$('.lang-btn').forEach((button) => { const on = button.dataset.lang === currentLang; button.classList.toggle('is-active', on); button.setAttribute('aria-pressed', String(on)); });
   setupVideo();
+  restartAdvisor();
 }
 
 function setLanguage(lang) {
@@ -347,6 +358,82 @@ document.addEventListener('click', (event) => {
   openCal(link.dataset.plan);
 });
 
+/* Advisor: demostración animada (ejemplo ilustrativo con datos ficticios). Escribe una pregunta, responde y pasa a la siguiente. */
+const ADV = {
+  es: { ph: 'Pregunta al Advisor…', items: [
+    ['¿Por qué este cruce puntúa un 78 %?', 'Cumple los filtros duros: tipología, ticket y autorización de ambas partes. Pierde puntos en el mercado: el mandato busca Madrid y Lisboa y el activo está en Valencia.'],
+    ['¿Qué pasaría si amplío el mercado a Valencia?', 'El encaje subiría del 78 % al 88 % y el cruce superaría el umbral del 85 %: pasaría a ser un match propuesto.'],
+    ['¿Por qué no hay match con este mandato?', 'El mandato excluye sale & leaseback y este activo lo incluye. Es un filtro duro, así que ni siquiera se puntúa.']
+  ] },
+  en: { ph: 'Ask the Advisor…', items: [
+    ['Why does this match score 78 %?', 'It passes the hard filters: asset type, ticket and authorisation from both sides. It loses points on market: the mandate looks for Madrid and Lisbon and the asset is in Valencia.'],
+    ['What if I widen the market to Valencia?', 'The fit would rise from 78 % to 88 % and the match would clear the 85 % threshold: it would become a proposed match.'],
+    ['Why is there no match with this mandate?', 'The mandate excludes sale and leaseback and this asset includes it. That is a hard filter, so it is not even scored.']
+  ] }
+};
+let advToken = 0;
+let advVisible = false;
+let advObserved = false;
+const advReduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+const advSleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function advRun(token) {
+  const root = $('#adv-demo'); const qEl = $('#adv-q'); const aEl = $('#adv-a');
+  if (!root || !qEl || !aEl) return;
+  const set = ADV[currentLang] || ADV.es;
+  qEl.dataset.ph = set.ph;
+  if (advReduce) { qEl.textContent = set.items[0][0]; aEl.textContent = set.items[0][1]; aEl.classList.add('is-on'); return; }
+  let i = 0;
+  while (token === advToken) {
+    const pair = set.items[i % set.items.length];
+    qEl.textContent = ''; aEl.textContent = ''; aEl.classList.remove('is-on'); root.classList.remove('is-thinking');
+    await advSleep(600);
+    for (let k = 1; k <= pair[0].length; k++) { if (token !== advToken) return; qEl.textContent = pair[0].slice(0, k); await advSleep(38); }
+    await advSleep(500);
+    if (token !== advToken) return;
+    root.classList.add('is-thinking'); aEl.classList.add('is-on');
+    await advSleep(900);
+    if (token !== advToken) return;
+    root.classList.remove('is-thinking');
+    for (let k = 1; k <= pair[1].length; k++) { if (token !== advToken) return; aEl.textContent = pair[1].slice(0, k); await advSleep(16); }
+    await advSleep(3800);
+    i += 1;
+    while (!advVisible && token === advToken) await advSleep(300);
+  }
+}
+
+function restartAdvisor() {
+  const root = $('#adv-demo');
+  if (!root) return;
+  advToken += 1;
+  const qEl = $('#adv-q'); if (qEl) qEl.dataset.ph = (ADV[currentLang] || ADV.es).ph;
+  if (advObserved) advRun(advToken);
+}
+
+function setupAdvisor() {
+  const root = $('#adv-demo');
+  if (!root) return;
+  if (!('IntersectionObserver' in window)) { advVisible = true; advObserved = true; restartAdvisor(); return; }
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      advVisible = entry.isIntersecting;
+      if (entry.isIntersecting && !advObserved) { advObserved = true; restartAdvisor(); }
+    });
+  }, { threshold: 0.35 });
+  io.observe(root);
+}
+
+/* Deal Room: la secuencia aparece al entrar en pantalla (sin JS o con movimiento reducido se ve entera). */
+function setupReveal() {
+  const list = $('.dr-steps');
+  if (!list || advReduce || !('IntersectionObserver' in window)) return;
+  list.classList.add('is-armed');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => { if (entry.isIntersecting) { list.classList.add('is-in'); io.disconnect(); } });
+  }, { threshold: 0.3 });
+  io.observe(list);
+}
+
 function wireEvents() {
   $$('.lang-btn').forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
   const menu = $('.menu-toggle'); const nav = $('#main-nav');
@@ -375,5 +462,7 @@ try {
 } catch (_) { /* sin almacenamiento */ }
 
 wireEvents();
+setupAdvisor();
+setupReveal();
 setupConsent();
 if (currentLang !== 'es') applyTranslations(); else setupVideo();
