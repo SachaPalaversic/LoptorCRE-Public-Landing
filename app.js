@@ -430,6 +430,14 @@ function setupAdvisor() {
 }
 
 /* Deal Room: la secuencia aparece al entrar en pantalla (sin JS o con movimiento reducido se ve entera). */
+function setupFaqTabs(){
+  const tabs=[...document.querySelectorAll('.faq-tab')];
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(x=>x.setAttribute('aria-selected',String(x===t)));
+    document.querySelectorAll('.faq-item[data-g]').forEach(i=>{i.hidden=i.dataset.g!==t.dataset.g;});
+  }));
+}
+
 function setupReveal() {
   const list = $('.dr-steps');
   if (!list || advReduce || !('IntersectionObserver' in window)) return;
@@ -470,5 +478,6 @@ try {
 wireEvents();
 setupAdvisor();
 setupReveal();
+setupFaqTabs();
 setupConsent();
 if (currentLang !== 'es') applyTranslations(); else setupVideo();
