@@ -420,3 +420,35 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .faq-tab{font:500 12px var(--mono);letter-spacing:.06em;padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;color:var(--muted);cursor:pointer}
 .faq-tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
 .faq-item[hidden]{display:none}
+
+/* Planes: tarjetas compactas y comparativa */
+.price-card{padding:26px 24px;display:flex;flex-direction:column}
+.price-card h3{font-size:clamp(28px,2.4vw,36px);margin:4px 0 14px}
+.plan-rows{margin:0 0 16px}
+.plan-rows div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;border-top:1px solid var(--line)}
+.plan-rows dt{font-size:14px;color:var(--muted)}
+.plan-rows dd{font:500 14px var(--mono);color:var(--ink);text-align:right;margin:0}
+.price-card ul{margin-bottom:20px}
+.price-card ul li{font-size:14px}
+.price-card .price-cta{margin-top:auto;width:100%}
+.plan-compare{margin-top:72px}
+.plan-compare-head h3{font:500 clamp(28px,3vw,36px)/1.1 var(--serif);letter-spacing:-.03em;margin:0 0 8px}
+.plan-compare-head p{color:var(--muted);margin:0 0 22px}
+.cmp-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+.cmp-table{width:100%;min-width:760px;border-collapse:separate;border-spacing:0;font-size:14px;color:var(--muted)}
+.cmp-table th,.cmp-table td{padding:12px 16px;border-bottom:1px solid var(--line);text-align:center;vertical-align:middle;line-height:1.4}
+.cmp-table thead th{padding:20px 16px 16px;background:#fff}
+.cmp-table tbody th[scope=row]{text-align:left;font-weight:500;color:var(--ink);background:#fff;width:34%;position:sticky;left:0;z-index:1}
+.cmp-feature-col{text-align:left!important;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cmp-plan-name{display:block;font:500 22px var(--serif);letter-spacing:-.02em;color:var(--ink)}
+.cmp-plan-for{display:block;margin-top:3px;font-size:12px;font-weight:400;color:var(--muted)}
+.cmp-group th{padding:16px 16px 8px;text-align:left;font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:#f4f7fb}
+.cmp-table .is-featured{background:#f3f8fe}
+.cmp-table thead .is-featured{border-top:3px solid var(--cobalt-text,#2b6cb0)}
+.cmp-yes{color:var(--verified);font-weight:700}
+.cmp-no{color:#b3bdca}
+.cmp-table tbody tr:last-child th,.cmp-table tbody tr:last-child td{border-bottom:0}
+.cmp-note{margin:16px 2px 0;font-size:12px;color:var(--muted);line-height:1.6;max-width:780px}
+.plans-note{display:none}
+.cmp-table .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cmp-scroll{position:relative}
