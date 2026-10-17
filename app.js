@@ -223,7 +223,7 @@ const EN = {
  "plans.ent.f3": "API and integrations by agreement",
  "plans.note": "“Unlimited” items are subject to fair use.",
  "faq.kicker": "FAQ",
- "faq.title": "Precision before <em>persuasion.</em>",
+ "faq.title": "Precision before<br /><em>persuasion.</em>",
  "final.title": "Present with <em>rigour.</em> Connect with <em>judgement.</em>",
  "final.body": "Structure the documentation. Find the fit. Talk directly to the other party.",
  "final.cta": "Request a demo",
