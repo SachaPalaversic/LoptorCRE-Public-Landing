@@ -23,7 +23,7 @@
     <link rel="apple-touch-icon" href="/brand/favicon.svg" />
     <link rel="preload" href="/fonts/newsreader-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="/styles.css?v=20261015-storytelling" />
+    <link rel="stylesheet" href="/styles.css?v=20261017-pasos" />
   </head>
   <body>
     <a class="skip-link" href="#main" data-i18n="nav.skip">Saltar al contenido</a>
@@ -38,6 +38,7 @@
           <a href="#como-funciona" data-i18n="nav.how">Cómo funciona</a>
           <a href="#matching" data-i18n="nav.match">Matching</a>
           <a href="#dark-pool" data-i18n="nav.pool">Dark Pool</a>
+          <a href="#deal-room" data-i18n="nav.deal">Deal Room</a>
           <a href="#tus-datos" data-i18n="nav.data">Tus datos</a>
           <a href="#planes" data-i18n="nav.plans">Planes</a>
           <a href="#faq" data-i18n="nav.faq">FAQ</a>
@@ -140,33 +141,55 @@
       <section class="how section" id="como-funciona" aria-labelledby="how-title">
         <div class="wrap">
           <p class="kicker" data-i18n="how.kicker">Cómo funciona</p>
-          <h2 id="how-title" class="display" data-i18n="how.title">Estructura. Conecta. <em>Negocia.</em></h2>
+          <h2 id="how-title" class="display" data-i18n="how.title">Del documento al contacto, <em>en cinco pasos.</em></h2>
 
           <article class="step" id="estructura">
             <div class="step-copy">
-              <p class="step-label"><span class="mono">01</span><span data-i18n="s1.label">Estructura</span></p>
+              <p class="step-label"><span class="mono">01</span><span data-i18n="s1.label">Ingesta</span></p>
               <h3 data-i18n="s1.title">Del documento al expediente.</h3>
               <p data-i18n="s1.body">Sube un PDF, un Excel o una nota. Cada dato queda ligado a su documento, página o celda y a su cita literal. Si dos fuentes se contradicen, la cifra no se imprime hasta que tú la confirmas.</p>
-              <p class="step-aside" data-i18n="s1.levels">Del expediente salen teasers A4 en tres niveles de visibilidad: solo texto, una imagen o varias. Tú decides cuánto se revela.</p>
             </div>
             <figure class="shot shot-wide"><img src="/app/es/provenance.webp" data-src-es="/app/es/provenance.webp" data-src-en="/app/provenance.webp" data-i18n-alt="s1.alt" alt="Tabla de datos y procedencia de la app: cada valor con su estado y su documento de origen" width="1400" height="980" loading="lazy" /></figure>
           </article>
 
-          <article class="step" id="conecta">
+          <article class="step" id="teaser">
             <div class="step-copy">
-              <p class="step-label"><span class="mono">02</span><span data-i18n="s2.label">Conecta</span></p>
-              <h3 data-i18n="s2.title">Tu activo, frente a los mandatos que encajan.</h3>
-              <div class="subcards">
-                <div class="subcard" id="matching"><h4 data-i18n="s2.matchTitle">Matching</h4><p data-i18n="s2.matchBody">El motor cruza activos y mandatos de compra con filtros duros —tipo de activo, horquilla de ticket, tipo de mandato, autorización de ambas partes y exclusiones— y una puntuación de encaje. Se propone un cruce desde el 85 %.</p></div>
-                <div class="subcard" id="dark-pool"><h4 data-i18n="s2.poolTitle">Dark Pool</h4><p data-i18n="s2.poolBody">Todo es anónimo. Solo viajan las métricas auditadas y la macrozona: ni el nombre, ni la marca, ni los asesores. La identidad no se revela hasta que las dos partes aprueban.</p></div>
-              </div>
+              <p class="step-label"><span class="mono">02</span><span data-i18n="t1.label">Teaser</span></p>
+              <h3 data-i18n="t1.title">Del expediente al teaser A4.</h3>
+              <p data-i18n="t1.body">Del expediente salen teasers A4 en tres niveles de visibilidad: solo texto, una imagen o varias. Tú decides cuánto se revela.</p>
             </div>
-            <figure class="shot shot-tall"><img src="/app/es/match-proposed.webp" data-src-es="/app/es/match-proposed.webp" data-src-en="/app/match-proposed.webp" data-i18n-alt="s2.alt" alt="Ficha de cruce ciego de la app: puntuación de encaje, datos documentados y protocolo de anonimato" width="1000" height="1583" loading="lazy" /><figcaption class="mono" data-i18n="how.demoNote">Cruce de ejemplo de la app: datos ficticios</figcaption></figure>
+            <figure class="shot shot-tall"><img src="/app/es/teaser-cover.webp" data-src-es="/app/es/teaser-cover.webp" data-src-en="/app/teaser-cover.webp" data-i18n-alt="t1.alt" alt="Teaser A4 de ejemplo de la app: descripción, imagen y métricas clave, sin el nombre del activo ni del vendedor" width="900" height="1273" loading="lazy" /><figcaption class="mono" data-i18n="how.shotNote">Pantalla de ejemplo de la app: datos ficticios</figcaption></figure>
           </article>
 
-          <article class="step" id="negocia">
+          <article class="step" id="matching">
             <div class="step-copy">
-              <p class="step-label"><span class="mono">03</span><span data-i18n="s3.label">Negocia</span></p>
+              <p class="step-label"><span class="mono">03</span><span data-i18n="s2.label">Matching</span></p>
+              <h3 data-i18n="s2.title">Tu activo, frente a los mandatos que encajan.</h3>
+              <p data-i18n="s2.matchBody">El motor cruza activos y mandatos de compra con filtros duros —tipo de activo, horquilla de ticket, tipo de mandato, autorización de ambas partes y exclusiones— y una puntuación de encaje. Se propone un cruce desde el 85 %.</p>
+              <div class="subcards">
+                <div class="subcard"><h4 data-i18n="s2.advTitle">Pregunta al Advisor</h4><p data-i18n="s2.advBody">Explica por qué un cruce puntúa así o por qué no hay match, con las reglas del motor.</p></div>
+                <div class="subcard"><h4 data-i18n="s2.nearTitle">Casi-matches</h4><p data-i18n="s2.nearBody">Si a un cruce le faltan pocos puntos, se avisa con discreción. Nadie pierde una oportunidad por un margen pequeño.</p></div>
+              </div>
+            </div>
+            <figure class="shot shot-wide"><img src="/app/es/mandates.webp" data-src-es="/app/es/mandates.webp" data-src-en="/app/mandates.webp" data-i18n-alt="s2.alt" alt="Mandatos de compra en la app: criterios de cada comprador, con ticket, mercados y exclusiones" width="1400" height="835" loading="lazy" /><figcaption class="mono" data-i18n="how.shotNote">Pantalla de ejemplo de la app: datos ficticios</figcaption></figure>
+          </article>
+
+          <article class="step" id="dark-pool">
+            <div class="step-copy">
+              <p class="step-label"><span class="mono">04</span><span data-i18n="p1.label">Dark Pool</span></p>
+              <h3 data-i18n="p1.title">Anónimo hasta que ambos aprueban.</h3>
+              <p data-i18n="s2.poolBody">Todo es anónimo. Solo viajan las métricas auditadas y la macrozona: ni el nombre, ni la marca, ni los asesores. La identidad no se revela hasta que las dos partes aprueban.</p>
+              <div class="subcards">
+                <div class="subcard"><h4 data-i18n="p1.askTitle">Consulta dato a dato</h4><p data-i18n="p1.askBody">Pides un dato concreto, como el precio o la superficie. El propietario decide si lo muestra, en rango. La identidad nunca se pide ni se revela.</p></div>
+                <div class="subcard"><h4 data-i18n="p1.validTitle">Mandato vigente</h4><p data-i18n="p1.validBody">El propietario confirma con un clic que su mandato sigue en vigor. Loptor nunca pide copia del mandato.</p></div>
+              </div>
+            </div>
+            <figure class="shot shot-tall"><img src="/app/es/match-proposed.webp" data-src-es="/app/es/match-proposed.webp" data-src-en="/app/match-proposed.webp" data-i18n-alt="p1.alt" alt="Ficha de cruce ciego de la app: puntuación de encaje, datos documentados y protocolo de anonimato" width="1000" height="1583" loading="lazy" /><figcaption class="mono" data-i18n="how.demoNote">Cruce de ejemplo de la app: datos ficticios</figcaption></figure>
+          </article>
+
+          <article class="step" id="deal-room">
+            <div class="step-copy">
+              <p class="step-label"><span class="mono">05</span><span data-i18n="s3.label">Deal Room</span></p>
               <h3 data-i18n="s3.title">Si las dos partes aprueban, se abre la Deal Room.</h3>
               <p data-i18n="s3.body">Se revelan las identidades y las dos partes hablan directamente, sea cual sea la posición de cada una: titular, mandato directo o co-mandato. Loptor no es un data room ni gestiona NDA: la negociación sigue donde ya la haces.</p>
             </div>
