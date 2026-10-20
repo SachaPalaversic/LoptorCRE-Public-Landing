@@ -21,7 +21,7 @@ window.LOPTOR_FR = {
  "nav.lang": "Langue",
  "brand.aria": "Loptor CRE Intelligence, accueil",
  "hero.eyebrow": "Immobilier commercial off-market",
- "hero.title": "Présentez avec<br /><em>rigueur.</em><br />Connectez avec<br /><em>discernement.</em>",
+ "hero.title": "Présentez avec <em>rigueur.</em><br />Connectez avec <em>discernement.</em>",
  "hero.lede": "Trouvez l’autre partie de votre opération sans révéler qui vous êtes. Loptor CRE croise, de façon anonyme, votre actif avec les mandats d’achat qui correspondent ; auparavant, il le transforme en teaser institutionnel traçable.",
  "hero.principle": "D’abord l’adéquation. Ensuite l’identité.",
  "hero.typed": "Opportunités sell-side · buy-side",

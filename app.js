@@ -21,7 +21,7 @@ const EN = {
  "nav.lang": "Language",
  "brand.aria": "Loptor CRE Intelligence, home",
  "hero.eyebrow": "Off-market commercial real estate",
- "hero.title": "Present with<br /><em>rigour.</em><br />Connect with<br /><em>judgement.</em>",
+ "hero.title": "Present with <em>rigour.</em><br />Connect with <em>judgement.</em>",
  "hero.lede": "Find the other side of your deal without revealing who you are. Loptor CRE matches your asset, anonymously, with the buy-side mandates that fit; first, it turns your asset into a traceable institutional teaser.",
  "hero.principle": "Fit first. Identity later.",
  "hero.typed": "Sell-side · Buy-side opportunities",
