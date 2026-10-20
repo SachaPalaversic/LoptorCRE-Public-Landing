@@ -4,7 +4,7 @@
  */
 const EN = {
  "meta.title": "Loptor CRE Intelligence — Present with rigour. Connect with judgement.",
- "meta.desc": "Loptor CRE Intelligence turns scattered documents into traceable institutional teasers and anonymously matches them with buy-side mandates in off-market commercial real estate.",
+ "meta.desc": "Loptor CRE Intelligence helps you find the other side of your deal: it anonymously matches your assets with buy-side mandates in off-market commercial real estate.",
  "nav.skip": "Skip to content",
  "nav.label": "Primary navigation",
  "nav.menu": "Open menu",
@@ -22,10 +22,11 @@ const EN = {
  "brand.aria": "Loptor CRE Intelligence, home",
  "hero.eyebrow": "Off-market commercial real estate",
  "hero.title": "Present with<br /><em>rigour.</em><br />Connect with<br /><em>judgement.</em>",
- "hero.lede": "Documents arrive scattered, the figures do not add up and the asset passes through too many hands before it reaches someone who can buy it. Loptor CRE turns that information into a traceable institutional teaser and matches it, anonymously, with the buy-side mandates that fit.",
+ "hero.lede": "Find the other side of your deal without revealing who you are. Loptor CRE matches your asset, anonymously, with the buy-side mandates that fit; first, it turns your asset into a traceable institutional teaser.",
+ "hero.principle": "Fit first. Identity later.",
  "flow.label": "From pain to solution: from loose documents to direct contact with the other party",
  "flow.painTag": "Today",
- "flow.pain1": "A PDF, a spreadsheet and loose notes",
+ "flow.pain1": "Nobody knows who is looking for what you have",
  "flow.f1": "PDF",
  "flow.f2": "Excel",
  "flow.f3": "Notes",
@@ -60,7 +61,9 @@ const EN = {
  "problem.p1t": "Scattered information",
  "problem.p1b": "A PDF, a spreadsheet and loose notes that have to be reordered by hand before anything can be sent.",
  "problem.p2t": "Figures that contradict each other",
- "problem.p2b": "Each document says something different and nobody knows which one rules. Whoever receives the teaser notices.",
+ "problem.p2b": "Information arrives scattered and each document says something different. Whoever receives the teaser notices.",
+ "problem.p4t": "Nobody knows who is on the other side",
+ "problem.p4b": "You send the asset down a chain of contacts without knowing whether anyone with a buy-side mandate is looking for it, or whether that mandate is still in force.",
  "problem.p3t": "Links that add nothing",
  "problem.p3b": "The asset passes through hands with no mandate and no judgement that only forward it, and each forward looks less like the original.",
  "problem.close": "There are links that add nothing.<br /><em>There are not too many intermediaries.</em>",
@@ -83,14 +86,14 @@ const EN = {
  "platform.noVideo": "Your browser cannot play this video.",
  "platform.posterAlt": "Blind opportunity sheet in the Loptor CRE app: 100% match, anonymous identity",
  "how.kicker": "How it works",
- "how.title": "From document to contact,<br /><em>in five steps.</em>",
+ "how.title": "From your asset to your counterparty,<br /><em>in five steps.</em>",
  "s1.label": "Ingestion",
  "s1.title": "From document to dossier.",
  "s1.body": "Upload a PDF, a spreadsheet or a note. Every figure stays tied to its document, page or cell and to its literal quote. If two sources contradict each other, the figure is not printed until you confirm it.",
  "s1.alt": "Data and provenance table in the app: each value with its status and its source document",
  "t1.label": "Teaser",
- "t1.title": "From dossier to blind A4 teaser.",
- "t1.body": "The dossier produces blind A4 teasers at three visibility levels: text only, one image or several. You decide how much is revealed.",
+ "t1.title": "Your ticket in: the blind A4 teaser.",
+ "t1.body": "The dossier produces blind A4 teasers at three visibility levels: text only, one image or several. You decide how much is revealed, and only what you include travels to the match.",
  "t1.alt": "Sample blind A4 teaser from the app: type, location and key metrics, without the asset or seller name",
  "s2.label": "Matching",
  "s2.title": "Your asset, against the mandates that fit.",
@@ -129,7 +132,14 @@ const EN = {
  "who.sellT": "Sell side",
  "who.sellB": "Present with rigour, without exposing your asset.",
  "who.buyT": "Buy side",
- "who.buyB": "Receive only what fits your mandate.",
+ "who.buyB": "Publish your mandate without giving your name. Receive only what fits your ticket, your asset type and your exclusions, and decide for yourself whether to take the step.",
+ "counter.kicker": "Who is on the other side?",
+ "counter.title": "Mandate-holding capital, without names.",
+ "counter.p1": "Family offices",
+ "counter.p2": "Investment funds",
+ "counter.p3": "Investors",
+ "counter.p4": "Brokers with a buy-side mandate",
+ "counter.body": "Each one declares its position and its mandate, and the engine only matches compatible pairs. No identity is visible until both parties approve.",
  "who.brokerT": "Broker with a mandate",
  "who.brokerB": "Your mandate comes out stronger. Your network stays yours: Loptor organises and extends it.",
  "types.title": "Six asset types,<br /><em>one documentary standard.</em>",
@@ -186,6 +196,8 @@ const EN = {
  "faq.a8": "Your network stays yours. Each party declares its position (owner, direct mandate, co-mandate or investor) and who it accepts to work with, and the engine only matches compatible pairs. The owner attests with one click that the mandate is still in force. It is a declaration, not a verification: Loptor does not ask for a copy of the mandate or certify anyone.",
  "faq.q9": "Does it replace my data room, my NDA or my network?",
  "faq.a9": "No. Loptor takes you as far as the qualified contact, and the Deal Room accompanies that first contact. NDA, signing and due diligence continue through your usual route. It charges no commission on deals.",
+ "faq.q11": "Who is on the other side?",
+ "faq.a11": "Loptor is not a directory or an investor database. The Dark Pool is made up of the assets and buy-side mandates that each party uploads and authorises, and only those that meet both sides' filters are matched.",
  "faq.q10": "How do I start and what does the trial include?",
  "faq.a10": "By invitation, after a demo of your case. Then a 14-day trial with 1 real A4 teaser, no card required. There is no permanent free plan. Pricing is shared in the demo.",
  "mandate.pill4": "Investor",
@@ -232,7 +244,7 @@ const EN = {
  "cmp.t35": "Tailored demo",
  "cmp.aria": "Comparison of the Advisor, Desk, Institutional and Enterprise plans",
  "data.soonT": "In development",
- "data.soonB": "A French-language experience and more asset types.",
+ "data.soonB": "More asset types.",
  "plans.kicker": "Plans",
  "plans.title": "Start with a demo.<br /><em>Choose a plan afterwards.</em>",
  "plans.lede": "Every plan starts with a demo and a 14-day free trial with 1 real A4 teaser, no card required. Pricing is shared during the demo.",
@@ -301,9 +313,16 @@ $$('[data-i18n-content]').forEach((el) => { const k = el.dataset.i18nContent; if
 
 const plain = (value) => value.replace(/<[^>]+>/g, '');
 let currentLang = 'es';
-const CAL_LANGS = ['es', 'en'];
+const CAL_LANGS = ['es', 'en', 'fr'];
 
-function pick(lang, bucket, key) { return lang === 'en' ? (EN[key] !== undefined ? (bucket === 'text' ? EN[key] : plain(EN[key])) : ES[bucket][key]) : ES[bucket][key]; }
+const FR = (window.LOPTOR_FR || {});
+function pick(lang, bucket, key) {
+  const dict = lang === 'fr' ? FR : lang === 'en' ? EN : null;
+  if (!dict) return ES[bucket][key];
+  let value = dict[key];
+  if (value === undefined && lang === 'fr') value = EN[key];
+  return value !== undefined ? (bucket === 'text' ? value : plain(value)) : ES[bucket][key];
+}
 
 function applyTranslations() {
   document.documentElement.lang = currentLang;
@@ -311,8 +330,8 @@ function applyTranslations() {
   $$('[data-i18n-alt]').forEach((el) => el.setAttribute('alt', pick(currentLang, 'alt', el.dataset.i18nAlt)));
   $$('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', pick(currentLang, 'aria', el.dataset.i18nAria)));
   $$('[data-i18n-content]').forEach((el) => el.setAttribute('content', pick(currentLang, 'content', el.dataset.i18nContent)));
-  $$('img[data-src-es]').forEach((img) => { img.src = currentLang === 'en' ? img.dataset.srcEn : img.dataset.srcEs; });
-  const ogLocale = $('meta[property="og:locale"]'); if (ogLocale) ogLocale.setAttribute('content', currentLang === 'en' ? 'en_US' : 'es_ES');
+  $$('img[data-src-es]').forEach((img) => { img.src = currentLang === 'es' ? img.dataset.srcEs : img.dataset.srcEn; });
+  const ogLocale = $('meta[property="og:locale"]'); if (ogLocale) ogLocale.setAttribute('content', currentLang === 'en' ? 'en_US' : currentLang === 'fr' ? 'fr_FR' : 'es_ES');
   $$('.lang-btn').forEach((button) => { const on = button.dataset.lang === currentLang; button.classList.toggle('is-active', on); button.setAttribute('aria-pressed', String(on)); });
   setupVideo();
   restartAdvisor();
@@ -332,14 +351,14 @@ function setupVideo() {
   const frame = $('#video-frame');
   if (!video || !frame) return;
   const token = ++videoToken;
-  const poster = currentLang === 'en' ? video.dataset.posterEn : video.dataset.posterEs;
-  const src = currentLang === 'en' ? video.dataset.srcEn : video.dataset.srcEs;
+  const poster = currentLang === 'es' ? video.dataset.posterEs : video.dataset.posterEn;
+  const src = currentLang === 'es' ? video.dataset.srcEs : video.dataset.srcEn;
   video.setAttribute('poster', poster);
   let fallback = $('.video-fallback', frame);
   const showFallback = () => {
     if (!fallback) { fallback = document.createElement('img'); fallback.className = 'video-fallback'; fallback.width = 1400; fallback.height = 980; frame.appendChild(fallback); }
     fallback.src = poster; fallback.alt = plain(pick(currentLang, 'aria', 'platform.posterAlt') || '');
-    fallback.alt = currentLang === 'en' ? plain(EN['platform.posterAlt']) : (document.documentElement.dataset.posterAltEs || '');
+    fallback.alt = currentLang !== 'es' ? plain(pick(currentLang, 'text', 'platform.posterAlt') || '') : (document.documentElement.dataset.posterAltEs || '');
     video.hidden = true; fallback.hidden = false;
   };
   fetch(src, { method: 'HEAD' }).then((response) => {
@@ -418,6 +437,11 @@ const ADV = {
     ['Why does this match score 78 %?', 'It passes the hard filters: asset type, ticket and authorisation from both sides. It loses points on market: the mandate looks for Madrid and Lisbon and the asset is in Valencia.'],
     ['What if I widen the market to Valencia?', 'The fit would rise from 78 % to 88 % and the match would clear the 85 % threshold: it would become a proposed match.'],
     ['Why is there no match with this mandate?', 'The mandate excludes sale and leaseback and this asset includes it. That is a hard filter, so it is not even scored.']
+  ] },
+  fr: { ph: 'Demandez à l’Advisor…', items: [
+    ['Pourquoi ce croisement obtient-il 78 % ?', 'Il respecte les filtres stricts : typologie, ticket et autorisation des deux parties. Il perd des points sur le marché : le mandat cherche Madrid et Lisbonne, et l’actif est à Valence.'],
+    ['Et si j’élargis le marché à Valence ?', 'L’adéquation passerait de 78 % à 88 % et le croisement franchirait le seuil de 85 % : il deviendrait un match proposé.'],
+    ['Pourquoi n’y a-t-il pas de match avec ce mandat ?', 'Le mandat exclut le sale & leaseback et cet actif l’inclut. C’est un filtre strict : il n’est donc même pas évalué.']
   ] }
 };
 let advToken = 0;
@@ -516,6 +540,7 @@ try {
   if (requested && CAL_LANGS.includes(requested)) { currentLang = requested; localStorage.setItem('loptor-lang', requested); }
   else if (saved && CAL_LANGS.includes(saved)) currentLang = saved;
   else if ((navigator.language || '').toLowerCase().startsWith('en')) currentLang = 'en';
+  else if ((navigator.language || '').toLowerCase().startsWith('fr')) currentLang = 'fr';
 } catch (_) { /* sin almacenamiento */ }
 
 wireEvents();

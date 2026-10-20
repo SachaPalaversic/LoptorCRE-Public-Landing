@@ -452,3 +452,11 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .plans-note{display:none}
 .cmp-table .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .cmp-scroll{position:relative}
+
+/* Contraparte y principio del hero (20 oct 2026) */
+.principle{display:flex;align-items:center;gap:10px;margin-top:18px;font:500 14px var(--mono);letter-spacing:.04em;color:var(--ink)}
+.principle::before{content:"";width:8px;height:8px;border-radius:50%;background:#F5A524;flex:none}
+.counter{margin-top:clamp(32px,4.5vw,48px);background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3.5vw,40px)}
+.counter h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2;max-width:34ch;margin-top:6px}
+.counter .pills li{border-color:var(--line);color:var(--ink);background:#f4f7fb}
+.counter>p:last-child{color:var(--muted);max-width:68ch;font-size:16px}
