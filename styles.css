@@ -460,3 +460,10 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .counter h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2;max-width:34ch;margin-top:6px}
 .counter .pills li{border-color:var(--line);color:var(--ink);background:#f4f7fb}
 .counter>p:last-child{color:var(--muted);max-width:68ch;font-size:16px}
+.typed{position:relative;display:inline-block;margin-top:22px;font:500 15px var(--mono);letter-spacing:.06em;color:var(--cobalt-text)}
+.typed-ghost{visibility:hidden}
+.typed-live{position:absolute;left:0;top:0;white-space:nowrap}
+.typed-caret{display:none}
+.typed-live::after{content:"";display:inline-block;width:2px;height:1.05em;margin-left:3px;vertical-align:-3px;background:var(--cobalt-text);animation:typedblink 1s steps(1) infinite}
+@keyframes typedblink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.typed-live::after{display:none}}

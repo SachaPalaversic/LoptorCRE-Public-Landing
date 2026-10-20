@@ -24,6 +24,7 @@ const EN = {
  "hero.title": "Present with<br /><em>rigour.</em><br />Connect with<br /><em>judgement.</em>",
  "hero.lede": "Find the other side of your deal without revealing who you are. Loptor CRE matches your asset, anonymously, with the buy-side mandates that fit; first, it turns your asset into a traceable institutional teaser.",
  "hero.principle": "Fit first. Identity later.",
+ "hero.typed": "Sell-side · Buy-side opportunities",
  "flow.label": "From pain to solution: from loose documents to direct contact with the other party",
  "flow.painTag": "Today",
  "flow.pain1": "Nobody knows who is looking for what you have",
@@ -335,7 +336,28 @@ function applyTranslations() {
   $$('.lang-btn').forEach((button) => { const on = button.dataset.lang === currentLang; button.classList.toggle('is-active', on); button.setAttribute('aria-pressed', String(on)); });
   setupVideo();
   restartAdvisor();
+  runTyped();
 }
+
+/* Frase del hero que se escribe sola. El texto completo reserva el espacio (sin saltos) y se anuncia entero a los lectores de pantalla. */
+let typedToken = 0;
+function runTyped() {
+  const box = $('#hero-typed'); if (!box) return;
+  const ghost = $('.typed-ghost', box); const live = $('.typed-live', box); const caret = $('.typed-caret', box);
+  const full = plain(ghost.innerHTML);
+  box.setAttribute('aria-label', full); box.setAttribute('role', 'text');
+  const token = ++typedToken;
+  if (advReduceMotion()) { live.textContent = full; caret.hidden = true; ghost.style.visibility = 'hidden'; return; }
+  live.textContent = ''; caret.hidden = false;
+  let i = 0;
+  const tick = () => {
+    if (token !== typedToken) return;
+    i += 1; live.textContent = full.slice(0, i);
+    if (i < full.length) setTimeout(tick, 55); else setTimeout(() => { if (token === typedToken) caret.classList.add('is-done'); }, 1800);
+  };
+  setTimeout(tick, 500);
+}
+function advReduceMotion() { return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches); }
 
 function setLanguage(lang) {
   if (!CAL_LANGS.includes(lang)) return;
@@ -548,4 +570,4 @@ setupAdvisor();
 setupReveal();
 setupFaqTabs();
 setupConsent();
-if (currentLang !== 'es') applyTranslations(); else setupVideo();
+if (currentLang !== 'es') applyTranslations(); else { setupVideo(); runTyped(); }
