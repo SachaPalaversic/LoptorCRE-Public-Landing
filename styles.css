@@ -396,7 +396,7 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .header-actions .btn{white-space:nowrap}
 @media (max-width:1320px){.header-inner{gap:14px}.main-nav a{padding:8px 7px;font-size:14px}}
 @media (max-width:1240px){.header-login{display:none}}
-@media (min-width:961px) and (max-width:1280px){
+@media (min-width:961px) and (max-width:1120px){
   .menu-toggle{display:block}
   .main-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;padding:10px var(--gutter) 18px;margin:0;gap:0}
   .main-nav.is-open{display:flex}
@@ -460,7 +460,7 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .counter h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.2;max-width:34ch;margin-top:6px}
 .counter .pills li{border-color:var(--line);color:var(--ink);background:#f4f7fb}
 .counter>p:last-child{color:var(--muted);max-width:68ch;font-size:16px}
-.typed{position:relative;display:inline-block;margin-top:22px;font:500 15px var(--mono);letter-spacing:.06em;color:var(--cobalt-text)}
+.typed{position:relative;display:inline-block;margin:0 0 16px;font:500 15px var(--mono);letter-spacing:.06em;color:var(--cobalt-text)}
 .typed-ghost{visibility:hidden}
 .typed-live{position:absolute;left:0;top:0;white-space:nowrap}
 .typed-caret{display:none}
@@ -485,3 +485,14 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .scr-card figcaption{font-size:12px;font-style:italic;color:var(--muted);margin-top:4px}
 @media (max-width:860px){.scr-grid{grid-template-columns:1fr}}
 @media (max-width:1500px){.header-login{display:none}}
+
+/* Hero más compacto y cabecera con nueve enlaces */
+.hero h1{font-size:clamp(34px,4.4vw,62px);line-height:1.04}
+.hero .typed{font-size:clamp(14px,1.3vw,17px)}
+@media (min-width:1121px) and (max-width:1280px){
+  .header-inner{gap:8px}
+  .brand img{height:30px}
+  .main-nav a{padding:8px 5px;font-size:13px}
+  .header-actions{gap:8px}
+  .header-actions .button-small{padding-left:14px;padding-right:14px}
+}
