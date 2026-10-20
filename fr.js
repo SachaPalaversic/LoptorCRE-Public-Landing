@@ -332,5 +332,5 @@ window.LOPTOR_FR = {
  "cookie.accept": "Tout accepter",
  "cookie.aria": "Préférences de cookies",
  "footer.cookieSettings": "Paramètres des cookies",
- "footer.contact": "Contact : info@loptorcre.com"
+ "footer.contact": "Contact : hello@loptorcre.com"
 };
