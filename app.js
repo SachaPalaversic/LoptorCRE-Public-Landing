@@ -334,7 +334,7 @@ const EN = {
  "cookie.accept": "Accept all",
  "cookie.aria": "Cookie preferences",
  "footer.cookieSettings": "Cookie settings",
- "footer.contact": "Contact: info@loptorcre.com"
+ "footer.contact": "Contact: hello@loptorcre.com"
 };
 
 const $ = (selector, root = document) => root.querySelector(selector);
