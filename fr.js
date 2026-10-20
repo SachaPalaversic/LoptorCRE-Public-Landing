@@ -3,7 +3,7 @@
  * Les clés manquantes retombent sur l'anglais (voir pick() dans app.js).
  */
 window.LOPTOR_FR = {
- "meta.title": "Loptor CRE Intelligence — Présentez avec rigueur. Connectez avec discernement.",
+ "meta.title": "Loptor CRE Intelligence — Présentez avec rigueur. Connectez avec discernement",
  "meta.desc": "Loptor CRE Intelligence vous aide à trouver l’autre partie de votre opération : elle croise, de façon anonyme, vos actifs avec les mandats d’achat en immobilier commercial off-market.",
  "nav.skip": "Aller au contenu",
  "nav.label": "Navigation principale",

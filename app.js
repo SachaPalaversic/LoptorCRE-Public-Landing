@@ -3,7 +3,7 @@
  * Los textos salen de una única fuente de contenido; no editar el diccionario a mano sin revisar el HTML.
  */
 const EN = {
- "meta.title": "Loptor CRE Intelligence — Present with rigour. Connect with judgement.",
+ "meta.title": "Loptor CRE Intelligence — Present with rigour. Connect with judgement",
  "meta.desc": "Loptor CRE Intelligence helps you find the other side of your deal: it anonymously matches your assets with buy-side mandates in off-market commercial real estate.",
  "nav.skip": "Skip to content",
  "nav.label": "Primary navigation",
