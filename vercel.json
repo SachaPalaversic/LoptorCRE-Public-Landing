@@ -2,5 +2,18 @@
   "buildCommand": "sh build.sh",
   "outputDirectory": "dist",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/deck", "destination": "/deck.pdf" }
+  ],
+  "headers": [
+    {
+      "source": "/deck.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"Loptor-CRE-Deck.pdf\"" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    }
+  ]
 }
