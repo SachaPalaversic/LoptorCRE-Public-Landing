@@ -21,5 +21,19 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "loptorcre.com" }],
+      "destination": "https://actiumcre.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.loptorcre.com" }],
+      "destination": "https://actiumcre.com/:path*",
+      "permanent": true
+    }
   ]
 }
