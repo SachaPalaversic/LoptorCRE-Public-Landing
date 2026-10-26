@@ -31,5 +31,5 @@ Cobalto #3B82F6 · Ámbar #F5A524 · Tinta #111A28 · Gris #55657B · Sobre oscu
 - Regenerar: `python3 scripts/build-brand-logos.py`.
 
 ## Variante interna: Actium Insights
-Solo para insights.actiumcre.com (privado). Icono + "Actium Insights" en una línea, misma fuente, tamaño y tracking que "Actium"; sin subtítulo.
+Solo para insights.actiumcre.com (privado). Icono + "Actium Insights" en la línea del nombre (misma fuente, tamaño y tracking que "Actium") y "CRE INTELLIGENCE" debajo, como el logo oficial.
 `public/brand/actium-insights-on-dark.svg` / `.png` y `actium-insights-on-light.svg` / `.png`. Regenerar: `python3 scripts/build-brand-insights.py`.
