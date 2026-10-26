@@ -1,5 +1,5 @@
 /*
- * Loptor CRE — analítica de la landing (PostHog, región UE).
+ * Actium CRE — analítica de la landing (PostHog, región UE).
  *
  * Sin SDK, sin cookies y sin almacenamiento del navegador: cada evento se envía a la
  * API pública de captura de PostHog UE con un identificador anónimo que vive solo en
@@ -8,7 +8,7 @@
  *  - Solo eventos explícitos y propiedades de lista blanca (ver ALLOWED). Nada de
  *    texto libre ni datos personales.
  *  - Respeta «No rastrear» (Do Not Track).
- *  - Solo mide en producción (loptorcre.com / www.loptorcre.com): los Previews de
+ *  - Solo mide en producción (actiumcre.com / www.actiumcre.com): los Previews de
  *    Vercel y localhost no ensucian las métricas.
  *  - Propaga la campaña (utm_*) y `source=landing` a los enlaces hacia la app, para
  *    atribuir cada alta sin cookies.
@@ -21,8 +21,8 @@
 
   var POSTHOG_KEY = 'phc_nYqkQM3LVkDALV3jqzMov3Abzp4dbjjT3b3gC5xt9Fne';
   var CAPTURE_URL = 'https://eu.i.posthog.com/capture/';
-  var APP_ORIGIN = 'https://app.loptorcre.com';
-  var PRODUCTION_HOSTS = ['loptorcre.com', 'www.loptorcre.com'];
+  var APP_ORIGIN = 'https://app.actiumcre.com';
+  var PRODUCTION_HOSTS = ['actiumcre.com', 'www.actiumcre.com'];
   var CAMPAIGN_KEYS = ['utm_source', 'utm_medium', 'utm_campaign'];
 
   // Evento → propiedades permitidas.

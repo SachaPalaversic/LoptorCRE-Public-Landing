@@ -1,10 +1,10 @@
 /*
- * Loptor CRE — landing. ES es el idioma base (vive en el HTML); EN se aplica desde este diccionario.
+ * Actium CRE — landing. ES es el idioma base (vive en el HTML); EN se aplica desde este diccionario.
  * Los textos salen de una única fuente de contenido; no editar el diccionario a mano sin revisar el HTML.
  */
 const EN = {
- "meta.title": "Loptor CRE Intelligence — Present with rigour. Connect with judgement",
- "meta.desc": "Loptor CRE Intelligence helps you find the other side of your deal: it anonymously matches your assets with buy-side mandates in off-market commercial real estate.",
+ "meta.title": "Actium CRE Intelligence — Present with rigour. Connect with judgement",
+ "meta.desc": "Actium CRE Intelligence helps you find the other side of your deal: it anonymously matches your assets with buy-side mandates in off-market commercial real estate.",
  "nav.skip": "Skip to content",
  "nav.label": "Primary navigation",
  "nav.menu": "Open menu",
@@ -19,10 +19,10 @@ const EN = {
  "nav.login": "Log in",
  "nav.demo": "Request a demo",
  "nav.lang": "Language",
- "brand.aria": "Loptor CRE Intelligence, home",
+ "brand.aria": "Actium CRE Intelligence, home",
  "hero.eyebrow": "Off-market commercial real estate",
  "hero.title": "Present with <em>rigour</em><br />Connect with <em>judgement</em>",
- "hero.lede": "Find the other side of your deal without revealing who you are. Loptor CRE matches your asset, anonymously, with the buy-side mandates that fit; first, it turns your asset into a traceable institutional teaser.",
+ "hero.lede": "Find the other side of your deal without revealing who you are. Actium CRE matches your asset, anonymously, with the buy-side mandates that fit; first, it turns your asset into a traceable institutional teaser.",
  "hero.principle": "Fit first. Identity later.",
  "hero.typed": "Sell-side · Buy-side opportunities",
  "flow.label": "From pain to solution: from loose documents to direct contact with the other party",
@@ -34,7 +34,7 @@ const EN = {
  "flow.pain2": "Rooms: 120 in the PDF, 118 in the spreadsheet",
  "flow.pain2s": "Unresolved",
  "flow.pain3": "Forward after forward: who holds the mandate?",
- "flow.bridge": "With Loptor CRE",
+ "flow.bridge": "With Actium CRE",
  "flow.s1t": "Traceable dossier",
  "flow.s1d": "Rooms · 120 · PDF, p. 6 · Confirmed",
  "flow.s2t": "Anonymous A4 teaser",
@@ -85,7 +85,7 @@ const EN = {
  "platform.note": "Recording of the real app · fictitious data",
  "platform.videoLabel": "Video: platform walkthrough, from file ingestion to the Deal Room",
  "platform.noVideo": "Your browser cannot play this video.",
- "platform.posterAlt": "Blind opportunity sheet in the Loptor CRE app: 100% match, anonymous identity",
+ "platform.posterAlt": "Blind opportunity sheet in the Actium CRE app: 100% match, anonymous identity",
  "how.kicker": "How it works",
  "how.title": "From your asset to your counterparty,<br /><em>in five steps.</em>",
  "s1.label": "Ingestion",
@@ -110,7 +110,7 @@ const EN = {
  "p1.askTitle": "One data point at a time",
  "p1.askBody": "You ask for one specific data point, such as price or floor area. The owner decides whether to show it, as a range. Identity is never requested or revealed.",
  "p1.validTitle": "Mandate in force",
- "p1.validBody": "The owner confirms with one click that the mandate is still in force. Loptor never asks for a copy of the mandate.",
+ "p1.validBody": "The owner confirms with one click that the mandate is still in force. Actium never asks for a copy of the mandate.",
  "p1.alt": "Blind match sheet in the app: fit score, documented data and anonymity protocol",
  "s2.alt": "Buy-side mandates in the app: each buyer's criteria, with ticket, markets and exclusions",
  "s3.label": "Deal Room",
@@ -121,7 +121,7 @@ const EN = {
  "dr.2t": "Identities are revealed",
  "dr.2b": "Each party receives the other's name and contact details, whatever its position: owner, direct mandate, co-mandate or investor.",
  "dr.3t": "They talk directly",
- "dr.3b": "Loptor is not a data room and does not handle NDAs: the negotiation carries on where you already conduct it.",
+ "dr.3b": "Actium is not a data room and does not handle NDAs: the negotiation carries on where you already conduct it.",
  "dr.4t": "The Advisor stays with you",
  "dr.4b": "Inside the room you can keep asking it about the fit.",
  "s3.alt": "Match with contact released: both parties have approved and credentials are exchanged",
@@ -141,7 +141,7 @@ const EN = {
  "counter.p4": "Brokers with a buy-side mandate",
  "counter.body": "Each one declares its position and its mandate, and the engine only matches compatible pairs. No identity is visible until both parties approve.",
  "who.brokerT": "Broker with a mandate",
- "who.brokerB": "Your mandate comes out stronger. Your network stays yours: Loptor organises and extends it.",
+ "who.brokerB": "Your mandate comes out stronger. Your network stays yours: Actium organises and extends it.",
  "types.title": "Six asset types,<br /><em>one documentary standard.</em>",
  "types.intro": "Each type has its own fields, extraction and teaser: a hotel reads like a hotel and an office like an office.",
  "types.hotel": "Hotel",
@@ -161,43 +161,43 @@ const EN = {
  "mandate.pill1": "Owner",
  "mandate.pill2": "Direct mandate",
  "mandate.pill3": "Co-mandate",
- "mandate.body": "A mandate that only accepts owners and direct mandates is never matched with a co-mandate: it is a hard filter in the engine. It is a declaration, not a verification: Loptor does not certify anyone, does not imply exclusivity and does not change the order of results.",
+ "mandate.body": "A mandate that only accepts owners and direct mandates is never matched with a co-mandate: it is a hard filter in the engine. It is a declaration, not a verification: Actium does not certify anyone, does not imply exclusivity and does not change the order of results.",
  "data.kicker": "Your data",
- "data.title": "Four rules Loptor<br /><em>never breaks with your data.</em>",
+ "data.title": "Four rules Actium<br /><em>never breaks with your data.</em>",
  "data.lede": "How each one is met is explained in the FAQ below.",
  "data.r1t": "Nothing without a source",
  "data.r1b": "Every figure, with its document, page and literal quote. What is missing is declared.",
  "data.r2t": "Identity protected",
  "data.r2b": "Nobody knows who you are until both parties approve. Only what you include in the blind teaser is seen.",
  "data.r3t": "You decide",
- "data.r3b": "Loptor proposes. The platform never takes a step of the match for you.",
+ "data.r3b": "Actium proposes. The platform never takes a step of the match for you.",
  "data.r4t": "Your documents stay yours",
  "data.r4b": "They are not used to train AI models. Hosted in the European Union and GDPR-compliant.",
- "data.scope": "Loptor works in the pre-transaction phase: it structures the dossier, issues the blind teaser and runs the pre-NDA match up to the first qualified contact. It is not an intermediary or an adviser, it charges no commission on deals, it does not audit (due diligence remains yours), it does not guarantee closing, and it is not a data room or an NDA or e-signature service.",
+ "data.scope": "Actium works in the pre-transaction phase: it structures the dossier, issues the blind teaser and runs the pre-NDA match up to the first qualified contact. It is not an intermediary or an adviser, it charges no commission on deals, it does not audit (due diligence remains yours), it does not guarantee closing, and it is not a data room or an NDA or e-signature service.",
  "faq.g1": "Confidentiality",
  "faq.g2": "Data quality",
  "faq.g3": "Matching",
  "faq.g4": "Operations",
  "faq.q1": "How is each party's identity protected before the NDA?",
- "faq.a1": "Until both parties approve contact, neither sees the other's name: the match runs on the blind teaser and the fit table, never on the full dossier. Only what the owner decides to include leaves the dossier, asset by asset and across three visibility levels. Identifying data is hidden by default, and Loptor never takes a step on the parties' behalf.",
+ "faq.a1": "Until both parties approve contact, neither sees the other's name: the match runs on the blind teaser and the fit table, never on the full dossier. Only what the owner decides to include leaves the dossier, asset by asset and across three visibility levels. Identifying data is hidden by default, and Actium never takes a step on the parties' behalf.",
  "faq.q2": "Can I ask for specific data before signing the NDA?",
  "faq.a2": "Yes, one data point at a time. You pick what your analysis needs (for example price, yield, revenue, EBITDA, occupancy, GLA or operator contract end). The owner decides whether to disclose it and answers in a range. Identity is never requested or revealed.",
  "faq.q3": "Are my documents used to train AI models? Where are they hosted?",
  "faq.a3": "They are not used to train AI models. We host in the European Union and comply with GDPR.",
  "faq.q4": "How traceable is each figure on the teaser?",
  "faq.a4": "Every figure is extracted with its source (document, page or cell) and its literal quote, so you can trace it back to the origin document. Nothing is inferred, estimated, averaged or completed; what is missing is grouped in a single “Under NDA” line. If two sources contradict each other, the conflict is flagged and the figure is not printed until you confirm the value. Yours prevails.",
- "faq.q5": "Does Loptor verify or audit the documentation?",
+ "faq.q5": "Does Actium verify or audit the documentation?",
  "faq.a5": "No. It structures and cites what the parties provide, but does not certify that it is truthful. Due diligence remains yours.",
  "faq.q6": "How is the fit between an asset and a buy-side mandate determined?",
  "faq.a6": "In two layers. First, hard filters that exclude without scoring: asset type, ticket range, mandate type, authorisation from both parties and exclusions. Then a fit score against each party's threshold. Near-matches (up to 10 points below) are flagged discreetly to the party with the higher threshold.",
  "faq.q7": "Can I audit why two assets match, or why they do not?",
  "faq.a7": "Yes. The Advisor explains the score using the engine's rules, shows which criterion excluded a match and simulates what would happen if you widened the market or changed the threshold. It is not a model giving opinions: it is the same engine, explained.",
  "faq.q8": "I already have my network. How do you avoid intermediaries without a mandate?",
- "faq.a8": "Your network stays yours. Each party declares its position (owner, direct mandate, co-mandate or investor) and who it accepts to work with, and the engine only matches compatible pairs. The owner attests with one click that the mandate is still in force. It is a declaration, not a verification: Loptor does not ask for a copy of the mandate or certify anyone.",
+ "faq.a8": "Your network stays yours. Each party declares its position (owner, direct mandate, co-mandate or investor) and who it accepts to work with, and the engine only matches compatible pairs. The owner attests with one click that the mandate is still in force. It is a declaration, not a verification: Actium does not ask for a copy of the mandate or certify anyone.",
  "faq.q9": "Does it replace my data room, my NDA or my network?",
- "faq.a9": "No. Loptor takes you as far as the qualified contact, and the Deal Room accompanies that first contact. NDA, signing and due diligence continue through your usual route. It charges no commission on deals.",
+ "faq.a9": "No. Actium takes you as far as the qualified contact, and the Deal Room accompanies that first contact. NDA, signing and due diligence continue through your usual route. It charges no commission on deals.",
  "faq.q11": "Who is on the other side?",
- "faq.a11": "Loptor is not a directory or an investor database. The Dark Pool is made up of the assets and buy-side mandates that each party uploads and authorises, and only those that meet both sides' filters are matched.",
+ "faq.a11": "Actium is not a directory or an investor database. The Dark Pool is made up of the assets and buy-side mandates that each party uploads and authorises, and only those that meet both sides' filters are matched.",
  "nav.screening": "Screening",
  "scr.kicker": "Blind screening",
  "scr.title": "Search by criteria.<br /><em>Move forward with one click.</em>",
@@ -304,7 +304,7 @@ const EN = {
  "plans.inst.who": "Organisation",
  "plans.inst.bill": "Annual billing",
  "plans.inst.f1": "Everything in Desk",
- "plans.inst.f2": "White-label deliverables, without Loptor branding",
+ "plans.inst.f2": "White-label deliverables, without Actium branding",
  "plans.inst.f3": "Account manager and priority support",
  "plans.ent.who": "Tailored",
  "plans.ent.bill": "Annual billing",
@@ -317,7 +317,7 @@ const EN = {
  "final.title": "Present with<br /><em>rigour</em><br />Connect with<br /><em>judgement</em>",
  "final.body": "Structure the documentation. Find the fit. Talk directly to the other party.",
  "final.cta": "Request a demo",
- "footer.legal": "© 2026 Loptor CRE Intelligence",
+ "footer.legal": "© 2026 Actium CRE Intelligence",
  "footer.privacy": "Privacy",
  "footer.cookies": "Cookies",
  "footer.aviso": "Legal notice",
@@ -334,7 +334,7 @@ const EN = {
  "cookie.accept": "Accept all",
  "cookie.aria": "Cookie preferences",
  "footer.cookieSettings": "Cookie settings",
- "footer.contact": "Contact: hello@loptorcre.com"
+ "footer.contact": "Contact: hello@actiumcre.com"
 };
 
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -425,10 +425,10 @@ function setupVideo() {
     } else showFallback();
   }).catch(() => { if (token === videoToken) showFallback(); });
 }
-document.documentElement.dataset.posterAltEs = 'Ficha ciega de oportunidad en la app de Loptor CRE: cruce al 100 %, identidad anónima';
+document.documentElement.dataset.posterAltEs = 'Ficha ciega de oportunidad en la app de Actium CRE: cruce al 100 %, identidad anónima';
 
 const PLAN_NAMES = { advisor: 'Advisor', desk: 'Desk', institutional: 'Institutional', enterprise: 'Enterprise' };
-const DEMO_URL = 'https://cal.com/loptorcre/30min';
+const DEMO_URL = 'https://cal.com/actiumcre/30min';
 
 // Consentimiento de cookies: solo el calendario de Cal.com (tercero) depende de él.
 const CONSENT_KEY = 'loptor-consent';
@@ -453,7 +453,7 @@ function setupConsent() {
 // Calendario de demos (Cal.com) integrado en una ventana emergente. El script de Cal.com
 // no se carga con la página: solo cuando alguien pulsa un botón de demo. Si no carga
 // (bloqueador, red), el enlace normal se abre en una pestaña nueva.
-const CAL_LINK = 'loptorcre/30min';
+const CAL_LINK = 'actiumcre/30min';
 let calState = 'idle'; // idle | loading | ready | failed
 let calPlan = '';
 function loadCal() {

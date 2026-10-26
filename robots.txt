@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Sitemap: https://loptorcre.com/sitemap.xml
+Sitemap: https://actiumcre.com/sitemap.xml
