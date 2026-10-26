@@ -29,3 +29,7 @@ Cobalto #3B82F6 · Ámbar #F5A524 · Tinta #111A28 · Gris #55657B · Sobre oscu
 - Nunca recrear ni describir el logo: usar los archivos.
 - Prohibido Arial/Helvetica, "ACTIUM" en mayúsculas, "actium" en minúsculas, el "NEXT-GEN DIGITAL".
 - Regenerar: `python3 scripts/build-brand-logos.py`.
+
+## Variante interna: Actium Insights
+Solo para insights.actiumcre.com (privado). Icono + "Actium Insights" en una línea, misma fuente, tamaño y tracking que "Actium"; sin subtítulo.
+`public/brand/actium-insights-on-dark.svg` / `.png` y `actium-insights-on-light.svg` / `.png`. Regenerar: `python3 scripts/build-brand-insights.py`.
