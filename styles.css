@@ -34,7 +34,7 @@ button{font:inherit;color:inherit}
 .site-header.is-stuck{border-bottom-color:var(--line)}
 .header-inner{display:flex;align-items:center;gap:20px;min-height:68px}
 .brand{display:flex;flex:none}
-.brand img{height:36px;width:auto}
+.brand img{height:52px;width:auto}
 .main-nav{display:flex;gap:2px;margin-left:auto}
 .main-nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:500;padding:8px 10px;border-radius:6px;white-space:nowrap}
 .main-nav a:hover{background:var(--paper-2);color:var(--cobalt-deep)}
@@ -491,7 +491,7 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .hero .typed{font-size:clamp(14px,1.3vw,17px)}
 @media (min-width:1121px) and (max-width:1280px){
   .header-inner{gap:8px}
-  .brand img{height:30px}
+  .brand img{height:42px}
   .main-nav a{padding:8px 5px;font-size:13px}
   .header-actions{gap:8px}
   .header-actions .button-small{padding-left:14px;padding-right:14px}
