@@ -562,3 +562,5 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
   .scr-points{grid-template-rows:repeat(3,1fr)}
   .scr-points .subcard{display:flex;flex-direction:column;justify-content:center}
 }
+
+#who-title{max-width:none}

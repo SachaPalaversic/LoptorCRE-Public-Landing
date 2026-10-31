@@ -126,7 +126,7 @@ window.LOPTOR_FR = {
  "how.demoNote": "Exemple de croisement de l’application : données fictives",
  "how.shotNote": "Exemple d’écran de l’application : données fictives",
  "who.kicker": "Pour qui",
- "who.title": "Pour qui vend, pour qui achète et pour qui détient le mandat.",
+ "who.title": "Pour qui vend, pour qui achète<br />et pour qui détient le mandat.",
  "who.sellT": "Vend",
  "who.sellB": "Présentez avec rigueur, sans exposer votre actif.",
  "who.buyT": "Achète",

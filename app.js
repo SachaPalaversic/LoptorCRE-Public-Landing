@@ -128,7 +128,7 @@ const EN = {
  "how.demoNote": "Sample match from the app: fictitious data",
  "how.shotNote": "Sample screen from the app: fictitious data",
  "who.kicker": "Who it is for",
- "who.title": "For those who sell, those who buy and those who hold the mandate.",
+ "who.title": "For those who sell, those who buy<br />and those who hold the mandate.",
  "who.sellT": "Sell side",
  "who.sellB": "Present with rigour, without exposing your asset.",
  "who.buyT": "Buy side",
