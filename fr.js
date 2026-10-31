@@ -198,7 +198,7 @@ window.LOPTOR_FR = {
  "faq.q8": "J’ai déjà mon réseau. Comment évitez-vous les intermédiaires sans mandat ?",
  "faq.a8": "Votre réseau reste le vôtre. Chaque partie déclare sa position (titulaire, mandat direct, co-mandat ou investisseur) et avec qui elle accepte de travailler, et le moteur ne croise que les paires compatibles. Le propriétaire atteste d’un clic que le mandat est toujours en vigueur. C’est une déclaration, pas une vérification : Actium ne demande pas de copie du mandat et ne certifie personne.",
  "faq.q9": "Remplace-t-il ma data room, mon NDA ou mon réseau de contacts ?",
- "faq.a9": "Non. Actium vous conduit jusqu’au contact qualifié, et la Deal Room accompagne ce premier contact. NDA, signature et due diligence suivent votre circuit habituel. Il ne perçoit aucune commission sur les opérations.",
+ "faq.a9": "Non. Actium ne remplace ni votre data room, ni votre NDA, ni votre réseau : il intervient en amont. Il vous aide à trouver la bonne contrepartie et à atteindre un premier contact qualifié, et la Deal Room est l’espace contrôlé où ce premier contact a lieu lorsque les deux parties acceptent. Ensuite, NDA, data room, signature et due diligence suivent votre circuit habituel, et votre réseau reste le vôtre. Actium ne perçoit aucune commission sur les opérations.",
  "nav.screening": "Screening",
  "scr.kicker": "Screening anonyme",
  "scr.title": "Cherchez par critères.<br /><em>Avancez d’un clic.</em>",

@@ -195,7 +195,7 @@ const EN = {
  "faq.q8": "I already have my network. How do you avoid intermediaries without a mandate?",
  "faq.a8": "Your network stays yours. Each party declares its position (owner, direct mandate, co-mandate or investor) and who it accepts to work with, and the engine only matches compatible pairs. The owner attests with one click that the mandate is still in force. It is a declaration, not a verification: Actium does not ask for a copy of the mandate or certify anyone.",
  "faq.q9": "Does it replace my data room, my NDA or my network?",
- "faq.a9": "No. Actium takes you as far as the qualified contact, and the Deal Room accompanies that first contact. NDA, signing and due diligence continue through your usual route. It charges no commission on deals.",
+ "faq.a9": "No. Actium does not replace your data room, your NDA or your network: it works before them. It helps you find the right counterparty and reach a first qualified contact, and the Deal Room is the controlled space where that first contact takes place once both sides accept. From there, NDA, data room, signing and due diligence continue through your usual route, and your network remains yours. Actium does not charge commissions on deals.",
  "faq.q11": "Who is on the other side?",
  "faq.a11": "Actium is not a directory or an investor database. The Dark Pool is made up of the assets and buy-side mandates that each party uploads and authorises, and only those that meet both sides' filters are matched.",
  "nav.screening": "Screening",
