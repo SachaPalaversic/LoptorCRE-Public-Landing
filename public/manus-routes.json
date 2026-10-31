@@ -1,1 +1,12 @@
-{"routes":[{"path":"/","title":"Actium CRE Intelligence"}]}
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "Actium CRE Intelligence"
+    },
+    {
+      "path": "/hero-explainer-v2.html",
+      "title": "Actium CRE Product Explainer"
+    }
+  ]
+}
