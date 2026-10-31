@@ -5,7 +5,7 @@
 - [ ] La landing se ejecuta como proyecto independiente y no accede, modifica ni depende técnicamente de `app.loptorcre.com`; los únicos enlaces hacia la aplicación son CTAs externos a `https://app.loptorcre.com`.
 - [ ] La página usa el lenguaje visual aprobado: fondo claro frío, azul marino/negro suave, azul medio para acciones, verde para verificación, tipografía editorial serif para titulares, sans-serif para cuerpo y monospace para metadatos.
 - [ ] Existe una composición responsive de escritorio, tablet y móvil con navegación accesible, foco visible, HTML semántico y soporte de `prefers-reduced-motion`.
-- [ ] Existe `public/manus-routes.json` con la ruta pública `/` y el servidor responde con HTTP 200 a ese recurso sin devolver el shell HTML.
+- [ ] Existe `public/routes.json` con la ruta pública `/` y el servidor responde con HTTP 200 a ese recurso sin devolver el shell HTML.
 
 ## Landing narrativa
 

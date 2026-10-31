@@ -74,7 +74,7 @@ Usar el wordmark tipográfico `loptor` con tratamiento editorial sobrio, acompa�
 - `src/components/Pricing.tsx`: planes y toggle mensual/anual donde aplique.
 - `src/components/Footer.tsx`: enlaces institucionales y legal placeholders; la razón social no forma parte de la narrativa comercial.
 - `src/App.tsx`: composición, estado de idioma y navegación por anclas.
-- `public/manus-routes.json`: declaración de la ruta pública `/`.
+- `public/routes.json`: declaración de la ruta pública `/`.
 - `public/robots.txt`, `public/sitemap.xml`: documentos para el dominio canónico cuando se configure.
 
 ## Experiencia trilingüe

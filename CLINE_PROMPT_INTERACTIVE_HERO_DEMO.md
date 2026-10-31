@@ -181,9 +181,9 @@ Verify at least:
 - No real asset files or confidential data.
 - No external tracking scripts.
 - No new npm dependency unless absolutely unavoidable; prefer zero dependencies.
-- Keep the existing `/manus-routes.json` intact.
+- Keep the existing `/routes.json` intact.
 - Preserve the current build command: `sh build.sh`.
-- Do not alter the Vercel or Manus deployment configuration in this task.
+- Do not alter the Vercel deployment configuration in this task.
 
 ## Acceptance criteria
 
