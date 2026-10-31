@@ -577,3 +577,6 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 .how .step:first-of-type{border-top:0}
 
 #how-title{max-width:none}
+
+/* Sin líneas horizontales entre los pasos de Cómo funciona */
+.how .step{border-top:0}
