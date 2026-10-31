@@ -529,3 +529,19 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
   .hero-explainer-embed{max-width:1120px;justify-self:center}
 }
 @media (min-width:641px) and (max-width:960px){.hero-explainer-embed{max-width:100%;justify-self:stretch}}
+
+/* Hero V4: caja del vídeo más pequeña (escalada), CTA debajo del vídeo */
+@media (min-width:961px){
+  .hero{padding-top:clamp(22px,2.6vw,36px)}
+  .hero-grid{gap:clamp(18px,2.2vw,28px)}
+  .hero .hero-copy h1{font-size:clamp(34px,3.7vw,54px)}
+  .hero-copy .hero-kicker{margin-bottom:16px}
+  .hero-explainer-embed{width:min(100%,clamp(600px,48vw,920px));max-width:none}
+  .hero-explainer-embed iframe{width:1120px;max-width:none;transform-origin:top left;height:630px}
+  .hero-explainer-caption{padding:8px 14px 10px}
+  .hero-grid > .hero-actions{justify-content:center;margin-top:2px;order:3;text-align:center}
+}
+@media (max-width:960px){
+  .hero-grid > .hero-actions{order:1}
+  .hero-grid > .hero-explainer-embed{order:2}
+}

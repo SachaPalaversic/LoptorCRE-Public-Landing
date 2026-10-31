@@ -74,15 +74,15 @@
             <div class="hero-side">
             <p class="lede" data-i18n="hero.lede">Encuentra a la otra parte de tu operación sin exponer quién eres. Actium CRE cruza, de forma anónima, tu activo con los mandatos de compra que encajan; antes, lo convierte en un teaser institucional trazable.</p>
             <p class="principle" data-i18n="hero.principle">Primero el encaje. Después la identidad.</p>
-            <div class="hero-actions">
-              <a class="button button-primary" data-demo href="https://cal.com/actiumcre/30min" target="_blank" rel="noopener" data-i18n="hero.cta">Solicita demo</a>
-              <p class="hero-note" data-i18n="hero.note">Después, 14 días de prueba con 1 teaser real. Sin tarjeta.</p>
-            </div>
             </div>
           </div>
           <div class="hero-visual hero-explainer-embed" role="group" aria-label="Actium CRE product explainer">
             <iframe src="/hero-explainer-v2.html" title="Actium CRE product explainer — 75 seconds" loading="eager" allow="autoplay" scrolling="no"></iframe>
             <p class="hero-explainer-caption mono">Product explainer · 75 sec · Play with sound</p>
+          </div>
+          <div class="hero-actions hero-actions-below">
+            <a class="button button-primary" data-demo href="https://cal.com/actiumcre/30min" target="_blank" rel="noopener" data-i18n="hero.cta">Solicita demo</a>
+            <p class="hero-note" data-i18n="hero.note">Después, 14 días de prueba con 1 teaser real. Sin tarjeta.</p>
           </div>
         </div>
 
@@ -404,12 +404,30 @@
     <script src="/fr.js" defer></script>
     <script src="/app.js" defer></script>
     <script>
-      /* Ajusta el alto del iframe del explainer al contenido real (evita recortes en cualquier ancho). */
-      window.addEventListener('message', function (e) {
-        if (e.origin !== location.origin || !e.data || e.data.type !== 'actium-explainer-height') return;
-        var f = document.querySelector('.hero-explainer-embed iframe');
-        if (f && e.data.height > 300 && e.data.height < 1600) f.style.height = e.data.height + 'px';
-      });
+      /* Alto del iframe del explainer = contenido real; en escritorio se renderiza a 1120px y se escala a la caja. */
+      (function () {
+        var box = document.querySelector('.hero-explainer-embed');
+        var f = box && box.querySelector('iframe');
+        if (!f) return;
+        var DESIGN = 1120, h = 0, wide = window.matchMedia('(min-width:961px)');
+        function apply() {
+          if (!h) return;
+          if (wide.matches) {
+            var s = Math.min(1, box.clientWidth / DESIGN);
+            f.style.height = h + 'px';
+            f.style.transform = 'scale(' + s + ')';
+            f.style.marginBottom = Math.round(h * (s - 1)) + 'px';
+          } else {
+            f.style.height = h + 'px'; f.style.transform = ''; f.style.marginBottom = '';
+          }
+        }
+        window.addEventListener('message', function (e) {
+          if (e.origin !== location.origin || !e.data || e.data.type !== 'actium-explainer-height') return;
+          if (e.data.height > 300 && e.data.height < 1600) { h = e.data.height; apply(); }
+        });
+        window.addEventListener('resize', apply);
+        if (wide.addEventListener) wide.addEventListener('change', apply);
+      })();
     </script>
   </body>
 </html>
