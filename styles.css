@@ -570,3 +570,5 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 #screening{padding-top:clamp(8px,1.2vw,16px)}
 
 #scr-title{max-width:none}
+
+.screening .section-lede{max-width:none}
