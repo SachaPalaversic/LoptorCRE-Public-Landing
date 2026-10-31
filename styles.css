@@ -572,3 +572,6 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 #scr-title{max-width:none}
 
 .screening .section-lede{max-width:none}
+
+/* Sin línea bajo el título de Cómo funciona (la del primer paso) */
+.how .step:first-of-type{border-top:0}
