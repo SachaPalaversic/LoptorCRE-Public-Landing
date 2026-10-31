@@ -270,6 +270,51 @@
   @media (max-width: 480px) {
     .actium-explainer .ae-meta { display: none; }
   }
+
+  /* ============================================================
+     V4 — Formato apaisado (16:9) cuando el iframe es ancho (>= 900px).
+     Texto a la izquierda, elemento visual a la derecha de cada slide.
+     En anchos menores se mantiene el layout vertical de V3.
+     ============================================================ */
+  @media (min-width: 900px) {
+    .actium-explainer { container-type: inline-size; }
+    .actium-explainer .ae-stage { min-height: 56.25cqw; grid-template-rows: 1fr auto; padding-inline: clamp(32px, 5vw, 72px); }
+    .actium-explainer .ae-brand, .actium-explainer .ae-meta { left: clamp(32px, 5vw, 72px); }
+    .actium-explainer .ae-meta { left: auto; right: clamp(32px, 5vw, 72px); }
+    .actium-explainer .ae-scene {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: clamp(32px, 5vw, 72px); align-content: start;
+      padding-top: clamp(84px, 8vw, 104px);
+    }
+    .actium-explainer .ae-scene > .ae-kicker { grid-column: 1; grid-row: 1; }
+    .actium-explainer .ae-scene > .ae-title  { grid-column: 1; grid-row: 2; max-width: none; font-size: clamp(30px, 3.5vw, 50px); }
+    .actium-explainer .ae-scene > .ae-copy   { grid-column: 1; grid-row: 3; font-size: clamp(14px, 1.3vw, 17px); }
+    .actium-explainer .ae-scene > .ae-signal { grid-column: 1; grid-row: 4; justify-self: start; }
+    .actium-explainer .ae-scene > .ae-cta    { grid-column: 1; grid-row: 4; justify-self: start; }
+    .actium-explainer .ae-scene > .ae-cards,
+    .actium-explainer .ae-scene > .ae-flow,
+    .actium-explainer .ae-scene > .ae-pair,
+    .actium-explainer .ae-scene > .ae-orbit,
+    .actium-explainer .ae-scene > .ae-screen > .ae-ui {
+      grid-column: 2; grid-row: 1 / span 4; align-self: center; width: 100%; max-width: none; margin-top: 0;
+    }
+    .actium-explainer .ae-cards, .actium-explainer .ae-pair { grid-template-columns: 1fr; gap: 12px; }
+    .actium-explainer .ae-card { padding: 16px 20px; }
+    .actium-explainer .ae-pair-card { padding: 18px 22px; }
+    .actium-explainer .ae-flow { margin-top: 0; justify-content: flex-start; }
+    .actium-explainer .ae-orbit { max-width: 520px; justify-self: end; }
+    .actium-explainer .ae-screen { display: contents; }
+    .actium-explainer .ae-screen-copy { grid-column: 1; grid-row: 4; max-width: none; margin-top: 18px; }
+    .actium-explainer .ae-screen-copy h3 { font-size: clamp(20px, 2vw, 26px); margin-bottom: 8px; }
+    .actium-explainer .ae-footer { grid-column: 1; }
+  }
+
+  .ae-gap { display: none; }
+  @media (min-width: 900px) {
+    .actium-explainer .ae-scene > .ae-gap { display: block; }
+    .ae-gap .line { background: none; border-top: 2px dashed rgba(44,111,214,.4); height: 0; transform: rotate(-12deg); left: 14%; right: 14%; }
+    .ae-gap::after { content: "?"; position: absolute; left: calc(50% - 22px); top: calc(50% - 22px); width: 44px; height: 44px; display: grid; place-items: center; border: 2px dashed #efa626; border-radius: 50%; background: #fff; color: #b77700; font: 600 18px var(--sans); }
+  }
 </style>
 </head>
 <body>
@@ -288,6 +333,7 @@
         <h1 class="ae-title">Relevant capital and inventory are already there.<br /><em>The connection is not.</em></h1>
         <p class="ae-copy">European commercial real estate remains fragmented, relationship-driven and sensitive to trust. Buyers face noise. Brokers face exposure. Both sides need a more controlled way to test fit before identity is revealed.</p>
         <div class="ae-signal"><span class="ae-live"></span><strong>THE MISSING LAYER</strong> / structured bilateral access</div>
+        <div class="ae-orbit ae-gap" aria-hidden="true"><div class="line"></div><div class="ae-node buy"><span>BUY-SIDE</span><b>Capital</b></div><div class="ae-node sell"><span>SELL-SIDE</span><b>Inventory</b></div></div>
       </article>
 
       <article class="ae-scene" data-scene="1">
