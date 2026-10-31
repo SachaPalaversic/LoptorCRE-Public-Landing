@@ -409,15 +409,15 @@
         var box = document.querySelector('.hero-explainer-embed');
         var f = box && box.querySelector('iframe');
         if (!f) return;
-        var DESIGN = 1120, h = 0, wide = window.matchMedia('(min-width:961px)');
+        var DESIGN = 1120, h = 0, DEFAULT_H = 630, wide = window.matchMedia('(min-width:961px)');
         function apply() {
-          if (!h) return;
           if (wide.matches) {
+            var hh = h || DEFAULT_H;
             var s = Math.min(1, box.clientWidth / DESIGN);
-            f.style.height = h + 'px';
+            f.style.height = hh + 'px';
             f.style.transform = 'scale(' + s + ')';
-            f.style.marginBottom = Math.round(h * (s - 1)) + 'px';
-          } else {
+            f.style.marginBottom = Math.round(hh * (s - 1)) + 'px';
+          } else if (h) {
             f.style.height = h + 'px'; f.style.transform = ''; f.style.marginBottom = '';
           }
         }
@@ -425,6 +425,8 @@
           if (e.origin !== location.origin || !e.data || e.data.type !== 'actium-explainer-height') return;
           if (e.data.height > 300 && e.data.height < 1600) { h = e.data.height; apply(); }
         });
+        apply();
+        window.addEventListener('DOMContentLoaded', apply);
         window.addEventListener('resize', apply);
         if (wide.addEventListener) wide.addEventListener('change', apply);
       })();
