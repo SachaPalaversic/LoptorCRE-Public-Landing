@@ -399,5 +399,13 @@
     <script src="/analytics.js" defer></script>
     <script src="/fr.js" defer></script>
     <script src="/app.js" defer></script>
+    <script>
+      /* Ajusta el alto del iframe del explainer al contenido real (evita recortes en cualquier ancho). */
+      window.addEventListener('message', function (e) {
+        if (e.origin !== location.origin || !e.data || e.data.type !== 'actium-explainer-height') return;
+        var f = document.querySelector('.hero-explainer-embed iframe');
+        if (f && e.data.height > 300 && e.data.height < 1600) f.style.height = e.data.height + 'px';
+      });
+    </script>
   </body>
 </html>

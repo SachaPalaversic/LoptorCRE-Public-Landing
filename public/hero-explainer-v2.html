@@ -181,6 +181,95 @@
   @media (prefers-reduced-motion: reduce) {
     .actium-explainer::before, .ae-scene { animation: none; }
   }
+
+  /* ============================================================
+     V3 — Ajustes de layout (31/10/2026)
+     - Todas las escenas se apilan en la misma celda: la altura del bloque
+       la marca la escena más alta, así nada se corta por abajo.
+     - Footer + controles pasan a flujo normal (ya no son absolutos):
+       no pueden solaparse con el contenido ni entre sí.
+     - Botones con ancho automático: "SOUND" / "MUTE" nunca se recortan.
+     ============================================================ */
+  .actium-explainer { height: auto; min-height: 0; }
+  .actium-explainer .ae-stage {
+    height: auto; min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    column-gap: 16px;
+    padding: clamp(22px, 4vw, 56px) clamp(22px, 7vw, 112px) 0;
+  }
+  .actium-explainer .ae-scene {
+    display: block;
+    grid-column: 1 / -1; grid-row: 1;
+    min-height: 0;
+    align-self: start;
+    padding-top: clamp(60px, 5.5vw, 80px);
+    padding-bottom: 24px;
+    visibility: hidden; pointer-events: none; animation: none;
+  }
+  .actium-explainer .ae-scene.is-active { visibility: visible; pointer-events: auto; animation: sceneIn .7s ease both; }
+  .actium-explainer .ae-title { max-width: 1000px; margin: 18px 0 16px; font-size: clamp(32px, 4.1vw, 60px); }
+  .actium-explainer .ae-signal { margin-top: 26px; flex-wrap: wrap; }
+  .actium-explainer .ae-cards { margin-top: 26px; }
+  .actium-explainer .ae-card { min-height: 0; }
+  .actium-explainer .ae-flow { margin-top: 28px; }
+  .actium-explainer .ae-pair { margin-top: 26px; }
+  .actium-explainer .ae-pair-card { min-height: 0; padding: 22px; }
+  .actium-explainer .ae-pair-card p { font-size: clamp(16px, 1.5vw, 19px); }
+  .actium-explainer .ae-pair + .ae-signal { margin-top: 24px; }
+  .actium-explainer .ae-cta { margin-top: 24px; }
+  .actium-explainer .ae-orbit { height: 210px; margin-top: 26px; }
+  .actium-explainer .ae-node { width: 128px; height: 66px; }
+  .actium-explainer .ae-node.buy { top: 14px; }
+  .actium-explainer .ae-node.sell { bottom: 10px; }
+  .actium-explainer .ae-node.core { top: 56px; height: 96px; }
+
+  /* Barra inferior: footer (izquierda) + controles (derecha) en una misma fila */
+  .actium-explainer .ae-footer {
+    position: static; grid-column: 1; grid-row: 2;
+    justify-content: flex-start; align-items: center; flex-wrap: wrap;
+    gap: 6px 20px; padding: 14px 0 22px; margin: 0;
+  }
+  .actium-explainer .ae-controls {
+    position: static; grid-column: 2; grid-row: 2; justify-self: end;
+    display: flex; flex-wrap: nowrap; align-items: center; gap: 8px;
+    padding: 10px 0 18px; z-index: 4;
+  }
+  .actium-explainer .ae-controls button {
+    flex: 0 0 auto; width: auto; min-width: 38px; height: 34px;
+    padding: 0 12px; line-height: 1; white-space: nowrap;
+  }
+  .actium-explainer .ae-controls button[data-action="sound"] {
+    flex: 0 0 auto; width: auto; min-width: 72px; padding: 0 12px;
+    font-size: 10px; letter-spacing: .08em;
+  }
+
+  @media (max-width: 720px) {
+    .actium-explainer { height: auto; min-height: 0; }
+    .actium-explainer .ae-stage { padding-bottom: 0; }
+    .actium-explainer .ae-scene { min-height: 0; padding-top: 64px; padding-bottom: 20px; }
+    .actium-explainer .ae-title { font-size: clamp(30px, 8vw, 46px); }
+    .actium-explainer .ae-card { padding: 14px 16px; }
+    .actium-explainer .ae-card b { margin-bottom: 6px; }
+    .actium-explainer .ae-pair-card { padding: 16px 18px; }
+    .actium-explainer .ae-screen { gap: 22px; }
+    .actium-explainer .ae-orbit { transform: none; width: 100%; max-width: 420px; }
+    .actium-explainer .ae-node { width: 112px; height: 60px; }
+    .actium-explainer .ae-node.core { left: calc(50% - 62px); width: 124px; height: 88px; top: 58px; }
+    .actium-explainer .ae-footer { font-size: 9px; letter-spacing: .03em; }
+  }
+  @media (max-width: 560px) {
+    .actium-explainer .ae-stage { grid-template-columns: minmax(0, 1fr); padding-inline: 20px; }
+    .actium-explainer .ae-footer { grid-column: 1; grid-row: 2; padding-bottom: 6px; }
+    .actium-explainer .ae-controls { grid-column: 1; grid-row: 3; justify-self: start; padding: 4px 0 20px; }
+    .actium-explainer .ae-brand { left: 20px; }
+    .actium-explainer .ae-meta { right: 20px; }
+  }
+  @media (max-width: 480px) {
+    .actium-explainer .ae-meta { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -203,7 +292,7 @@
 
       <article class="ae-scene" data-scene="1">
         <div class="ae-kicker">What Actium CRE is</div>
-        <h1 class="ae-title">A private transaction layer for <em>off-market CRE.</em></h1>
+        <h1 class="ae-title">A private transaction layer for<br /><em>off-market CRE.</em></h1>
         <p class="ae-copy">Actium CRE is a bilateral off-market transaction engine connecting Buy-Side capital with Sell-Side inventory. Confidential mandates are matched with audited assets through a double-blind Dark Pool.</p>
         <div class="ae-cards"><div class="ae-card blue"><b>Buy-Side capital</b><span>Family Offices<br />PE funds<br />Institutional investors</span></div><div class="ae-card amber"><b>Double-blind Dark Pool</b><span>Fit first<br />Controlled visibility<br />Consent-based introduction</span></div><div class="ae-card green"><b>Sell-Side inventory</b><span>Assets<br />Portfolios<br />Direct or co-mandates</span></div></div>
       </article>
@@ -224,7 +313,7 @@
 
       <article class="ae-scene" data-scene="4">
         <div class="ae-kicker">One platform. Two sides of the market.</div>
-        <h1 class="ae-title">A more deliberate way to create <em>qualified liquidity.</em></h1>
+        <h1 class="ae-title">A more deliberate way to create<br /><em>qualified liquidity.</em></h1>
         <div class="ae-pair"><div class="ae-pair-card"><h3>BUY-SIDE</h3><p>Define a mandate, screen blind inventory, select an opportunity and request matching without broadcasting the full investment strategy.</p></div><div class="ae-pair-card"><h3>SELL-SIDE</h3><p>Structure assets, preserve provenance, control visibility and test real demand before exposing the mandate or relationship.</p></div></div>
         <div class="ae-signal"><strong>FAMILY OFFICES</strong> · <strong>PE FUNDS</strong> · <strong>CRE BROKERS</strong> · institutional capital markets</div>
       </article>
@@ -232,7 +321,7 @@
       <article class="ae-scene" data-scene="5">
         <div class="ae-kicker">The Actium CRE proposition</div>
         <h1 class="ae-title">Private CRE transactions,<br /><em>structured before identity is revealed.</em></h1>
-        <p class="ae-copy">Actium CRE is built for the moment before the introduction — when fit matters, evidence matters and trust has to be earned in stages.</p>
+        <p class="ae-copy">Actium CRE is built for the moment before the introduction, when fit matters, evidence matters and trust has to be earned in stages.</p>
         <div class="ae-orbit"><div class="line"></div><div class="ae-node buy"><span>BUY-SIDE</span><b>Capital</b></div><div class="ae-node core"><span>DOUBLE-BLIND</span><b>DARK POOL</b></div><div class="ae-node sell"><span>SELL-SIDE</span><b>Inventory</b></div></div>
         <div class="ae-cta"><i></i> Request access / Explore Actium CRE</div>
       </article>
@@ -323,6 +412,18 @@
     observer.observe(root);
   }
   render(performance.now());
+})();
+</script>
+<script>
+/* Avisa a la landing de la altura real del bloque para que el iframe nunca lo recorte. */
+(() => {
+  const root = document.querySelector('.actium-explainer');
+  if (!root || window.parent === window) return;
+  const send = () => window.parent.postMessage({ type: 'actium-explainer-height', height: Math.ceil(root.getBoundingClientRect().height) }, location.origin);
+  if ('ResizeObserver' in window) new ResizeObserver(send).observe(root);
+  window.addEventListener('load', send);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(send);
+  send();
 })();
 </script>
 </body>
