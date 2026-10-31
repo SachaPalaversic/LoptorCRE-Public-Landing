@@ -70,8 +70,9 @@
   .ae-footer { position: absolute; bottom: 25px; left: clamp(22px, 7vw, 112px); right: clamp(22px, 7vw, 112px); display: flex; justify-content: space-between; align-items: end; gap: 20px; color: #7088a0; font: 10px var(--mono); letter-spacing: .05em; text-transform: uppercase; }
   .ae-progress { position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: rgba(255,255,255,.12); }
   .ae-progress i { display: block; width: 0%; height: 100%; background: linear-gradient(90deg, var(--blue), var(--amber)); transform-origin: left; }
-  .ae-controls { position: absolute; right: clamp(22px, 7vw, 112px); bottom: 22px; display: flex; gap: 8px; z-index: 4; }
-  .ae-controls button { width: 34px; height: 28px; border: 1px solid rgba(255,255,255,.24); background: rgba(7,21,35,.35); color: white; cursor: pointer; font: 12px var(--mono); }
+  .ae-controls { position: absolute; right: clamp(22px, 7vw, 112px); bottom: 22px; display: flex; flex-wrap: nowrap; gap: 8px; z-index: 4; }
+  .ae-controls button { flex: 0 0 34px; width: 34px; height: 28px; padding: 0; border: 1px solid rgba(255,255,255,.24); background: rgba(7,21,35,.35); color: white; cursor: pointer; font: 12px var(--mono); white-space: nowrap; }
+  .ae-controls button[data-action="sound"] { flex-basis: 64px; width: 64px; padding: 0 7px; font-size: 10px; letter-spacing: .03em; }
   .ae-controls button:hover, .ae-controls button:focus-visible { background: rgba(52,120,229,.5); outline: none; }
   .ae-signal { display: inline-flex; align-items: center; gap: 8px; margin-top: 34px; padding: 11px 14px; border: 1px solid rgba(255,255,255,.16); background: rgba(255,255,255,.06); color: #d6e3ef; font: 11px var(--mono); }
   .ae-signal strong { color: var(--amber); font-weight: 500; }
@@ -161,6 +162,11 @@
     .ae-opp { padding: 8px; }
     .ae-opp b { font-size: 10px; }
     .ae-footer { font-size: 8px; }
+  }
+  @media (max-width: 420px) {
+    .ae-controls { right: 16px; gap: 6px; }
+    .ae-controls button { flex-basis: 30px; width: 30px; }
+    .ae-controls button[data-action="sound"] { flex-basis: 58px; width: 58px; padding-inline: 4px; }
   }
   @media (prefers-reduced-motion: reduce) {
     .actium-explainer::before, .ae-scene { animation: none; }
