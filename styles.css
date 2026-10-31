@@ -568,3 +568,5 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
 /* Screening sigue a Cómo funciona (mismo fondo): se evita sumar dos paddings */
 #como-funciona{padding-bottom:clamp(20px,3vw,40px)}
 #screening{padding-top:clamp(8px,1.2vw,16px)}
+
+#scr-title{max-width:none}

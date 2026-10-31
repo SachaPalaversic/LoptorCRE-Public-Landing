@@ -200,7 +200,7 @@ const EN = {
  "faq.a11": "Actium is not a directory or an investor database. The Dark Pool is made up of the assets and buy-side mandates that each party uploads and authorises, and only those that meet both sides' filters are matched.",
  "nav.screening": "Screening",
  "scr.kicker": "Blind screening",
- "scr.title": "Search by criteria.<br /><em>Move forward with one click.</em>",
+ "scr.title": "Search with your investment criteria.<br /><em>Move forward with one click.</em>",
  "scr.lede": "For family offices, funds and investment teams: describe what you are looking for and see what is in the Dark Pool, as a blind sheet. Exclusive to the Institutional and Enterprise plans.",
  "scr.a.t": "The seller decides",
  "scr.a.b": "Every blind teaser has two checkboxes: send it to the Dark Pool and make it visible in the screening. Only what the teaser declares is searchable.",

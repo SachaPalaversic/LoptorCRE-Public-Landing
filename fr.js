@@ -201,7 +201,7 @@ window.LOPTOR_FR = {
  "faq.a9": "Non. Actium ne remplace ni votre data room, ni votre NDA, ni votre réseau. Actium vous aide à trouver la bonne contrepartie et à atteindre un premier contact qualifié. La Deal Room d’Actium est l’espace contrôlé où ce premier contact a lieu lorsque les deux parties acceptent. Ensuite, tout se passe en dehors d’Actium : le NDA, la data room, la signature et la due diligence suivent votre circuit habituel, et votre réseau reste le vôtre.",
  "nav.screening": "Screening",
  "scr.kicker": "Screening anonyme",
- "scr.title": "Cherchez par critères.<br /><em>Avancez d’un clic.</em>",
+ "scr.title": "Cherchez selon vos critères d’investissement.<br /><em>Avancez d’un clic.</em>",
  "scr.lede": "Pour les family offices, fonds et équipes d’investissement : décrivez ce que vous cherchez et voyez ce qui existe dans le Dark Pool, sous forme de fiche anonyme. Réservé aux offres Institutional et Enterprise.",
  "scr.a.t": "Le vendeur décide",
  "scr.a.b": "Chaque teaser anonyme a deux cases : l’envoyer au Dark Pool et le rendre visible dans le screening. Seul ce que le teaser déclare est consultable.",
