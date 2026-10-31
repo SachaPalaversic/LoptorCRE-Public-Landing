@@ -555,3 +555,10 @@ mark.pending{background:#fff3cd;color:#5a4300;padding:1px 6px;border-radius:4px}
   .hero-copy .hero-actions{margin-top:26px;justify-content:flex-start;text-align:left;order:0}
   .hero-explainer-embed{width:100%;max-width:none;justify-self:end}
 }
+
+/* Screening: columnas del mismo alto (las 3 tarjetas se reparten la altura de la ficha) */
+@media (min-width:861px){
+  .scr-grid{align-items:stretch}
+  .scr-points{grid-template-rows:repeat(3,1fr)}
+  .scr-points .subcard{display:flex;flex-direction:column;justify-content:center}
+}
