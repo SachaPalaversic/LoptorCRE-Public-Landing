@@ -202,7 +202,7 @@ window.LOPTOR_FR = {
  "nav.screening": "Screening",
  "scr.kicker": "Screening anonyme",
  "scr.title": "Cherchez selon vos critères d’investissement.<br /><em>Avancez d’un clic.</em>",
- "scr.lede": "Pour les family offices, fonds et équipes d’investissement : décrivez ce que vous cherchez et voyez ce qui existe dans le Dark Pool, sous forme de fiche anonyme. Réservé aux offres Institutional et Enterprise.",
+ "scr.lede": "Pour les family offices, fonds et équipes d’investissement : décrivez ce que vous cherchez et voyez ce qui existe dans le Dark Pool, sous forme de fiche anonyme.<br />Réservé aux offres Institutional et Enterprise.",
  "scr.a.t": "Le vendeur décide",
  "scr.a.b": "Chaque teaser anonyme a deux cases : l’envoyer au Dark Pool et le rendre visible dans le screening. Seul ce que le teaser déclare est consultable.",
  "scr.b.t": "L’investisseur cherche",
