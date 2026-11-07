@@ -176,6 +176,11 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,6.2vw,82px);lin
 
 /* Planes */
 .plan-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px;align-items:stretch}
+/* Plan Advisor oculto provisionalmente (ver SHOW_ADVISOR_PLAN en app.js) */
+.hide-advisor-plan [data-plan-card="advisor"]{display:none}
+.hide-advisor-plan .plan-grid{grid-template-columns:repeat(3,1fr)}
+.hide-advisor-plan .cmp-table thead tr th:nth-child(2),
+.hide-advisor-plan .cmp-table tbody tr td:nth-child(2){display:none}
 .price-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;display:flex;flex-direction:column}
 .price-card.is-featured{border:2px solid var(--cobalt-text);padding:25px 21px;box-shadow:0 22px 44px -26px rgba(47,111,190,.55)}
 .badge{position:absolute;top:-12px;left:20px;background:var(--cobalt-text);color:#fff;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:4px 9px;border-radius:5px}
@@ -241,6 +246,7 @@ h1{font-family:var(--serif);font-weight:400;font-size:clamp(44px,6.2vw,82px);lin
   .types-grid li:nth-child(even){padding-left:18px;border-left:1px solid var(--line)}
   .trust-grid{grid-template-columns:1fr}
   .plan-grid{grid-template-columns:1fr 1fr}
+  .hide-advisor-plan .plan-grid{grid-template-columns:1fr}
   .faq-wrap{grid-template-columns:1fr}
   .footer-meta{text-align:left}
 }
