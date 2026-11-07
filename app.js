@@ -8,6 +8,11 @@
 const SHOW_ADVISOR_PLAN = false;
 if (!SHOW_ADVISOR_PLAN) document.documentElement.classList.add('hide-advisor-plan');
 
+// Etiqueta y estilo destacado del plan recomendado (Desk), ocultos provisionalmente.
+// Cambiar a true para volver a mostrarlos; el texto del diccionario no se toca.
+const SHOW_RECOMMENDED_BADGE = false;
+if (!SHOW_RECOMMENDED_BADGE) document.documentElement.classList.add('hide-recommended-badge');
+
 const EN = {
  "meta.title": "Actium CRE Intelligence — Present with rigour. Connect with judgement",
  "meta.desc": "Actium CRE Intelligence helps you find the other side of your deal: it anonymously matches your assets with buy-side mandates in off-market commercial real estate.",
@@ -288,7 +293,7 @@ const EN = {
  "data.soonT": "In development",
  "data.soonB": "More asset types.",
  "plans.kicker": "Plans",
- "plans.title": "Start with a demo.<br /><em>Choose a plan afterwards.</em>",
+ "plans.title": "One engine.<br /><em>Three scales.</em>",
  "plans.lede": "Pricing is shared during the demo.",
  "plans.users": "users",
  "plans.assets": "assets",
@@ -321,7 +326,7 @@ const EN = {
  "plans.note": "“Unlimited” items are subject to fair use.",
  "faq.kicker": "FAQ",
  "faq.title": "Precision before<br /><em>persuasion.</em>",
- "final.title": "Present with<br /><em>rigour</em><br />Connect with<br /><em>judgement</em>",
+ "final.title": "<span class=\"final-line\">Present with <em>rigour</em></span><br /><span class=\"final-line\">Connect with <em>judgement</em></span>",
  "final.body": "Structure the documentation. Find the fit. Talk directly to the other party.",
  "final.cta": "Request a demo",
  "footer.legal": "© 2026 Actium CRE Intelligence",
