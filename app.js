@@ -2,6 +2,17 @@
  * Actium CRE — landing. ES es el idioma base (vive en el HTML); EN se aplica desde este diccionario.
  * Los textos salen de una única fuente de contenido; no editar el diccionario a mano sin revisar el HTML.
  */
+
+// El plan Advisor se mantiene en los datos y en la configuración, pero se oculta
+// provisionalmente de la presentación de la landing. Cambiar a true para volver a mostrarlo.
+const SHOW_ADVISOR_PLAN = false;
+if (!SHOW_ADVISOR_PLAN) document.documentElement.classList.add('hide-advisor-plan');
+
+// Etiqueta y estilo destacado del plan recomendado (Desk), ocultos provisionalmente.
+// Cambiar a true para volver a mostrarlos; el texto del diccionario no se toca.
+const SHOW_RECOMMENDED_BADGE = false;
+if (!SHOW_RECOMMENDED_BADGE) document.documentElement.classList.add('hide-recommended-badge');
+
 const EN = {
  "meta.title": "Actium CRE Intelligence — Present with rigour. Connect with judgement",
  "meta.desc": "Actium CRE Intelligence helps you find the other side of your deal: it anonymously matches your assets with buy-side mandates in off-market commercial real estate.",
@@ -56,7 +67,6 @@ const EN = {
  "road5t": "Negotiate",
  "road5d": "Direct contact when both parties approve.",
  "hero.cta": "Request a demo",
- "hero.note": "Then a 14-day trial with 1 real teaser. No card required.",
  "problem.kicker": "The problem",
  "problem.title": "An asset sent down a chain of intermediaries can go unsold.<br /><em>So can a badly structured one.</em>",
  "problem.p1t": "Scattered information",
@@ -233,8 +243,8 @@ const EN = {
  "cmp.t36": "Blind asset screening",
  "faq.q12": "What is blind screening and who can use it?",
  "faq.a12": "It is a criteria-based search over the Dark Pool's blind sheets, for the Institutional and Enterprise plans only. Only assets whose owner has made them visible in the screening appear, and only the fields their teaser declares are searched. If one interests you, you create a buy-side mandate for that asset and request the match. Identity is not revealed until both parties approve.",
- "faq.q10": "How do I start and what does the trial include?",
- "faq.a10": "By invitation, after a demo of your case. Then a 14-day trial with 1 real A4 teaser, no card required. There is no permanent free plan. Pricing is shared in the demo.",
+ "faq.q10": "How do I start?",
+ "faq.a10": "By invitation, after a demo of your case. There is no permanent free plan. Pricing is shared in the demo.",
  "faq.q13": "Does Actium charge fees on my transaction?",
  "faq.a13": "No. Actium does not take part in deals or charge commissions on them. Actium helps you reach more qualified counterparties.",
  "mandate.pill4": "Investor",
@@ -266,7 +276,7 @@ const EN = {
  "cmp.t20": "Hosting in the EU",
  "cmp.t21": "Support",
  "cmp.t22": "Standard",
- "cmp.t23": "Priority and account manager",
+ "cmp.t23": "Priority",
  "cmp.t24": "Agreed in contract",
  "cmp.t25": "Granular permissions, API and integrations",
  "cmp.t26": "By agreement",
@@ -276,20 +286,20 @@ const EN = {
  "cmp.t30": "Annual",
  "cmp.t31": "Contract agreed with you",
  "cmp.t32": "How you start",
- "cmp.t33": "Demo, then 14-day trial",
+ "cmp.t33": "Demo",
  "cmp.t34": "Technical demo",
  "cmp.t35": "Tailored demo",
- "cmp.aria": "Comparison of the Advisor, Desk, Institutional and Enterprise plans",
+ "cmp.aria": "Comparison of the Desk, Institutional and Enterprise plans",
  "data.soonT": "In development",
  "data.soonB": "More asset types.",
  "plans.kicker": "Plans",
- "plans.title": "Start with a demo.<br /><em>Choose a plan afterwards.</em>",
- "plans.lede": "Every plan starts with a demo and a 14-day free trial with 1 real A4 teaser, no card required. Pricing is shared during the demo.",
+ "plans.title": "One engine.<br /><em>Three scales.</em>",
+ "plans.lede": "Pricing is shared during the demo.",
  "plans.users": "users",
  "plans.assets": "assets",
  "plans.mandates": "mandates",
  "plans.pool": "In the Dark Pool",
- "plans.recommended": "Most used",
+ "plans.recommended": "Recommended",
  "plans.tailored": "Tailored",
  "plans.all": "Whole portfolio",
  "plans.unl": "Unlimited",
@@ -300,14 +310,14 @@ const EN = {
  "plans.adv.f3": "Co-brokerage protocol",
  "plans.desk.who": "Team",
  "plans.desk.bill": "Annual billing",
- "plans.desk.f1": "Everything in Advisor",
+ "plans.desk.f1": "Unlimited A4 teasers at all three visibility levels",
  "plans.desk.f2": "Shared workspace for up to 3 users",
  "plans.desk.f3": "Advanced conflict detection and resolution",
  "plans.inst.who": "Organisation",
  "plans.inst.bill": "Annual billing",
  "plans.inst.f1": "Everything in Desk",
  "plans.inst.f2": "White-label deliverables, without Actium branding",
- "plans.inst.f3": "Account manager and priority support",
+ "plans.inst.f3": "Priority support",
  "plans.ent.who": "Tailored",
  "plans.ent.bill": "Annual billing",
  "plans.ent.f1": "Everything in Institutional",
@@ -316,7 +326,7 @@ const EN = {
  "plans.note": "“Unlimited” items are subject to fair use.",
  "faq.kicker": "FAQ",
  "faq.title": "Precision before<br /><em>persuasion.</em>",
- "final.title": "Present with<br /><em>rigour</em><br />Connect with<br /><em>judgement</em>",
+ "final.title": "<span class=\"final-line\">Present with <em>rigour</em></span><br /><span class=\"final-line\">Connect with <em>judgement</em></span>",
  "final.body": "Structure the documentation. Find the fit. Talk directly to the other party.",
  "final.cta": "Request a demo",
  "footer.legal": "© 2026 Actium CRE Intelligence",
