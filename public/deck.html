@@ -20,11 +20,53 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://actiumcre.com/og-deck.jpg">
 <link rel="icon" type="image/svg+xml" href="/brand/favicon.svg">
-<meta http-equiv="refresh" content="0; url=/deck.pdf">
-<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#090A0F;color:#F1F4F8;font-family:system-ui,sans-serif}a{color:#7FB0FF}</style>
+<style>
+@font-face{font-family:"IBM Plex Sans";src:url(/fonts/ibm-plex-sans-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#090A0F;color:#F1F4F8;font-family:"IBM Plex Sans",system-ui,sans-serif}
+header{height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #1c2230}
+header img{height:28px;display:block}
+.lang{display:flex;border:1px solid #2a3344;border-radius:8px;overflow:hidden}
+.lang button{background:none;border:0;color:#9AA4B2;font:500 13px/1 "IBM Plex Sans",system-ui,sans-serif;padding:9px 14px;cursor:pointer;letter-spacing:.04em}
+.lang button[aria-pressed="true"]{background:#1e3a8a;color:#F1F4F8}
+main{height:calc(100% - 60px)}
+iframe{width:100%;height:100%;border:0;display:block;background:#090A0F}
+.mobile{display:none;padding:48px 24px;text-align:center}
+.mobile p{color:#9AA4B2;margin:0 0 20px}
+.mobile a{display:inline-block;background:#3b82f6;color:#06101f;text-decoration:none;font-weight:500;padding:14px 22px;border-radius:8px}
+@media (max-width:820px),(pointer:coarse){iframe{display:none}.mobile{display:block}}
+</style>
 </head>
 <body>
-<p>Opening the deck… <a href="/deck.pdf">Open the PDF</a></p>
-<script>location.replace('/deck.pdf');</script>
+<header>
+<img src="/brand/actium-logo-on-dark.svg" alt="Actium CRE Intelligence">
+<div class="lang" role="group" aria-label="Language">
+<button type="button" data-lang="en" aria-pressed="true">EN</button>
+<button type="button" data-lang="es" aria-pressed="false">ES</button>
+</div>
+</header>
+<main>
+<iframe id="pdf" title="Actium CRE Intelligence — Deck" src="/deck.pdf"></iframe>
+<div class="mobile"><p id="mtext">Corporate presentation · 12 pages</p><a id="open" href="/deck.pdf">Open the PDF</a></div>
+</main>
+<script>
+(function(){
+var T={en:{pdf:"/deck.pdf",text:"Corporate presentation · 12 pages",btn:"Open the PDF"},
+       es:{pdf:"/deck-es.pdf",text:"Presentación corporativa · 12 páginas",btn:"Abrir el PDF"}};
+function set(l,push){
+  if(!T[l])l="en";
+  document.documentElement.lang=l;
+  document.getElementById("pdf").src=T[l].pdf;
+  document.getElementById("open").href=T[l].pdf;
+  document.getElementById("open").textContent=T[l].btn;
+  document.getElementById("mtext").textContent=T[l].text;
+  [].forEach.call(document.querySelectorAll(".lang button"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l?"true":"false")});
+  if(push){var u=new URL(location.href);if(l==="en")u.searchParams.delete("lang");else u.searchParams.set("lang",l);history.replaceState(null,"",u)}
+}
+[].forEach.call(document.querySelectorAll(".lang button"),function(b){b.addEventListener("click",function(){set(b.getAttribute("data-lang"),true)})});
+var q=new URLSearchParams(location.search).get("lang");
+set(q==="es"?"es":"en",false);
+})();
+</script>
 </body>
 </html>
