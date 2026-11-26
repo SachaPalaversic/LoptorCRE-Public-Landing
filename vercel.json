@@ -20,6 +20,14 @@
           "value": "noindex, nofollow"
         }
       ]
+    },
+    {
+      "source": "/deck-es.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "inline; filename=\"Actium-CRE-Deck-ES.pdf\"" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
     }
   ],
   "redirects": [
