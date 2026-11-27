@@ -318,6 +318,7 @@ window.LOPTOR_FR = {
  "final.cta": "Demander une démo",
  "footer.legal": "© 2026 Actium CRE Intelligence",
  "footer.privacy": "Confidentialité",
+ "footer.dpa": "Sous-traitance des données",
  "footer.cookies": "Cookies",
  "footer.aviso": "Mentions légales",
  "cookie.title": "Votre vie privée",
