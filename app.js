@@ -331,6 +331,7 @@ const EN = {
  "final.cta": "Request a demo",
  "footer.legal": "© 2026 Actium CRE Intelligence",
  "footer.privacy": "Privacy",
+ "footer.dpa": "Data processing",
  "footer.cookies": "Cookies",
  "footer.aviso": "Legal notice",
  "cookie.title": "Your privacy",
@@ -377,6 +378,7 @@ function applyTranslations() {
   $$('[data-i18n-alt]').forEach((el) => el.setAttribute('alt', pick(currentLang, 'alt', el.dataset.i18nAlt)));
   $$('[data-i18n-aria]').forEach((el) => el.setAttribute('aria-label', pick(currentLang, 'aria', el.dataset.i18nAria)));
   $$('[data-i18n-content]').forEach((el) => el.setAttribute('content', pick(currentLang, 'content', el.dataset.i18nContent)));
+  $$('[data-dpa-link]').forEach((el) => el.setAttribute('href', 'https://legal.actiumcre.com/data-processing-agreement' + (currentLang === 'es' ? '?lang=es' : '')));
   $$('img[data-src-es]').forEach((img) => { img.src = currentLang === 'es' ? img.dataset.srcEs : img.dataset.srcEn; });
   const ogLocale = $('meta[property="og:locale"]'); if (ogLocale) ogLocale.setAttribute('content', currentLang === 'en' ? 'en_US' : currentLang === 'fr' ? 'fr_FR' : 'es_ES');
   $$('.lang-btn').forEach((button) => { const on = button.dataset.lang === currentLang; button.classList.toggle('is-active', on); button.setAttribute('aria-pressed', String(on)); });
